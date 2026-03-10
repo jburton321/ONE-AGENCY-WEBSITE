@@ -25,7 +25,7 @@ const Footer5 = () => {
 							<div className="footer-widget">
 								<div className="footer-logo">
 									<Link href="/">
-										<img src="/images/logos/secondary-logo.png" alt={brandName ?? "ONE Agency"} />
+										<img src="/logo/main-white.svg" alt={brandName ?? "ONE Agency"} />
 									</Link>
 								</div>
 								{desc && <p className="desc">{desc}</p>}

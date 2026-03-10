@@ -114,15 +114,27 @@ function IncreaseCard() {
 	const pathRef = useRef(null);
 	const lenRef = useRef(0);
 	const initRef = useRef(false);
+	const [measured, setMeasured] = useState(false);
 
 	useEffect(() => {
-		if (!pathRef.current) return;
-		if (!initRef.current) {
-			lenRef.current = pathRef.current.getTotalLength();
-			pathRef.current.style.strokeDasharray = `${lenRef.current}`;
-			initRef.current = true;
-		}
 		const el = pathRef.current;
+		if (!el) return;
+		if (!initRef.current) {
+			const measure = () => {
+				try {
+					lenRef.current = el.getTotalLength();
+					el.style.strokeDasharray = `${lenRef.current}`;
+					initRef.current = true;
+				} catch {
+					lenRef.current = 120;
+					el.style.strokeDasharray = "120";
+					initRef.current = true;
+				}
+				setMeasured(true);
+			};
+			requestAnimationFrame(() => requestAnimationFrame(measure));
+			return;
+		}
 		if (fading) {
 			el.style.transition = `stroke-dashoffset ${CARD_FADE}ms ease`;
 			el.style.strokeDashoffset = `${lenRef.current}`;
@@ -133,7 +145,7 @@ function IncreaseCard() {
 			el.style.transition = `stroke-dashoffset ${CARD_DRAW}ms cubic-bezier(0.22,0.61,0.36,1)`;
 			el.style.strokeDashoffset = "0";
 		}
-	}, [showing, fading]);
+	}, [showing, fading, measured]);
 
 	const sparkPoints = [38, 32, 35, 24, 28, 18, 14, 10];
 	const polyline = sparkPoints.map((y, i) => `${i * 14},${y}`).join(" ");
@@ -194,6 +206,7 @@ function GrowthLineChart() {
 	const pathRef = useRef(null);
 	const lenRef = useRef(0);
 	const initRef = useRef(false);
+	const [measured, setMeasured] = useState(false);
 
 	const points = [
 		{ x: 0, y: 58 },
@@ -215,13 +228,24 @@ function GrowthLineChart() {
 	const areaPath = `${linePath} L200,70 L0,70 Z`;
 
 	useEffect(() => {
-		if (!pathRef.current) return;
-		if (!initRef.current) {
-			lenRef.current = pathRef.current.getTotalLength();
-			pathRef.current.style.strokeDasharray = `${lenRef.current}`;
-			initRef.current = true;
-		}
 		const el = pathRef.current;
+		if (!el) return;
+		if (!initRef.current) {
+			const measure = () => {
+				try {
+					lenRef.current = el.getTotalLength();
+					el.style.strokeDasharray = `${lenRef.current}`;
+					initRef.current = true;
+				} catch {
+					lenRef.current = 250;
+					el.style.strokeDasharray = "250";
+					initRef.current = true;
+				}
+				setMeasured(true);
+			};
+			requestAnimationFrame(() => requestAnimationFrame(measure));
+			return;
+		}
 		if (fading) {
 			el.style.transition = `stroke-dashoffset ${CARD_FADE}ms ease`;
 			el.style.strokeDashoffset = `${lenRef.current}`;
@@ -232,7 +256,7 @@ function GrowthLineChart() {
 			el.style.transition = `stroke-dashoffset ${CARD_DRAW}ms cubic-bezier(0.22,0.61,0.36,1)`;
 			el.style.strokeDashoffset = "0";
 		}
-	}, [showing, fading]);
+	}, [showing, fading, measured]);
 
 	return (
 		<div className="rounded-2xl border border-white/40 shadow-lg shadow-black/5 p-5 w-full xl:w-64 backdrop-blur-xl" style={{ background: "rgba(255,255,255,0.55)" }}>

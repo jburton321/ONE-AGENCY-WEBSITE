@@ -8,19 +8,19 @@ const Logo = ({ headerType, isStickyHeader }) => {
 		<div className="site-logo">
 			<Link className="logo" href="/">
 				<Image
-					src={`/images/logos/${
+					src={
 						(headerType === 3 ||
 							headerType === 4 ||
 							headerType === 5 ||
 							headerType === 6 ||
 							headerType === 9) &&
 						!isStickyHeader
-							? "secondary-logo.png"
+							? "/logo/main-white.svg"
 							: headerType === 9
-							? "secondary-logo.png"
-							: "primary-logo.png"
-					}`}
-					alt="logo"
+							? "/logo/main-white.svg"
+							: "/logo/main.svg"
+					}
+					alt="ONE Agency"
 					height={37}
 					width={150}
 				/>

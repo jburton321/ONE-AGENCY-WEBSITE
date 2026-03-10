@@ -8,6 +8,7 @@ Example: `public/images/logo.png` → use in code as `/images/logo.png`.
 ```
 public/
 ├── fakedata/          ← JSON data (products, blogs, nav, etc.)
+├── logo/              ← Main brand logo (main.svg = black, main-white.svg = white)
 ├── images/
 │   ├── icons/         ← SVG icons (verified, badge, logo-icon, etc.)
 │   ├── shapes/       ← SVG shapes (hero, about, testimonial, process, etc.)
@@ -23,7 +24,7 @@ Create or use these under `public/images/` so components find them:
 
 | Folder | Used for |
 |--------|----------|
-| `images/logos/` | primary-logo.png, secondary-logo.png |
+| `logo/` | main.svg (black, light backgrounds), main-white.svg (white, dark backgrounds) |
 | `images/hero/` | Hero banners (e.g. h1-hero-1.webp, hero-banner.webp) |
 | `images/about/` | About thumbs (thumb-1.png, etc.), about images |
 | `images/blog/` | Blog images, author avatars, widget-cta |

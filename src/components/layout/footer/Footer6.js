@@ -159,7 +159,7 @@ const Footer6 = () => {
 						<div className="col-xxl-6 col-xl-5 col-lg-3">
 							<div className="h6-footer-logo">
 								<Link href="/" className="footer-logo">
-									<img src="/images/logos/primary-logo.png" alt={brandName ?? "ONE Agency"} />
+									<img src="/logo/main.svg" alt={brandName ?? "ONE Agency"} />
 								</Link>
 							</div>
 						</div>

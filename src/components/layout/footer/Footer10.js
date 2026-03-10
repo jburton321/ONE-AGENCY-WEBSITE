@@ -29,7 +29,7 @@ const Footer10 = () => {
 							>
 								<div className="footer-logo">
 									<Link href="/">
-										<img src="/images/logos/primary-logo.png" alt={brandName ?? "ONE Agency"} />
+										<img src="/logo/main.svg" alt={brandName ?? "ONE Agency"} />
 									</Link>
 								</div>
 								<p className="desc">
