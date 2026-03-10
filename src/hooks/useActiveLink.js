@@ -35,8 +35,8 @@ const checkActive = (mainObject, currentPathname, isRestricted) => {
 };
 
 export default function useActiveLink() {
+	const currentPathname = usePathname();
 	const makeActiveLink = modifiableObject => {
-		const currentPathname = usePathname();
 		const { name } = modifiableObject;
 		const isPages = name === "Pages" ? true : false;
 		const currentObject = {
