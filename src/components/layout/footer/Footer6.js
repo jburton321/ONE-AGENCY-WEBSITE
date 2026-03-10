@@ -1,8 +1,20 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import FormSelect from "@/components/shared/Inputs/FormSelect";
 import Link from "next/link";
+import getFooterData from "@/libs/getFooterData";
 
 const Footer6 = () => {
+	const footerData = getFooterData() ?? {};
+	const {
+		ctaHeading,
+		ctaSubheading,
+		locations = [],
+		brandName,
+		copyrightYear,
+		copyrightText,
+	} = footerData;
+	const offices = locations.slice(0, 2);
+
 	return (
 		<footer className="tj-footer-area h6-footer">
 			{/* <!-- footer content --> */}
@@ -13,7 +25,7 @@ const Footer6 = () => {
 							<div className="footer-widget h6-footer-widget">
 								<div className="h6-footer-widget-top">
 									<h2 className="h6-footer-widget-title">
-										Let’s <span>connect</span> and collaborate
+										{ctaSubheading ?? ctaHeading ?? "Let's connect and collaborate"}
 									</h2>
 									<div className="h6-footer-widget-btn">
 										<ButtonPrimary
@@ -24,20 +36,28 @@ const Footer6 = () => {
 									</div>
 								</div>
 								<div className="footer-contact-infos">
-									<div className="infos-left">
-										<div className="infos-item">
-											<span>Headquarters - USA</span>
-											<p>993 Renner Burg, West Rond, MT 94251-030</p>
-											<Link href="tel:1009544-7818">+1 (009) 544-7818</Link>
+									{offices[0] && (
+										<div className="infos-left">
+											<div className="infos-item">
+												<span>{offices[0].label}</span>
+												<p>{offices[0].address}</p>
+												{offices[0].phoneHref && (
+													<Link href={offices[0].phoneHref}>{offices[0].phone}</Link>
+												)}
+											</div>
 										</div>
-									</div>
-									<div className="infos-right">
-										<div className="infos-item">
-											<span>Operations - Canada</span>
-											<p>Suite 452 8082 Boner Parge, Elviraton, CA 48998</p>
-											<Link href="tel:1009544-7818">+1 (009) 544-7818</Link>
+									)}
+									{offices[1] && (
+										<div className="infos-right">
+											<div className="infos-item">
+												<span>{offices[1].label}</span>
+												<p>{offices[1].address}</p>
+												{offices[1].phoneHref && (
+													<Link href={offices[1].phoneHref}>{offices[1].phone}</Link>
+												)}
+											</div>
 										</div>
-									</div>
+									)}
 								</div>
 							</div>
 						</div>
@@ -45,7 +65,7 @@ const Footer6 = () => {
 							<div className="footer-widget h6-footer-widget">
 								<div className="contact-form-one">
 									<h4 className="title">
-										Feel free to get in touch or visit our location.
+										Feel free to get in touch or visit our locations.
 									</h4>
 									<form>
 										<div className="row">
@@ -89,13 +109,13 @@ const Footer6 = () => {
 															<FormSelect
 																id={"contact"}
 																className="nice-select"
-																defaultValue={"Chose a option"}
+																defaultValue={"Choose an option"}
 																items={[
-																	{ value: "1", name: "Chose a option" },
-																	{ value: "2", name: "IT consulting" },
-																	{ value: "3", name: "Market research" },
-																	{ value: "4", name: "Business process" },
-																	{ value: "5", name: "Business consultancy" },
+																	{ value: "1", name: "Choose an option" },
+																	{ value: "2", name: "Paid Search" },
+																	{ value: "3", name: "Paid Social" },
+																	{ value: "4", name: "Performance Creative" },
+																	{ value: "5", name: "Marketing Automation" },
 																	{ value: "6", name: "Digital marketing" },
 																	{ value: "7", name: "Branding design" },
 																]}
@@ -139,7 +159,7 @@ const Footer6 = () => {
 						<div className="col-xxl-6 col-xl-5 col-lg-3">
 							<div className="h6-footer-logo">
 								<Link href="/" className="footer-logo">
-									<img src="/images/logos/primary-logo.png" alt="logo" />
+									<img src="/images/logos/primary-logo.png" alt={brandName ?? "ONE Agency"} />
 								</Link>
 							</div>
 						</div>
@@ -177,7 +197,9 @@ const Footer6 = () => {
 							<div className="copyright-content-area">
 								<div className="copyright-text">
 									<p>
-										© 2025 <Link href="/"> Solvior </Link> All right reserved.
+										© {copyrightYear ?? new Date().getFullYear()}{" "}
+										<Link href="/">{brandName ?? "ONE Agency"}</Link>{" "}
+										{copyrightText ?? "All rights reserved."}
 									</p>
 								</div>
 								<div className="copyright-socails">
@@ -207,10 +229,10 @@ const Footer6 = () => {
 								<div className="copyright-menu">
 									<ul>
 										<li>
-											<Link href="/contact">Policy & privacy</Link>
+											<Link href="/contact">Privacy Policy</Link>
 										</li>
 										<li>
-											<Link href="/contact">Terms & conditions</Link>
+											<Link href="/contact">Terms &amp; Conditions</Link>
 										</li>
 									</ul>
 								</div>

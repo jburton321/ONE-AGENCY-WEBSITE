@@ -1,0 +1,37 @@
+{
+  "ctaHeading": "Join ONE Agency in radically transforming the future of intelligent marketing",
+  "ctaSubheading": "All you need is ONE",
+  "tagline": "Delivering a Symphony of Digital Performance.",
+  "footerShortDesc": "Delivering a Symphony of Digital Performance.",
+  "locations": [
+    { "label": "Orlando", "address": "5900 Lake Ellenor Dr., Suite 300, Orlando, FL 32809", "phone": "+1 (689) 205-9923", "phoneHref": "tel:+16892059923" }
+  ],
+  "howWePartner": [
+    { "label": "Process", "path": "/contact" },
+    { "label": "Models", "path": "/contact" }
+  ],
+  "resources": [
+    { "label": "Case Studies", "path": "/contact" },
+    { "label": "Whitepapers", "path": "/contact" }
+  ],
+  "company": [
+    { "label": "About", "path": "/about" },
+    { "label": "Blog", "path": "/blogs" },
+    { "label": "Locations", "path": "/contact" },
+    { "label": "Leadership", "path": "/contact" },
+    { "label": "Careers", "path": "/careers" }
+  ],
+  "support": [
+    { "label": "Help Center", "path": "/contact" },
+    { "label": "Premium Support", "path": "/contact" },
+    { "label": "Contact Support", "path": "/contact" }
+  ],
+  "contact": [
+    { "label": "Contact Us", "path": "/contact" },
+    { "label": "Request Demo", "path": "/contact" }
+  ],
+  "brandName": "ONE Agency",
+  "copyrightYear": 2026,
+  "copyrightText": "All rights reserved.",
+  "contactEmail": "mailto:info@oneagency.com"
+}

@@ -50,20 +50,18 @@ const PortfolioDetailsPrimary = ({ option }) => {
 								</h3>
 								<div className="tj-entry-content">
 									<p className="wow fadeInUp" data-wow-delay="0.1s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset, innovative approaches. Our consulting of our missing
-										empower businesses of all sizes to thrive. Committed to the
-										delivering exceptional in the values through our strategic
-										inset, i approaches empower. Our mission is to empowers
-										businesses
+										ONE Agency hyperscales digital growth through customer
+										acquisition, performance creative and MarTech. We deliver a
+										symphony of digital performance and actionable data
+										analytics for brands of all sizes. Committed to delivering
+										exceptional value through our proprietary tech stack and
+										strategic, innovative approaches. We empower brands to
+										thrive in changing marketplaces.
 									</p>
 									<p className="wow fadeInUp" data-wow-delay="0.3s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset
+										ONE Agency is your ultimate new customer acquisition, UX/CX
+										and MarTech performance agency partner. We are committed to
+										delivering exceptional value through strategic insight.
 									</p>
 									<div className="tj-check-list">
 										<h4 className="text-anim">Projects overview</h4>
@@ -120,18 +118,16 @@ const PortfolioDetailsPrimary = ({ option }) => {
 									</div>
 									<h4 className="text-anim">Final result</h4>
 									<p className="wow fadeInUp" data-wow-delay="0.3s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset, innovative approaches. Our consulting of our missing
-										empower businesses of all sizes to thrive. Committed to the
-										delivering exceptional.
+										ONE Agency transforms the future of intelligent marketing.
+										We deliver a symphony of digital performance and empower
+										brands of all sizes to thrive through customer acquisition,
+										performance creative and actionable data analytics.
+										Committed to delivering exceptional value.
 									</p>
 									<p className="wow fadeInUp" data-wow-delay="0.5s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset.
+										Hyperscale digital growth through your ultimate new customer
+										acquisition, UX/CX and MarTech performance agency partner.
+										We are ONE Agency. Request Demo to get started.
 									</p>
 								</div>
 							</article>

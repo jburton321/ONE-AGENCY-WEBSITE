@@ -20,7 +20,7 @@ const PricingPlanItems = ({ isYearlyPlan }) => {
 						</div>
 						<div className="pricing__package-desc">
 							<p>
-								Save <span>20% offer</span> of consulting{" "}
+								Save <span>20% offer</span> on performance marketing{" "}
 								<span>93K clients</span>.
 							</p>
 						</div>
@@ -89,7 +89,7 @@ const PricingPlanItems = ({ isYearlyPlan }) => {
 						</div>
 						<div className="pricing__package-desc">
 							<p>
-								Save <span>20% offer</span> of consulting{" "}
+								Save <span>20% offer</span> on performance marketing{" "}
 								<span>93K clients</span>.
 							</p>
 						</div>
@@ -155,7 +155,7 @@ const PricingPlanItems = ({ isYearlyPlan }) => {
 						</div>
 						<div className="pricing__package-desc">
 							<p>
-								Save <span>20% offer</span> of consulting{" "}
+								Save <span>20% offer</span> on performance marketing{" "}
 								<span>93K clients</span>.
 							</p>
 						</div>

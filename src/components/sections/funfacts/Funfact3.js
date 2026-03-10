@@ -16,14 +16,13 @@ const Funfact3 = () => {
 								<i className="tji-star-2"></i>Our evolution
 							</span>
 							<div className="desc mb-60 wow fadeInUp" data-wow-delay="0.3s">
-								"Founded in 2002 by Burdee Ncolase en. our firm started with our
-								great vision to bring innovative solutions of businesses facing
-								unprecedented challenges. That began as a small consultings firm
-								quickly evolved into a trusted partner for companies around the
-								globe . Our journey into began with a simple idea thats offer
-								unparalleled consulting services empower Our core values of
-								integrity, innovation, and excellence guide everything we do
-								leading the wave in consulting's."
+								"ONE Agency started with a vision to hyperscale digital growth for
+								brands through customer acquisition and performance creative. We
+								evolved into a trusted partner for companies around the globe.
+								Our journey began with a simple idea: deliver a symphony of
+								digital performance. Our core values of integrity, innovation,
+								and excellence guide everything we do—leading the wave in
+								intelligent marketing."
 							</div>
 							<div className="tj-evolute-counter">
 								<div className="counter-item">
@@ -76,14 +75,13 @@ const Funfact3 = () => {
 								<i className="tji-star-2"></i>Our evolution
 							</span>
 							<div className="desc mb-60">
-								"Founded in 2002 by Burdee Ncolase en. our firm started with our
-								great vision to bring innovative solutions of businesses facing
-								unprecedented challenges. That began as a small consultings firm
-								quickly evolved into a trusted partner for companies around the
-								globe . Our journey into began with a simple idea thats offer
-								unparalleled consulting services empower Our core values of
-								integrity, innovation, and excellence guide everything we do
-								leading the wave in consulting's."
+								"ONE Agency started with a vision to hyperscale digital growth for
+								brands through customer acquisition and performance creative. We
+								evolved into a trusted partner for companies around the globe.
+								Our journey began with a simple idea: deliver a symphony of
+								digital performance. Our core values of integrity, innovation,
+								and excellence guide everything we do—leading the wave in
+								intelligent marketing."
 							</div>
 							<div className="tj-evolute-counter">
 								<div className="counter-item">

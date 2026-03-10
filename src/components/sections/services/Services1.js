@@ -22,7 +22,7 @@ const Services1 = () => {
 						<div className="sec-heading">
 							<div className="sec-text">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-									Solutions & services
+									Solutions & Services
 								</span>
 								<h2 className="sec-title text-anim">
 									The ONE solution for digital advertising performance

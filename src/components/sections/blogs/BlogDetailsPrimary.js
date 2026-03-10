@@ -70,47 +70,43 @@ const BlogDetailsPrimary = ({ option }) => {
 								</div>
 								<div className="tj-entry-content">
 									<p className="wow fadeInUp" data-wow-delay="0.1s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset, innovative approaches. Our consulting of our missing
-										empower businesses of all sizes to thrive. Committed to the
-										delivering exceptional in the values through our strategic
-										inset, i approaches empower. Our mission is to empowers
-										businesses
+										ONE Agency hyperscales digital growth through customer
+										acquisition, performance creative and MarTech. We deliver a
+										symphony of digital performance and actionable data
+										analytics for brands of all sizes. Committed to delivering
+										exceptional value through our proprietary tech stack and
+										strategic, innovative approaches. We empower brands to
+										thrive in changing marketplaces.
 									</p>
 									<p className="wow fadeInUp" data-wow-delay="0.3s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset
+										ONE Agency is your ultimate new customer acquisition, UX/CX
+										and MarTech performance agency partner. We are committed to
+										delivering exceptional value through strategic insight.
 									</p>
 									<blockquote className="wow fadeInUp" data-wow-delay="0.1s">
 										<p>
-											The greatest asset of a consultant is the ability to ask
-											the right questions and guide clients to discover their
-											own consulting answers.
+											The greatest asset of a performance partner is the ability
+											to ask the right questions and guide clients to discover
+											their own path to digital growth.
 										</p>
 										<p>
-											<cite>Aryan Greene</cite>
+											<cite>ONE Agency</cite>
 										</p>
 									</blockquote>
 									<p className="wow fadeInUp" data-wow-delay="0.3s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset, innovative approaches. Our consulting of our missing
-										empower businesses of all sizes to thrive. Committed to the
-										delivering exceptional
+										We focus on outcomes and work backwards from your objectives:
+										qualified leads, conversions and scalable growth. We deliver
+										real-time visibility in myONE Dash and a proven methodology
+										for customer acquisition and performance creative. All you
+										need is ONE.
 									</p>
 
 									<div className="tj-check-list">
-										<h4 className="text-anim">Kye lessons of business</h4>
+										<h4 className="text-anim">Key lessons for digital growth</h4>
 										<p className="wow fadeInUp" data-wow-delay="0.1s">
-											Our mission is to empowers businesses size to thrive in an
-											businesses ever changing marketplace. We are committed to
-											the delivering exceptionals the value through strategic
-											inset.
+											ONE Agency combines a proprietary tech stack, persuasive
+											creative and actionable data analytics. We are committed
+											to delivering exceptional value through strategic insight.
 										</p>
 										<ul className="wow fadeInUp" data-wow-delay="0.3s">
 											<li>
@@ -118,15 +114,15 @@ const BlogDetailsPrimary = ({ option }) => {
 												expertise
 											</li>
 											<li>
-												<i className="tji-double-check"></i> Journey and
-												commitment to explained
+												<i className="tji-double-check"></i> Process and
+												commitment to excellence
 											</li>
 											<li>
 												<i className="tji-double-check"></i> Meet our team and
 												learn
 											</li>
 											<li>
-												<i className="tji-double-check"></i> Meet our team
+												<i className="tji-double-check"></i> Request Demo
 											</li>
 										</ul>
 									</div>
@@ -152,18 +148,16 @@ const BlogDetailsPrimary = ({ option }) => {
 									</div>
 									<h4 className="text-anim">Conclusions</h4>
 									<p className="wow fadeInUp" data-wow-delay="0.1s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset, innovative approaches. Our consulting of our missing
-										empower businesses of all sizes to thrive. Committed to the
-										delivering exceptional.
+										ONE Agency transforms the future of intelligent marketing.
+										We deliver a symphony of digital performance and empower
+										brands of all sizes to thrive through customer acquisition,
+										performance creative and actionable data analytics.
+										Committed to delivering exceptional value.
 									</p>
 									<p className="wow fadeInUp" data-wow-delay="0.3s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset.
+										Hyperscale digital growth through your ultimate new customer
+										acquisition, UX/CX and MarTech performance agency partner.
+										We are ONE Agency. Request Demo to get started.
 									</p>
 								</div>
 							</article>
@@ -266,12 +260,10 @@ const BlogDetailsPrimary = ({ option }) => {
 														</div>
 														<div className="desc">
 															<p>
-																Our mission is to empowers businesses size to
-																thrive in an businesses ever changes
-																marketplace. We are committed to the delivering
-																exceptionals the value through strategic
-																inset.Our mission is to empowers businesses size
-																to thrive in an businesses
+																ONE Agency delivers a symphony of digital
+																performance. We help brands hyperscale through
+																customer acquisition and performance creative.
+																Real-time visibility in myONE Dash. Great post.
 															</p>
 														</div>
 													</div>
@@ -305,12 +297,10 @@ const BlogDetailsPrimary = ({ option }) => {
 																</div>
 																<div className="desc">
 																	<p>
-																		Our mission is to empowers businesses size
-																		to thrive in an businesses ever changes
-																		marketplace. We are committed to the
-																		delivering exceptionals the value through
-																		strategic inset.Our mission is to empowers
-																		businesses size to thrive in an businesses
+																		Agree on the value of data-driven campaigns
+																		and MarTech. ONE Agency’s approach to
+																		qualified leads and conversion is spot on.
+																		Request Demo to see their stack in action.
 																	</p>
 																</div>
 															</div>
@@ -342,12 +332,10 @@ const BlogDetailsPrimary = ({ option }) => {
 														</div>
 														<div className="desc">
 															<p>
-																Our mission is to empowers businesses size to
-																thrive in an businesses ever changes
-																marketplace. We are committed to the delivering
-																exceptionals the value through strategic
-																inset.Our mission is to empowers businesses size
-																to thrive in an businesses
+																All you need is ONE. Their proprietary tech
+																stack and performance creative methodology
+																have been a game-changer for our digital
+																growth. Recommended.
 															</p>
 														</div>
 													</div>

@@ -2,6 +2,7 @@
 import modifyNumber from "@/libs/modifyNumber";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { processCopy } from "@/data/home-copy";
 
 const Process4 = () => {
 	const containerRef = useRef(null);
@@ -78,10 +79,10 @@ const Process4 = () => {
 					<div className="col-12">
 						<div className="sec-heading h8-section-heading sec-heading-centered style-4">
 							<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-								OUR WORKING PROCESS{" "}
+								{processCopy[4].subTitle}{" "}
 							</span>
 							<h2 className="sec-title text-anim">
-								Three steps transform for our business
+								{processCopy[4].secTitle}
 							</h2>
 						</div>
 					</div>

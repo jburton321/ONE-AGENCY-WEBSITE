@@ -37,7 +37,7 @@ const HeaderTop = ({ type }) => {
 								) : (
 									<i className="tji-check"></i>
 								)}{" "}
-								Trusted partner in business excellence
+								Delivering a Symphony of Digital Performance
 								<Link href="/contact">
 									<span>Join us now</span>
 									<i className="tji-angle-right"></i>
@@ -79,16 +79,10 @@ const HeaderTop = ({ type }) => {
 								<div className="topbar_infos">
 									<div className="info_item">
 										<span>
-											<i className="tji-clock"></i>
-										</span>
-										<span>Mon - Friday : 9:00 - 18:00</span>
-									</div>
-									<div className="info_item">
-										<span>
 											<i className="tji-email"></i>
 										</span>
-										<Link href="mailto:support@solvior.com">
-											support@solvior.com
+										<Link href="mailto:info@oneagency.com">
+											info@oneagency.com
 										</Link>
 									</div>
 									<div className="info_item">

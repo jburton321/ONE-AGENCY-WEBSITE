@@ -34,7 +34,7 @@ const PortfolioCard10 = ({ portfolio, idx, lastItem }) => {
 				</h3>
 
 				<div className="desc">
-					Our consultant specialize in delivering rapid, actionable solutions
+					ONE Agency specializes in delivering rapid, actionable solutions
 					that address your most pressing business on challenges. Whether you
 					are facing.
 				</div>

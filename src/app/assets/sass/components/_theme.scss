@@ -132,75 +132,94 @@ h6 {
 	font-weight: var(--tj-fw-sbold);
 	line-height: 1.2;
 	letter-spacing: -0.025em;
+	text-transform: capitalize;
 	@include transition(all 0.3s ease-in-out 0s);
 }
 
+/* Heading sizes from _typography.scss $font-size map – output explicitly so they display */
 h1 {
-	font-size: var(--tj-fs-h1);
+	font-size: 80px;
 	@media #{$xl} {
-		font-size: 65px;
+		font-size: 72px;
 	}
 	@media #{$lg} {
-		font-size: 50px;
+		font-size: 58px;
 	}
 	@media #{$md} {
-		font-size: 45px;
+		font-size: 52px;
 	}
 	@media #{$sm} {
-		font-size: 40px;
+		font-size: 46px;
 	}
 	@media #{$xs} {
-		font-size: 35px;
+		font-size: 40px;
 	}
 }
 
+/* Hero main title: 56px on all 10 homepage variants */
+.tj-hero-section h1.hero-title,
+.tj-hero-section-two h1.hero-title,
+.tj-hero-section-three h1.hero-title,
+.tj-hero-section-four h1.hero-title,
+.tj-hero-slider h1.slider-title,
+.h6-hero-section h1.hero-title,
+.h8-hero h1.h8-hero-title,
+.h9-hero h1.hero-title,
+.h10-hero h1.hero-title {
+	font-size: 56px !important;
+}
+
 h2 {
-	font-size: var(--tj-fs-h2);
+	font-size: 56px;
 	@media #{$md} {
-		font-size: 40px;
+		font-size: 46px;
 	}
 	@media #{$sm} {
-		font-size: 35px;
+		font-size: 40px;
 	}
 	@media #{$xs} {
-		font-size: 30px;
+		font-size: 34px;
 	}
 }
 
 h3 {
-	font-size: var(--tj-fs-h3);
+	font-size: 38px;
 	@media #{$lg, $md} {
-		font-size: 28px;
+		font-size: 32px;
 	}
 	@media #{$sm} {
-		font-size: 24px;
+		font-size: 28px;
 	}
 	@media #{$xs} {
-		font-size: 22px;
+		font-size: 26px;
 	}
 }
 
 h4 {
-	font-size: var(--tj-fs-h4);
+	font-size: 28px;
 	@media #{$lg} {
-		font-size: 22px;
+		font-size: 26px;
 	}
 	@media #{$md, $sm, $xs} {
+		font-size: 24px;
+	}
+}
+
+h4.text-anim {
+	font-size: 32px;
+}
+
+h5 {
+	font-size: 22px;
+	@media #{$sm, $xs} {
 		font-size: 20px;
 	}
 }
 
-h5 {
-	font-size: var(--tj-fs-h5);
-	@media #{$sm, $xs} {
-		font-size: 17px;
-	}
-}
-
 h6 {
-	font-size: var(--tj-fs-h6);
+	font-size: 20px;
 	@media #{$sm, $xs} {
-		font-size: 16px;
+		font-size: 18px;
 	}
 }
 
@@ -502,10 +521,8 @@ img {
 	background: var(--tj-color-theme-dark);
 	opacity: 0.7;
 }
+/* Titles visible by default; GSAP animates from 0 to 1 on scroll into view */
 .text-anim,
 .hero-text-anim {
-	opacity: 0;
-	&:has([aria-hidden="true"]) {
-		opacity: 1;
-	}
+	opacity: 1;
 }

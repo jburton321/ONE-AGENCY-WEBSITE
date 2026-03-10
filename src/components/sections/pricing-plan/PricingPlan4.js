@@ -21,8 +21,8 @@ const PricingPlan4 = () => {
 									<h2 className="sec-title text-anim">Our Pricing Tiers</h2>
 									<div className="desc wow fadeInUp" data-wow-delay="0.3s">
 										<p>
-											Our mission is to empowers businesses off all size to
-											thrive in an businesses ever changing marketplace.
+											ONE Agency hyperscales digital growth for brands of all
+											sizes. Delivering a symphony of digital performance.
 										</p>
 									</div>
 								</div>
@@ -59,10 +59,10 @@ const PricingPlan4 = () => {
 							<div className="pricing-right-content">
 								<div className="desc mb-30 wow fadeInUp" data-wow-delay="0.1s">
 									<p>
-										Our mission is to empowers businesses off all size to thrive
-										in an businesses ever changing marketplace. We are committed
-										to the delivering exceptional in the value through our
-										strategic inset, innovative.
+										ONE Agency hyperscales digital growth through customer
+										acquisition and performance creative. We are committed to
+										delivering exceptional value through our strategic insight
+										and innovative approaches.
 									</p>
 								</div>
 								<div

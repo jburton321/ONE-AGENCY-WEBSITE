@@ -15,7 +15,7 @@ const PortfolioCard6 = ({ portfolio, idx, lastItem }) => {
 						<Link href={`/portfolios/${id}`}>{title}</Link>
 					</h3>
 					<div className="desc">
-						Our consultant specialize in delivering rapid, actionable solutions
+						ONE Agency specializes in delivering rapid, actionable solutions
 						that address your most pressing business on challenges. Whether you
 						are facing.
 					</div>

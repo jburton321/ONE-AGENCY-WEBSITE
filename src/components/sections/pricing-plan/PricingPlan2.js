@@ -68,7 +68,7 @@ const PricingPlan2 = () => {
 										</span>
 									</div>
 									<p className="offer">
-										Save <strong>20% offer</strong> of business consulting for
+										Save <strong>20% offer</strong> on performance marketing for
 										our <strong>93K clients</strong> worldwide.
 									</p>
 									<ButtonPrimary text={"Choose package"} url={"/contact"} />
@@ -121,7 +121,7 @@ const PricingPlan2 = () => {
 										</span>
 									</div>
 									<p className="offer">
-										Save <strong>20% offer</strong> of business consulting for
+										Save <strong>20% offer</strong> on performance marketing for
 										our <strong>93K clients</strong> worldwide.
 									</p>
 									<ButtonPrimary text={"Choose package"} url={"/contact"} />
@@ -166,7 +166,7 @@ const PricingPlan2 = () => {
 										</span>
 									</div>
 									<p className="offer">
-										Save <strong>20% offer</strong> of business consulting for
+										Save <strong>20% offer</strong> on performance marketing for
 										our <strong>93K clients</strong> worldwide.
 									</p>
 									<ButtonPrimary text={"Choose package"} url={"/contact"} />

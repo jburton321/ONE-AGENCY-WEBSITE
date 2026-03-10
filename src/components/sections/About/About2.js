@@ -1,6 +1,8 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import FunfactSingle from "@/components/shared/funfact/FunfactSingle";
 import Image from "next/image";
+import { aboutCopy } from "@/data/home-copy";
+const copy = aboutCopy[2];
 
 const About2 = () => {
 	return (
@@ -39,18 +41,13 @@ const About2 = () => {
 										className="sub-title wow fadeInUp"
 										data-wow-delay="0.1s"
 									>
-										// Number #1 solver agency
+										// {copy.subTitle}
 									</span>
 									<h2 className="sec-title text-anim">
-										Empowering your business vision
+										{copy.secTitle}
 									</h2>
 									<div className="desc wow fadeInUp" data-wow-delay="0.3s">
-										<p>
-											Our mission is to empower on businesses off all sizes to
-											thrive business ever changes is marketplaces. We are all
-											committee the delivering in exceptional value markets
-											strategic innovative.
-										</p>
+										<p>{copy.desc}</p>
 									</div>
 									<div
 										className="about-feature-item wow fadeInUp"
@@ -60,23 +57,16 @@ const About2 = () => {
 											<div className="feature-left">
 												<div className="check-list-one">
 													<ul>
-														<li>
-															<i className="tji-double-check"></i>Expertise and
-															experience
-														</li>
-														<li>
-															<i className="tji-double-check"></i>Client Centric
-															approach
-														</li>
-														<li>
-															<i className="tji-double-check"></i>Commitment
-															excellences
-														</li>
+														{copy.list.map((item, i) => (
+															<li key={i}>
+																<i className="tji-double-check"></i> {item}
+															</li>
+														))}
 													</ul>
 												</div>
 												<div className="about-button">
 													<ButtonPrimary
-														text={"Free consultation"}
+														text={copy.cta}
 														url={"/about"}
 													/>
 												</div>
@@ -89,7 +79,7 @@ const About2 = () => {
 								<div className="funfact-box">
 									<FunfactSingle currentValue={20} symbol={"+"} />
 									<span className="sub-title">
-										Years more of business consulting experiences we have.
+										Years more of digital performance and growth expertise we have.
 									</span>
 								</div>
 							</div>

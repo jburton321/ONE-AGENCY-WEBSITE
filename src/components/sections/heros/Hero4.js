@@ -4,6 +4,8 @@ import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import FunfactSingle from "@/components/shared/funfact/FunfactSingle";
 import Image from "next/image";
 import Link from "next/link";
+import { heroCopy } from "@/data/home-copy";
+const copy = heroCopy[4];
 
 const Hero4 = () => {
 	return (
@@ -14,17 +16,14 @@ const Hero4 = () => {
 						<div className="hero-content-area">
 							<div className="hero-content-three">
 								<h1 className="hero-title text-anim">
-									Tailored <span>consulting</span> for the modern business
+									{copy.title} <span>{copy.titleHighlight}</span>
 								</h1>
 								<div className="desc wow fadeInUp" data-wow-delay="0.1s">
-									<p>
-										Transform your business with expert consultancy services our
-										team of seasoned consultants unparalleled.
-									</p>
+									<p>{copy.desc}</p>
 								</div>
 								<div className="btn-area wow fadeInUp" data-wow-delay="0.3s">
 									<ButtonPrimary
-										text={"Free consultation"}
+										text={copy.cta}
 										url={"/contact"}
 										className={"hero-button"}
 									/>

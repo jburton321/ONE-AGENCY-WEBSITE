@@ -2,6 +2,8 @@ import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import PopupVideo from "@/components/shared/popup-video/PopupVideo";
 import Image from "next/image";
 import Link from "next/link";
+import { aboutCopy } from "@/data/home-copy";
+const copy = aboutCopy[4];
 
 const About4 = () => {
 	return (
@@ -47,28 +49,22 @@ const About4 = () => {
 										className="sub-title wow fadeInUp"
 										data-wow-delay="0.3s"
 									>
-										// OUR COMOPANY
+										// {copy.subTitle}
 									</span>
 									<h2 className="sec-title text-anim">
-										Crafting in success tailored solution on ultimate business
-										challenges.
+										{copy.secTitle}
 									</h2>
 								</div>
 								<div className="about-feature-item">
 									<div className="feature-box">
 										<div className="desc wow fadeInUp" data-wow-delay="0.7s">
-											<p>
-												Our mission is to empoiwers businesses off our all size
-												too thrive in an businesses changing marketplaces. In
-												toda dynamicis business environment, the key to the
-												success lies Our mission is to empower.
-											</p>
+											<p>{copy.desc}</p>
 										</div>
 										<div
 											className="about-button wow fadeInUp"
 											data-wow-delay="0.9s"
 										>
-											<ButtonPrimary text={"Read more"} url={"/contact"} />
+											<ButtonPrimary text={copy.cta} url={"/contact"} />
 										</div>
 									</div>
 									<div className="feature-box">

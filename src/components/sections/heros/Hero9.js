@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { heroCopy } from "@/data/home-copy";
+const copy = heroCopy[9];
+
 const Hero9 = () => {
 	const marqueeItems = [
 		"Expertise",
@@ -82,28 +85,25 @@ const Hero9 = () => {
 										className="hero-sub-title  wow fadeInRight"
 										data-wow-delay="0s"
 									>
-										NUMBE #1 SOLVER
+										{copy.subTitle}
 									</div>
 									<h1 className="hero-title text-anim">
-										Expert guidance for ambitious companies
+										{copy.title}
 									</h1>
 									<div className="desc wow fadeInUp" data-wow-delay="0.1s">
-										<p>
-											Transform your business with expert consultancy services
-											our team of seasoned consultants unparalleled.
-										</p>
+										<p>{copy.desc}</p>
 									</div>
 									<div
 										className="h9-hero-action wow fadeInUp"
 										data-wow-delay="0.3s"
 									>
 										<ButtonPrimary
-											text={"Free consultation"}
+											text={copy.cta}
 											url={"/contact"}
 											className={"hero-button"}
 										/>
 										<Link className="service-button text-btn" href="/contact">
-											Learn more here<i className="tji-angle-right"></i>
+											{copy.ctaLink}<i className="tji-angle-right"></i>
 										</Link>
 									</div>
 								</div>

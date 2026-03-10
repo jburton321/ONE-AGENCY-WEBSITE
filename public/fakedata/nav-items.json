@@ -144,7 +144,7 @@
 					{
 						"id": 5,
 						"name": "Error 404",
-						"path": "/error",
+						"path": "/error-page",
 						"badge": null
 					},
 					{
@@ -173,53 +173,6 @@
 					},
 					{ "id": 10, "name": "Term & conditions", "path": "#", "badge": null }
 				]
-			},
-			{
-				"id": 3,
-				"name": "Shop pages",
-				"path": "/shop",
-				"items": [
-					{ "id": 1, "name": "Shop", "path": "/shop", "badge": "HOT" },
-					{
-						"id": 2,
-						"name": "Shop details",
-						"path": "/shop/1",
-						"badge": null
-					},
-					{ "id": 3, "name": "Cart", "path": "/cart", "badge": null },
-					{
-						"id": 4,
-						"name": "Checkout",
-						"path": "/checkout",
-						"badge": null
-					},
-					{
-						"id": 5,
-						"name": "My account",
-						"path": "#",
-						"badge": null
-					},
-					{
-						"id": 6,
-						"name": "Wishlist",
-						"path": "/wishlist",
-						"badge": "NEW"
-					},
-					{
-						"id": 7,
-						"name": "Login",
-						"path": "/login",
-						"badge": null
-					},
-					{
-						"id": 8,
-						"name": "Registration",
-						"path": "/password",
-						"badge": null
-					},
-					{ "id": 9, "name": "Order confirm", "path": "#", "badge": null },
-					{ "id": 10, "name": "Coming soon", "path": "#", "badge": null }
-				]
 			}
 		]
 	},
@@ -230,19 +183,19 @@
 		"submenu": [
 			{
 				"id": 1,
-				"name": "Customer acquisition",
+				"name": "Customer Acquisition",
 				"icon": "tji-optimization",
 				"path": "/services/1"
 			},
 			{
 				"id": 2,
-				"name": "Performance creative",
+				"name": "Performance Creative",
 				"icon": "tji-strategic",
 				"path": "/services/2"
 			},
 			{
 				"id": 3,
-				"name": "Software development & integration",
+				"name": "Software Development & Integration",
 				"icon": "tji-leadership",
 				"path": "/services/3"
 			},
@@ -260,19 +213,19 @@
 			},
 			{
 				"id": 6,
-				"name": "Data solutions",
+				"name": "Data Solutions",
 				"icon": "tji-process",
 				"path": "/services/6"
 			},
 			{
 				"id": 7,
-				"name": "Remarketing & retargeting",
+				"name": "Remarketing & Retargeting",
 				"icon": "tji-strategic",
 				"path": "/services/7"
 			},
 			{
 				"id": 8,
-				"name": "Marketing automation",
+				"name": "Marketing Automation",
 				"icon": "tji-leadership",
 				"path": "/services/8"
 			}

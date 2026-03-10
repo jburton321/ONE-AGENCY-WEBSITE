@@ -1,6 +1,9 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import ProcessItems from "@/components/shared/process/ProcessItems";
+import { processCopy } from "@/data/home-copy";
+
 const Process3 = () => {
+	const copy = processCopy[3];
 	return (
 		<section id="tj-process" className="h7-process  section-space">
 			<div className="container">
@@ -9,14 +12,14 @@ const Process3 = () => {
 						<div className="process-left">
 							<div className="sec-heading style-3">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.2s">
-									HOW IT’S WORK
+									{copy.subTitle}
 								</span>
 								<h2 className="sec-title text-anim">
-									Three steps transform for our business
+									{copy.secTitle}
 								</h2>
 							</div>
 							<div className="case-btn wow fadeInUp" data-wow-delay="0.4s">
-								<ButtonPrimary text={"Know more"} url={"/contact"} />
+								<ButtonPrimary text={"Request Demo"} url={"/contact"} />
 							</div>
 
 							{/* <!-- banner img --> */}

@@ -20,7 +20,7 @@ const TestimonialsCard5 = ({ testimonial, type }) => {
 				</div>
 				<div className="desc">
 					<p>
-						“Our experience on Solvior has been nothing short of exceptional.
+						“Our experience on ONE Agency has been nothing short of exceptional.
 						From one, their team demonstrated a deep understanding of our
 						industry and quickly identified key areas for improvement
 						recommendations From one, their team demonstrated.”

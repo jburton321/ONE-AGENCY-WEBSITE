@@ -3,6 +3,7 @@ import ServiceCard6 from "@/components/shared/cards/ServiceCard6";
 import getALlServices from "@/libs/getALlServices";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { servicesCopy } from "@/data/home-copy";
 
 const Services6 = () => {
 	const services = getALlServices()?.slice(0, 4);
@@ -14,10 +15,10 @@ const Services6 = () => {
 					<div className="col">
 						<div className="sec-heading style-2 text-center">
 							<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-								// OUR SOLUTIONS
+								// {servicesCopy.subTitleTransformative}
 							</span>
 							<h2 className="sec-title text-anim">
-								Our best comprehensive service offer.
+								{servicesCopy.secTitleComprehensive}
 							</h2>
 						</div>
 						.

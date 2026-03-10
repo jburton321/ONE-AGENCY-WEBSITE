@@ -10,9 +10,10 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 	const homeNav = makeActiveLink(navItems[0]);
 	const pagesNav = makeActiveLink(navItems[1]);
 	const serviceNav = makeActiveLink(navItems[2]);
-	const portfolioNav = makeActiveLink(navItems[3]);
-	const blogNav = makeActiveLink(navItems[4]);
-	const contactNav = makeActiveLink(navItems[5]);
+	const solutionsNav = makeActiveLink(navItems[3]);
+	const portfolioNav = makeActiveLink(navItems[4]);
+	const blogNav = makeActiveLink(navItems[5]);
+	const contactNav = makeActiveLink(navItems[6]);
 
 	return (
 		<div
@@ -146,8 +147,7 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 													Need help? <br /> Feel free contact us
 												</h3>
 												<p>
-													Our mission is to empowers businesses off all size in
-													an businesses.
+													Delivering a Symphony of Digital Performance.
 												</p>
 											</div>
 											<div className="cta-btn">
@@ -176,38 +176,251 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 						serviceNav?.isActive ? "current-menu-ancestor" : ""
 					}`}
 				>
-					<Link href={serviceNav?.path ? serviceNav?.path : "/"}>
-						{serviceNav?.name}
-					</Link>
-					<ul className="sub-menu  mega-menu-service">
-						{serviceNav?.submenu?.length
-							? serviceNav?.submenu?.map((item, idx) => (
-									<li key={idx}>
-										<Link
-											className="mega-menu-service-single"
-											href={item?.path ? item?.path : "/"}
+					<Link href="javascript:void(0)">{serviceNav?.name}</Link>
+					<ul className="sub-menu header__mega-menu mega-menu mega-menu-pages">
+						<li>
+							<div className="mega-menu-wrapper">
+								<div className="mega-menu-pages-single">
+									<div className="mega-menu-pages-single-inner">
+										<h6 className="mega-menu-title">Paid Media</h6>
+										<div className="mega-menu-list">
+											{serviceNav?.submenu?.length
+												? serviceNav?.submenu?.slice(0, 2).map((item, idx) => (
+														<Link
+															key={idx}
+															href={item?.path ? item?.path : "/"}
+															className={item?.isActive ? "active" : ""}
+														>
+															{item?.name ?? ""}
+														</Link>
+												  ))
+												: ""}
+										</div>
+									</div>
+								</div>
+								<div className="mega-menu-pages-single">
+									<div className="mega-menu-pages-single-inner">
+										<h6 className="mega-menu-title">Programmatic & Data</h6>
+										<div className="mega-menu-list">
+											{serviceNav?.submenu?.length
+												? serviceNav?.submenu?.slice(2, 4).map((item, idx) => (
+														<Link
+															key={idx}
+															href={item?.path ? item?.path : "/"}
+															className={item?.isActive ? "active" : ""}
+														>
+															{item?.name ?? ""}
+														</Link>
+												  ))
+												: ""}
+										</div>
+									</div>
+								</div>
+								<div className="mega-menu-pages-single">
+									<div className="mega-menu-pages-single-inner">
+										<h6 className="mega-menu-title">Creative & ORM</h6>
+										<div className="mega-menu-list">
+											{serviceNav?.submenu?.length
+												? serviceNav?.submenu?.slice(4, 6).map((item, idx) => (
+														<Link
+															key={idx}
+															href={item?.path ? item?.path : "/"}
+															className={item?.isActive ? "active" : ""}
+														>
+															{item?.name ?? ""}
+														</Link>
+												  ))
+												: ""}
+										</div>
+									</div>
+								</div>
+								<div className="mega-menu-pages-single">
+									<div className="mega-menu-pages-single-inner">
+										<h6 className="mega-menu-title">Technology</h6>
+										<div className="mega-menu-list">
+											{serviceNav?.submenu?.length
+												? serviceNav?.submenu?.slice(6, 8).map((item, idx) => (
+														<Link
+															key={idx}
+															href={item?.path ? item?.path : "/"}
+															className={item?.isActive ? "active" : ""}
+														>
+															{item?.name ?? ""}
+														</Link>
+												  ))
+												: ""}
+										</div>
+									</div>
+								</div>
+								<div className="col-12 col-lg-3 mega-menu-pages-single">
+									<div className="mega-menu-pages-single-inner">
+										<div
+											className="tj-sidebar-cta"
+											style={{
+												backgroundImage: "url('/images/blog/widget-cta.webp')",
+											}}
 										>
-											{" "}
-											<span className="mega-menu-service-icon">
-												<i
-													className={
-														item?.icon ? item?.icon : "tji-optimization"
-													}
-												></i>
-											</span>{" "}
-											<span className="mega-menu-service-title">
-												{item?.name
-													? item?.name
-													: "Business process optimization"}
-											</span>{" "}
-											<span className="mega-menu-service-nav">
-												<i className="tji-arrow-right"></i>
-												<i className="tji-arrow-right"></i>
-											</span>
-										</Link>
-									</li>
-							  ))
-							: ""}
+											<div className="content">
+												<div className="icon">
+													<Image
+														src="/images/shapes/widget-cta-icon.png"
+														alt="image"
+														width={55}
+														height={55}
+													/>
+												</div>
+												<h3>
+													Need help? <br /> Feel free contact us
+												</h3>
+												<p>
+													Delivering a Symphony of Digital Performance.
+												</p>
+											</div>
+											<div className="cta-btn">
+												<ButtonPrimary
+													text={"Get in touch"}
+													url={"/contact"}
+													className={"white-btn"}
+												/>
+												<Image
+													className="shapes move-anim-2"
+													src="/images/shapes/carrow.png"
+													alt="shape"
+													width={115}
+													height={117}
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li
+					className={`has-dropdown ${
+						solutionsNav?.isActive ? "current-menu-ancestor" : ""
+					}`}
+				>
+					<Link href="javascript:void(0)">{solutionsNav?.name}</Link>
+					<ul className="sub-menu header__mega-menu mega-menu mega-menu-pages">
+						<li>
+							<div className="mega-menu-wrapper">
+								<div className="mega-menu-pages-single">
+									<div className="mega-menu-pages-single-inner">
+										<h6 className="mega-menu-title">Acquisition & Creative</h6>
+										<div className="mega-menu-list">
+											{solutionsNav?.submenu?.length
+												? solutionsNav?.submenu?.slice(0, 2).map((item, idx) => (
+														<Link
+															key={idx}
+															href={item?.path ? item?.path : "/"}
+															className={item?.isActive ? "active" : ""}
+														>
+															{item?.name ?? ""}
+														</Link>
+												  ))
+												: ""}
+										</div>
+									</div>
+								</div>
+								<div className="mega-menu-pages-single">
+									<div className="mega-menu-pages-single-inner">
+										<h6 className="mega-menu-title">Engagement & Growth</h6>
+										<div className="mega-menu-list">
+											{solutionsNav?.submenu?.length
+												? solutionsNav?.submenu?.slice(2, 4).map((item, idx) => (
+														<Link
+															key={idx}
+															href={item?.path ? item?.path : "/"}
+															className={item?.isActive ? "active" : ""}
+														>
+															{item?.name ?? ""}
+														</Link>
+												  ))
+												: ""}
+										</div>
+									</div>
+								</div>
+								<div className="mega-menu-pages-single">
+									<div className="mega-menu-pages-single-inner">
+										<h6 className="mega-menu-title">Data & Platform</h6>
+										<div className="mega-menu-list">
+											{solutionsNav?.submenu?.length
+												? solutionsNav?.submenu?.slice(4, 6).map((item, idx) => (
+														<Link
+															key={idx}
+															href={item?.path ? item?.path : "/"}
+															className={item?.isActive ? "active" : ""}
+														>
+															{item?.name ?? ""}
+														</Link>
+												  ))
+												: ""}
+										</div>
+									</div>
+								</div>
+								<div className="mega-menu-pages-single">
+									<div className="mega-menu-pages-single-inner">
+										<h6 className="mega-menu-title">AI & Integration</h6>
+										<div className="mega-menu-list">
+											{solutionsNav?.submenu?.length
+												? solutionsNav?.submenu?.slice(6, 8).map((item, idx) => (
+														<Link
+															key={idx}
+															href={item?.path ? item?.path : "/"}
+															className={item?.isActive ? "active" : ""}
+														>
+															{item?.name ?? ""}
+														</Link>
+												  ))
+												: ""}
+										</div>
+									</div>
+								</div>
+								<div className="col-12 col-lg-3 mega-menu-pages-single">
+									<div className="mega-menu-pages-single-inner">
+										<div
+											className="tj-sidebar-cta"
+											style={{
+												backgroundImage: "url('/images/blog/widget-cta.webp')",
+											}}
+										>
+											<div className="content">
+												<div className="icon">
+													<Image
+														src="/images/shapes/widget-cta-icon.png"
+														alt="image"
+														width={55}
+														height={55}
+													/>
+												</div>
+												<h3>
+													Need help? <br /> Feel free contact us
+												</h3>
+												<p>
+													Delivering a Symphony of Digital Performance.
+												</p>
+											</div>
+											<div className="cta-btn">
+												<ButtonPrimary
+													text={"Get in touch"}
+													url={"/contact"}
+													className={"white-btn"}
+												/>
+												<Image
+													className="shapes move-anim-2"
+													src="/images/shapes/carrow.png"
+													alt="shape"
+													width={115}
+													height={117}
+												/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</li>
 				<li

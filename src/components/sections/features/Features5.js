@@ -4,9 +4,11 @@ import FeatureCard2 from "@/components/shared/cards/FeatureCard2";
 import tjSvgAnimation from "@/libs/tjSvgAnimation";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import { featuresCopy } from "@/data/home-copy";
 
 const Features5 = () => {
 	const animContainerRef = useRef();
+	const copy = featuresCopy[5];
 	useGSAP(
 		() => {
 			tjSvgAnimation(animContainerRef);
@@ -15,8 +17,8 @@ const Features5 = () => {
 	);
 	const features = [
 		{
-			title: "Quick solutions",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[0].title,
+			desc: copy.cards[0].desc,
 			icon: (
 				<svg
 					width="81"
@@ -62,8 +64,8 @@ const Features5 = () => {
 			),
 		},
 		{
-			title: "Expert advice",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[1].title,
+			desc: copy.cards[1].desc,
 			icon: (
 				<svg
 					width="80"
@@ -123,8 +125,8 @@ const Features5 = () => {
 			),
 		},
 		{
-			title: "Strategic planning",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[2].title,
+			desc: copy.cards[2].desc,
 			icon: (
 				<svg
 					width="80"

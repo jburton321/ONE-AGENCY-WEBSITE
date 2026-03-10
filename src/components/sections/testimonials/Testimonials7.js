@@ -45,7 +45,7 @@ const Testimonials7 = () => {
 										className="sub-title wow fadeInUp"
 										data-wow-delay="0.3s"
 									>
-										Happy clients all over the world with solvior
+										Happy clients all over the world with ONE Agency
 									</span>
 								</div>
 							</div>

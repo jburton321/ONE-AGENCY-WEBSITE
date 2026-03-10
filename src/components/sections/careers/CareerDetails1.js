@@ -37,28 +37,27 @@ const CareerDetails1 = ({ currentItemId }) => {
 								<div className="tj-entry-content">
 									<h4 className="text-anim">Job Description</h4>
 									<p className="wow fadeInUp" data-wow-delay="0.1s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset, innovative approaches. Our consulting of our missing
-										empower businesses of all sizes to thrive. Committed to the
-										delivering exceptional in the values through our strategic
-										inset, i approaches empower. Our mission is to empowers
-										businesses
+										ONE Agency hyperscales digital growth through customer
+										acquisition, performance creative and MarTech. We deliver a
+										symphony of digital performance and actionable data
+										analytics for brands of all sizes. Committed to delivering
+										exceptional value through our proprietary tech stack and
+										strategic, innovative approaches. We empower brands to
+										thrive in changing marketplaces.
 									</p>
 									<p className="wow fadeInUp" data-wow-delay="0.3s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset
+										ONE Agency is your ultimate new customer acquisition, UX/CX
+										and MarTech performance agency partner. We are committed to
+										delivering exceptional value through strategic insight.
 									</p>
 									<div className="tj-check-list">
 										<h4 className="text-anim">Requirements</h4>
 										<p className="wow fadeInUp" data-wow-delay="0.1s">
-											Formulating and implementing business goals. We begin with
-											an in-depth analysis of your business and market to
-											identify opportunities and challenges. From there, we work
-											with you to define clear, actionable.
+											Supporting live media spend, impressions and lead data.
+											We begin with an in-depth analysis of your digital
+											performance and audience to identify quick wins and
+											longer-term objectives. From there, we work with you to
+											define clear, actionable goals.
 										</p>
 									</div>
 									<div
@@ -69,48 +68,46 @@ const CareerDetails1 = ({ currentItemId }) => {
 											<li>
 												<i className="tji-double-check"></i>
 												<span>
-													Clear vision and direction for your business for
-													consultings.
+													Clear vision for paid media, creative and conversion
+													optimization.
 												</span>
 											</li>
 											<li>
 												<i className="tji-double-check"></i>
 												<span>
-													Enhanced ability to anticipate and respond to market
-													changes.
+													Ability to anticipate and respond to performance and
+													market changes.
 												</span>
 											</li>
 											<li>
 												<i className="tji-double-check"></i>
 												<span>
-													Data-driven decision-making for strategic planning
+													Data-driven decision-making for campaign and strategy
 													execution.
 												</span>
 											</li>
 											<li>
 												<i className="tji-double-check"></i>
 												<span>
-													Structured approach to achieving your business goals.
+													Structured approach to achieving digital growth goals.
 												</span>
 											</li>
 										</ul>
 									</div>
 									<p className="wow fadeInUp" data-wow-delay="0.3s">
-										Our mission is to empowers businesses size to thrive in an
-										businesses ever changing marketplace. We are committed to
-										the delivering exceptionals the value through strategic
-										inset, innovative approaches. Our consulting of our missing
-										empower businesses of all sizes to delivering delivering
-										exceptional.
+										ONE Agency helps brands transform the future of intelligent
+										marketing. We are committed to delivering exceptional
+										results through our strategic insight and innovative
+										approaches. Our team empowers businesses of all sizes to
+										deliver exceptional performance.
 									</p>
 									<div className="tj-check-list">
 										<h4 className="text-anim">Responsibilities</h4>
 										<p className="wow fadeInUp" data-wow-delay="0.1s">
-											Our mission is to empowers businesses size to thrive in an
-											businesses ever changing marketplace. We are committed to
-											the delivering exceptionals the value through strategic
-											inset. Committed to the delivering exceptional in the
-											values through our strategic inset, i approaches empower.
+											ONE Agency hyperscales digital growth through customer
+											acquisition and performance creative. We are committed
+											to delivering exceptional value through our strategic
+											insight. Committed to delivering exceptional value through our proprietary tech stack and data analytics.
 										</p>
 										<ul className="wow fadeInUp" data-wow-delay="0.3s">
 											<li>
@@ -118,15 +115,15 @@ const CareerDetails1 = ({ currentItemId }) => {
 												expertise
 											</li>
 											<li>
-												<i className="tji-double-check"></i> Journey and
-												commitment to explained
+												<i className="tji-double-check"></i> Process and
+												commitment to excellence
 											</li>
 											<li>
 												<i className="tji-double-check"></i> Meet our team and
 												learn
 											</li>
 											<li>
-												<i className="tji-double-check"></i> Meet our team
+												<i className="tji-double-check"></i> Join ONE Agency
 											</li>
 										</ul>
 									</div>
@@ -138,9 +135,9 @@ const CareerDetails1 = ({ currentItemId }) => {
 								>
 									<div className="tj-tags tagcloud">
 										<span className="tag__title">Tags:</span>
-										<Link href="/careers">Business</Link>
-										<Link href="/careers">Consulting</Link>
-										<Link href="/careers">Insights</Link>
+										<Link href="/careers">Digital Growth</Link>
+										<Link href="/careers">Performance</Link>
+										<Link href="/careers">MarTech</Link>
 									</div>
 									<div className="tj-socials_share">
 										<span className="tag__title">Share:</span>
@@ -211,7 +208,7 @@ const CareerDetails1 = ({ currentItemId }) => {
 									<ul>
 										<li>
 											<span className="first-child">Category</span>
-											<span>Business consultant</span>
+											<span>Digital marketing</span>
 										</li>
 										<li>
 											<span className="first-child">Number</span>
@@ -219,11 +216,11 @@ const CareerDetails1 = ({ currentItemId }) => {
 										</li>
 										<li>
 											<span className="first-child">Company</span>
-											<span>Solvior</span>
+											<span>ONE Agency</span>
 										</li>
 										<li>
 											<span className="first-child">Website</span>
-											<span>www.example.com</span>
+											<span>oneagency.com</span>
 										</li>
 										<li>
 											<span className="first-child">Salary</span>

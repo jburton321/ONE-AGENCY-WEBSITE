@@ -5,9 +5,11 @@ import FeatureCard3 from "@/components/shared/cards/FeatureCard3";
 import tjSvgAnimation from "@/libs/tjSvgAnimation";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import { featuresCopy } from "@/data/home-copy";
 
 const Features6 = () => {
 	const animContainerRef = useRef();
+	const copy = featuresCopy[6];
 	useGSAP(
 		() => {
 			tjSvgAnimation(animContainerRef);
@@ -16,8 +18,8 @@ const Features6 = () => {
 	);
 	const features = [
 		{
-			title: "Quick solutions",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[0].title,
+			desc: copy.cards[0].desc,
 			icon: (
 				<svg
 					width="81"
@@ -63,8 +65,8 @@ const Features6 = () => {
 			),
 		},
 		{
-			title: "Expert advice",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[1].title,
+			desc: copy.cards[1].desc,
 			icon: (
 				<svg
 					width="80"
@@ -124,8 +126,8 @@ const Features6 = () => {
 			),
 		},
 		{
-			title: "Strategic planning",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[2].title,
+			desc: copy.cards[2].desc,
 			icon: (
 				<svg
 					width="80"
@@ -158,8 +160,8 @@ const Features6 = () => {
 			),
 		},
 		{
-			title: "Efficient operations",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[3].title,
+			desc: copy.cards[3].desc,
 			icon: (
 				<svg
 					width="80"
@@ -213,7 +215,7 @@ const Features6 = () => {
 
 							<div className="desc wow fadeInUp" data-wow-delay="0.7s">
 								<p>
-									Our mission is to empower businesses of thrive in solutions
+									ONE Agency hyperscales digital growth through customer acquisition and performance creative. We deliver solutions
 								</p>
 							</div>
 							<div className="wow fadeInUp" data-wow-delay="0.8s">

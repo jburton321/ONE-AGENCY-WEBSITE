@@ -24,8 +24,8 @@ const Faq2 = () => {
 												data-bs-target="#collapseOne-1"
 												aria-expanded="false"
 											>
-												<span>01.</span> How do consultants add value to a
-												business?
+												<span>01.</span> How does ONE Agency add value to
+												digital growth?
 											</button>
 										</h2>
 										{/* <!-- content --> */}
@@ -36,14 +36,13 @@ const Faq2 = () => {
 										>
 											<div className="accordion-body">
 												<p>
-													You might need a consultant if you're facing specifics
-													challenges, such as stagnating our growth, operational
-													inefficiencies, strategic issues, or if you lack
-													expertise in certain areas. Consultants can also help
-													if you need an objective perspective on your business
-													businesses ever changing marketplace. We are committed
-													to the delivering exceptional the value through
-													strategic.
+													ONE Agency combines a proprietary tech stack,
+													persuasive creative and actionable data analytics to
+													hyperscale customer acquisition and performance. We
+													help if you face stagnating growth, conversion
+													bottlenecks or lack in-house expertise in paid media
+													and MarTech. We deliver exceptional value through
+													strategic, data-driven campaigns.
 												</p>
 											</div>
 										</div>
@@ -60,8 +59,8 @@ const Faq2 = () => {
 												data-bs-target="#collapseOne-2"
 												aria-expanded="false"
 											>
-												<span>02.</span> How do I know if my business needs a
-												consultant?
+												<span>02.</span> How do I know if I need a performance
+												marketing partner?
 											</button>
 										</h2>
 										{/* <!-- content --> */}
@@ -72,14 +71,12 @@ const Faq2 = () => {
 										>
 											<div className="accordion-body">
 												<p>
-													You might need a consultant if you're facing specifics
-													challenges, such as stagnating our growth, operational
-													inefficiencies, strategic issues, or if you lack
-													expertise in certain areas. Consultants can also help
-													if you need an objective perspective on your business
-													businesses ever changing marketplace. We are committed
-													to the delivering exceptional the value through
-													strategic.
+													You might need a partner if you're facing specific
+													challenges: stagnating lead gen, low conversion rates,
+													operational gaps in paid search or social, or lack of
+													expertise in MarTech. ONE Agency can provide an
+													objective perspective on your digital strategy and
+													deliver exceptional value through our strategic approach.
 												</p>
 											</div>
 										</div>
@@ -96,8 +93,8 @@ const Faq2 = () => {
 												data-bs-target="#collapseOne-3"
 												aria-expanded="false"
 											>
-												<span>03.</span> How do business consultants charge for
-												their services?
+												<span>03.</span> How does ONE Agency charge for
+												its services?
 											</button>
 										</h2>
 										{/* <!-- content --> */}
@@ -108,14 +105,12 @@ const Faq2 = () => {
 										>
 											<div className="accordion-body">
 												<p>
-													You might need a consultant if you're facing specifics
-													challenges, such as stagnating our growth, operational
-													inefficiencies, strategic issues, or if you lack
-													expertise in certain areas. Consultants can also help
-													if you need an objective perspective on your business
-													businesses ever changing marketplace. We are committed
-													to the delivering exceptional the value through
-													strategic.
+													We offer flexible engagement models aligned to your
+													goals: media spend under management, project-based
+													creative and integration work, or retainer partnerships.
+													We begin with an objective view of your performance and
+													market to identify quick wins. Contact us for a
+													discussion and Request Demo to see our approach.
 												</p>
 											</div>
 										</div>
@@ -132,7 +127,7 @@ const Faq2 = () => {
 												data-bs-target="#collapseOne-4"
 												aria-expanded="false"
 											>
-												<span>04.</span> Can a business consultant guarantee
+												<span>04.</span> Can ONE Agency guarantee
 												results?
 											</button>
 										</h2>
@@ -144,14 +139,12 @@ const Faq2 = () => {
 										>
 											<div className="accordion-body">
 												<p>
-													You might need a consultant if you're facing specifics
-													challenges, such as stagnating our growth, operational
-													inefficiencies, strategic issues, or if you lack
-													expertise in certain areas. Consultants can also help
-													if you need an objective perspective on your business
-													businesses ever changing marketplace. We are committed
-													to the delivering exceptional the value through
-													strategic.
+													We focus on outcomes and work backwards from your
+													objectives: qualified leads, conversions, and scalable
+													growth. While no agency can guarantee specific results,
+													we deliver a symphony of digital performance with
+													real-time visibility in myONE Dash and proven methodology
+													for customer acquisition and performance creative.
 												</p>
 											</div>
 										</div>
@@ -168,8 +161,8 @@ const Faq2 = () => {
 												data-bs-target="#collapseOne-5"
 												aria-expanded="false"
 											>
-												<span>05.</span> How can I measure the success of a
-												consulting engagement?
+												<span>05.</span> How can I measure success of an
+												engagement?
 											</button>
 										</h2>
 										{/* <!-- content --> */}
@@ -180,14 +173,12 @@ const Faq2 = () => {
 										>
 											<div className="accordion-body">
 												<p>
-													You might need a consultant if you're facing specifics
-													challenges, such as stagnating our growth, operational
-													inefficiencies, strategic issues, or if you lack
-													expertise in certain areas. Consultants can also help
-													if you need an objective perspective on your business
-													businesses ever changing marketplace. We are committed
-													to the delivering exceptional the value through
-													strategic.
+													We align to your KPIs: qualified leads generated, media
+													spend under management, impressions delivered,
+													e-commerce transactions and conversion rates. Real-time
+													visibility into leads, CPL, CPA and creative performance
+													is available in myONE Dash. We work with you to define
+													clear, actionable metrics from day one.
 												</p>
 											</div>
 										</div>
@@ -202,7 +193,7 @@ const Faq2 = () => {
 
 							<div className="sec-heading h7-section-heading style-4">
 								<h2 className="sec-title text-anim">
-									Questions and answers...
+									Digital growth questions and answers.
 								</h2>
 							</div>
 						</div>

@@ -1,101 +1,101 @@
 [
-	{
-		"id": 1,
-		"name": "Savanah Nguyen",
-		"desig": "Manager",
-		"img": "/images/team/team-1.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 2,
-		"name": "Esther Howard",
-		"desig": "Co. Founder",
-		"img": "/images/team/team-2.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 3,
-		"name": "Kristin Watson",
-		"desig": "Sr. Manager",
-		"img": "/images/team/team-3.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 4,
-		"name": "Guy Hawkins",
-		"desig": "Sr. Marketer",
-		"img": "/images/team/team-4.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 5,
-		"name": "Darlene Robert",
-		"desig": "Sr. Dsigner",
-		"img": "/images/team/team-5.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 6,
-		"name": "Ronald Richards",
-		"desig": "Sr. Marketer",
-		"img": "/images/team/team-6.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 7,
-		"name": "Savannah Nguyen",
-		"desig": "Sr. Excutive",
-		"img": "/images/team/team-7.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 8,
-		"name": "Jerome Bell",
-		"desig": "Sr. Developer",
-		"img": "/images/team/team-8.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-
-	{
-		"id": 9,
-		"name": "Darlene Robert",
-		"desig": "Sr. Dsigner",
-		"img": "/images/team/team-5.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 10,
-		"name": "Ronald Richards",
-		"desig": "Sr. Marketer",
-		"img": "/images/team/team-6.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 11,
-		"name": "Savannah Nguyen",
-		"desig": "Sr. Excutive",
-		"img": "/images/team/team-7.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 12,
-		"name": "Jerome Bell",
-		"desig": "Sr. Developer",
-		"img": "/images/team/team-8.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 13,
-		"name": "Savanah Nguyen",
-		"desig": "Manager",
-		"img": "/images/team/team-1.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	},
-	{
-		"id": 14,
-		"name": "Esther Howard",
-		"desig": "Co. Founder",
-		"img": "/images/team/team-2.webp",
-		"imgLarge": "/images/team/team-single.webp"
-	}
+  {
+    "id": 1,
+    "name": "John & Marcia Rowley",
+    "desig": "Investors & Managing Members",
+    "slug": "john-marcia-rowley",
+    "img": "/images/team/team-1.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "John and Marcia Rowley are founders and former owners of International Cruise & Excursions, Inc. (ICE) and now Co-Founders and Executive Chairmen of ONE (Open Network Exchange). The Rowleys have a diverse investment portfolio encompassing established and emerging companies across various industries, including real estate, finance, travel, wine, tech and several charity foundations."
+  },
+  {
+    "id": 2,
+    "name": "Jason Tremblay",
+    "desig": "Chief Executive Officer",
+    "slug": "jason-tremblay",
+    "img": "/images/team/team-2.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "A digital marketing and advertising visionary, Jason has built and sold several B2C marketing companies in travel & hospitality. He leverages his expertise in performance marketing and the development of proprietary, human-centric tech platforms to drive new customer acquisition for clients. Prior to launching ONE Agency with the Rowleys, Jason and Brooke founded & led two of INC 5000's Fastest-Growing companies. He currently oversees ONE Agency's expansion and innovation and is also the CEO of VacationVIP.com, a contact center and marketing company delivering quality tours to some of the timeshare industry's largest brands. Jason is always looking for \"what's in it for the customer,\" believes in the Golden Rule and leads with positivity, passion, and his eye on what customers want next."
+  },
+  {
+    "id": 3,
+    "name": "Brooke Tremblay",
+    "desig": "Chief Creative Officer",
+    "slug": "brooke-tremblay",
+    "img": "/images/team/team-3.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "Brooke is a creative, communications and digital advertising strategist, passionate about unifying messaging with persuasive, conversion-centric design. A brand-builder and content architect, Brooke's expertise at ONE Agency lies in determining exactly what will move a user to take action and making that central to client campaigns. Prior to 2014 when she joined forces with Jason to create and grow both a digital advertising agency and contact center, Brooke led the social media marketing, public relations, internal communications and corporate social responsibility programs for one of the largest privately held vacation ownership companies. Brooke leads with endless energy, focus, heart and determination – and loves to make the team laugh."
+  },
+  {
+    "id": 4,
+    "name": "Elizabeth Hale",
+    "desig": "Chief Financial Officer",
+    "slug": "elizabeth-hale",
+    "img": "/images/team/team-4.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "Elizabeth Hale is the CFO of ONE Agency and the CEO and founder of eeCPA tax and accounting firm. Elizabeth transforms growth-minded companies and for more than 30 years has helped entrepreneurs, investors, family offices and commercial real estate developers pinpoint new and creative avenues for growth."
+  },
+  {
+    "id": 5,
+    "name": "Ezra Herrera",
+    "desig": "Chief Technology Officer",
+    "slug": "ezra-herrera",
+    "img": "/images/team/team-5.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "Ezra, a high-performance software architect and entrepreneur with 28+ years of experience, thrives on creating innovative and smart software solutions. As an accomplished developer at heart, he crafts highly efficient and user-friendly platforms. Throughout his career, Ezra has built impressive solutions for renowned Latin American institutions including Microsoft SWAT Team. Currently, as CTO at ONE Agency, he leads the architecture of myONE Dash and spearheads all the technology that fuels our creative campaigns. Ezra leads his team of developers with a big heart and vision."
+  },
+  {
+    "id": 6,
+    "name": "Luis Silvestre",
+    "desig": "VP Of Software Engineering",
+    "slug": "luis-silvestre",
+    "img": "/images/team/team-6.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "Luis Silvestre leads ONE Agency's software engineering practice, ensuring our platforms and integrations deliver reliability and scale for client campaigns."
+  },
+  {
+    "id": 7,
+    "name": "Oskar Diaz de Leon",
+    "desig": "Chief Commercial Officer",
+    "slug": "oskar-diaz-de-leon",
+    "img": "/images/team/team-7.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "Oskar is a digital growth fanatic and has mastered the ability to turn complex ideas into solutions tailored to specific client needs. The former VP of Digital Solutions for a privately held resort development company, with a background in software engineering and MBA in technology management, Oskar has led teams focused on customer engagement and product innovation and development. Today, as Chief Commercial Officer for the ONE companies, he makes clients' visions of digital expansion possible by connecting the dots and bringing the right people together."
+  },
+  {
+    "id": 8,
+    "name": "Suzanne Mora",
+    "desig": "Senior Vice President, Agency Operations",
+    "slug": "suzanne-mora",
+    "img": "/images/team/team-8.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "Suzanne (Suz) is an operational leader and manages ONE Agency's production team, as well as ensures client success. Always thinking about roadmaps, what-ifs, internal workflow, client dependencies, low-hanging fruit and how to expedite go-to-market timelines, Suz makes execution top of mind for the team. Her expertise extends from everyday operations and project management to customer journey mapping. She is known for her demos, how-to videos and tutorials, and for always lending a helping hand to our clients and team members. In the midst of working with eccentric creatives, Suz has a firm grip on reality and leads with persistence, process and genuine care to always do the right thing."
+  },
+  {
+    "id": 9,
+    "name": "Jonathan Floril",
+    "desig": "Vice President Paid Media",
+    "slug": "jonathan-floril",
+    "img": "/images/team/team-1.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "Jonathan is a performance marketer and paid media strategist with a focus on delivering targeted, personalized and engaging advertising with measurable ROI. While holding many roles during his career, he worked with brands like Topps Cards, The Biltmore Hotel and 4Ocean. Jonathan was an early pioneer in Facebook Ads having started managing paid media campaigns for businesses at the infancy of the platform. Under his leadership, the ONE Agency team manages paid social and paid search campaigns for some of the most well-known brands in hospitality and beyond, staying ahead of the competition in the ever-changing digital ecosystem."
+  },
+  {
+    "id": 10,
+    "name": "Ryan Forrester",
+    "desig": "VP of Digital Strategy",
+    "slug": "ryan-forrester",
+    "img": "/images/team/team-2.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "Ryan is an accomplished digital marketing leader with over 20 years of experience, known for his balanced and effective marketing leadership approach. He leverages marketing analysis and data-driven processes to build high-performing campaigns that drive high ROI and ROAS for our clients. Ryan's expertise is focused on strategic marketing, managing large budgets and complex campaigns, and building high-performing customer journeys. His broad marketing experience encompasses branding, SEM, SEO, social media, and email marketing. Throughout his career, he has worked with a diverse range of clients and brands, including Sandals, Westgate Resorts, Travel + Leisure, FedEx, Motorola, Kimberly Clark, GlaxoSmithKline and more. Ryan also brings 14 years of resort marketing specific experience to ONE Agency."
+  },
+  {
+    "id": 11,
+    "name": "Jon Epstein",
+    "desig": "Vice President, Agency Growth",
+    "slug": "jon-epstein",
+    "img": "/images/team/team-3.webp",
+    "imgLarge": "/images/team/team-single.webp",
+    "bio": "Jon is a results-oriented leader with over 30 years of success in building and managing high-performing sales organizations. His proven track record spans multiple industries, including business development, hospitality, automotive, and financial services. Jon is passionate about creating customer-centric cultures that drive significant ROI. His experience encompasses both brick-and-mortar operations (e.g., a decade at Expedia Holdings) and digital-first environments (leading guest services for Expedia Inc. across North America). By focusing on the growth of customers, partners, and internal teams, Jon consistently delivers exceptional results."
+  }
 ]

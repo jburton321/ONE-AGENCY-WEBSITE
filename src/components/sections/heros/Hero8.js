@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { heroCopy } from "@/data/home-copy";
+const copy = heroCopy[8];
 
 const Hero8 = () => {
 	return (
@@ -16,8 +18,8 @@ const Hero8 = () => {
 								<div className="h8-hero-title-wrapper">
 									<h1 className="slider-title h8-hero-title hero-text-anim">
 										{" "}
-										INNOVATE
-										<span>CONSULTING</span> <span>HERE</span>
+										{copy.title}
+										<span>{copy.titleHighlight}</span> <span>{copy.titleEnd}</span>
 									</h1>
 
 									<div
@@ -52,10 +54,7 @@ const Hero8 = () => {
 									<div className="h8-hero-desc-icon">
 										<i className="tji-arrow-bown"></i>
 									</div>
-									<p>
-										Transform your ideal business with expert consultancy
-										services today.
-									</p>
+									<p>{copy.desc}</p>
 								</div>
 								<div
 									className="h8-hero-banner d-none d-md-block wow fadeInUp"

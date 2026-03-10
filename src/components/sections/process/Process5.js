@@ -1,6 +1,7 @@
 "use client";
 import modifyNumber from "@/libs/modifyNumber";
 import { useEffect, useRef } from "react";
+import { processCopy } from "@/data/home-copy";
 
 const Process5 = () => {
 	const containerRef = useRef(null);
@@ -62,10 +63,10 @@ const Process5 = () => {
 					<div className="col-12">
 						<div className="sec-heading sec-heading-centered style-2">
 							<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-								[ OUR WORKING PROCESS ]
+								[ {processCopy[5].subTitle} ]
 							</span>
 							<h2 className="sec-title text-anim">
-								Three steps transform for our business
+								{processCopy[5].secTitle}
 							</h2>
 						</div>
 					</div>

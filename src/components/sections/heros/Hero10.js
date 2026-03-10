@@ -2,6 +2,9 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import DoughnutChart from "@/components/shared/charts/DoughnutChart";
 import FunfactSingle from "@/components/shared/funfact/FunfactSingle";
+import { heroCopy } from "@/data/home-copy";
+const copy = heroCopy[10];
+
 const Hero10 = () => {
 	const marqueeItems = [
 		"Expertise",
@@ -32,14 +35,11 @@ const Hero10 = () => {
 						<div className="slider-wrapper h10-hero-wrapper">
 							<div className="h10-hero-content">
 								<h1 className="hero-title hero-text-anim">
-									Expert business
-									<span>consulting</span>
+									{copy.title}
+									<span>{copy.titleHighlight}</span>
 								</h1>
 								<div className="desc  wow fadeInUp" data-wow-delay="1.2s">
-									<p>
-										Transform your business with expert consultancy services our
-										team of seasoned consultants unparalleled.
-									</p>
+									<p>{copy.desc}</p>
 								</div>
 
 								<div
@@ -60,14 +60,14 @@ const Hero10 = () => {
 											<div className="h10-hero-counter-item">
 												<FunfactSingle currentValue={810} isSup={"+"} />
 												<span className="sub-title">
-													Helping ambitious our brand turn into a success
+													{copy.statLabel}
 												</span>
 											</div>
 										</div>
 									</div>
 									<div className="h10-hero-stat-action">
 										<ButtonPrimary
-											text={"Get free consultation"}
+											text={copy.cta}
 											url={"/about"}
 										/>
 									</div>

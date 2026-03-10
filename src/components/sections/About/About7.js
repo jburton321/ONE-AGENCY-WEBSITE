@@ -1,6 +1,8 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import FunfactSingle from "@/components/shared/funfact/FunfactSingle";
 import Image from "next/image";
+import { aboutCopy } from "@/data/home-copy";
+const copy = aboutCopy[7];
 
 const About7 = () => {
 	return (
@@ -23,66 +25,46 @@ const About7 = () => {
 							</div>
 							<div className="about-content-five">
 								<div className="sec-heading h7-section-heading style-4">
-									<span
-										className="sub-title wow fadeInUp"
-										data-wow-delay="0.3s"
-									>
-										ABOUT OUR COMPANY
-									</span>
-									<h2 className="sec-title text-anim">
-										Building new businesses through our strategic & expert
-										guidance
-									</h2>
-								</div>
-								<div className="desc wow fadeInUp" data-wow-delay="0.7s">
-									<p>
-										Our mission is to empowers businesses off our all size
-										thrives an businesses changing marketplaces. In today
-										dynamics business environment, the key to the success lies
-										Our mission is to empower
-									</p>
-								</div>
-								<div className="about-float-area">
-									<div
-										className="about-float-area-left wow fadeInUp"
-										data-wow-delay="0.4s"
-									>
-										<div className="check-list-one ">
-											<ul>
-												<li>
-													<i className="tji-double-check"></i>Expertise and
-													experience
+<span
+									className="sub-title wow fadeInUp"
+									data-wow-delay="0.3s"
+								>
+									{copy.subTitle}
+								</span>
+								<h2 className="sec-title text-anim">
+									{copy.secTitle}
+								</h2>
+							</div>
+							<div className="desc wow fadeInUp" data-wow-delay="0.7s">
+								<p>{copy.desc}</p>
+							</div>
+							<div className="about-float-area">
+								<div
+									className="about-float-area-left wow fadeInUp"
+									data-wow-delay="0.4s"
+								>
+									<div className="check-list-one ">
+										<ul>
+											{copy.list.map((item, i) => (
+												<li key={i}>
+													<i className="tji-double-check"></i> {item}
 												</li>
-												<li>
-													<i className="tji-double-check"></i>Client Centric
-													approach
-												</li>
-												<li>
-													<i className="tji-double-check"></i>Commitment
-													excellences
-												</li>
-											</ul>
+											))}
+										</ul>
 											<div className="vr-line"></div>
 											<ul>
-												<li>
-													<i className="tji-double-check"></i>Expertise and
-													experience
-												</li>
-												<li>
-													<i className="tji-double-check"></i>Client Centric
-													approach
-												</li>
-												<li>
-													<i className="tji-double-check"></i>Commitment
-													excellences
-												</li>
+												{copy.list.map((item, i) => (
+													<li key={i}>
+														<i className="tji-double-check"></i> {item}
+													</li>
+												))}
 											</ul>
 										</div>
 										<div
 											className="btn-area wow fadeInUp"
 											data-wow-delay="0.5s"
 										>
-											<ButtonPrimary text={"Know more"} url={"/about"} />
+											<ButtonPrimary text={copy.cta} url={"/about"} />
 											<div className="client-experience">
 												<ul className="images-thumb">
 													<li className="wow fadeInLeft" data-wow-delay="0.6s">

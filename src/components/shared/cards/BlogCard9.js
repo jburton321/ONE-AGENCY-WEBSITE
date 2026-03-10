@@ -19,7 +19,7 @@ const BlogCard9 = ({ blog, idx }) => {
 						<Link href={`/blogs/${id}`}>{title}</Link>
 					</h3>
 					<div className="excerpt">
-						Our consultant specialize in delivering rapid, actionable solutions
+						ONE Agency specializes in delivering rapid, actionable solutions
 						that address your most pressing business on challenges.
 					</div>
 

@@ -5,7 +5,7 @@ const History1 = () => {
 	const history = [
 		{
 			title: "Founding and early years",
-			desc: "Our mission is to empowers businesses off all size to thrive in an businesses ever changing marketplace. We are committed to the delivering exceptional in the value.",
+			desc: "ONE Agency was founded to hyperscale digital growth for brands through customer acquisition and performance creative. We are committed to delivering exceptional value through our symphony of digital performance.",
 			images: [
 				"/images/history/history-1.webp",
 				"/images/history/history-2.webp",
@@ -14,7 +14,7 @@ const History1 = () => {
 		},
 		{
 			title: "Expansion and growth",
-			desc: "Our mission is to empowers businesses off all size to thrive in an businesses ever changing marketplace. We are committed to the delivering exceptional in the value.",
+			desc: "We expanded our proprietary tech stack and data analytics capabilities to serve brands across paid search, paid social and programmatic. Delivering exceptional value through strategic, innovative performance marketing.",
 			images: [
 				"/images/history/history-3.webp",
 				"/images/history/history-4.webp",
@@ -23,7 +23,7 @@ const History1 = () => {
 		},
 		{
 			title: "Innovation and industry leadership",
-			desc: "Our mission is to empowers businesses off all size to thrive in an businesses ever changing marketplace. We are committed to the delivering exceptional in the value.",
+			desc: "ONE Agency became a leader in intelligent marketing, combining persuasive creative with MarTech integration and real-time visibility. We empower brands of all sizes to thrive in changing marketplaces.",
 			images: [
 				"/images/history/history-5.webp",
 				"/images/history/history-6.webp",
@@ -32,7 +32,7 @@ const History1 = () => {
 		},
 		{
 			title: "Global expansion and diversification",
-			desc: "Our mission is to empowers businesses off all size to thrive in an businesses ever changing marketplace. We are committed to the delivering exceptional in the value.",
+			desc: "We opened locations in Orlando, Scottsdale, Uxbridge and Cancún. Our solutions now span Customer Acquisition, Performance Creative, Data, AI Solutions and Accelerated API Integrations for global brands.",
 			images: [
 				"/images/history/history-7.webp",
 				"/images/history/history-8.webp",
@@ -41,7 +41,7 @@ const History1 = () => {
 		},
 		{
 			title: "Looking ahead",
-			desc: "Our mission is to empowers businesses off all size to thrive in an businesses ever changing marketplace. We are committed to the delivering exceptional in the value.",
+			desc: "Transforming the future of intelligent marketing. All you need is ONE. We remain committed to delivering exceptional value through customer acquisition, performance creative and actionable data analytics.",
 			images: [
 				"/images/history/history-9.webp",
 				"/images/history/history-1.webp",

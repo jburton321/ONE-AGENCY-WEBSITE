@@ -25,10 +25,9 @@ const Contact1 = () => {
 									</h2>
 									<div className="desc wow fadeInUp" data-wow-delay="0.3s">
 										<p>
-											Our mission is to empowers businesses off our all size too
-											thrive in an businesses ever changing marketplaces. In
-											today's dynamicis business environment, the key to success
-											lies.
+											ONE Agency hyperscales digital growth through customer acquisition
+											and performance creative. We deliver a symphony of digital
+											performance and actionable data analytics. Request Demo to get started.
 										</p>
 									</div>
 									<div
@@ -53,8 +52,8 @@ const Contact1 = () => {
 								<div className="contact-item">
 									<div className="contact-text">
 										<i className="fa-solid fa-envelope"></i>
-										<Link href="mailto:support@solvior.com">
-											support@solvior.com
+										<Link href="mailto:info@oneagency.com">
+											info@oneagency.com
 										</Link>
 									</div>
 									<div className="contact-text">
@@ -104,13 +103,13 @@ const Contact1 = () => {
 														<FormSelect
 															id={"contact"}
 															className="nice-select"
-															defaultValue={"Chose a option"}
+															defaultValue={"Choose an option"}
 															items={[
-																{ value: "1", name: "Chose a option" },
-																{ value: "2", name: "IT consulting" },
-																{ value: "3", name: "Market research" },
-																{ value: "4", name: "Business process" },
-																{ value: "5", name: "Business consultancy" },
+																{ value: "1", name: "Choose an option" },
+																{ value: "2", name: "Paid Search" },
+																{ value: "3", name: "Paid Social" },
+																{ value: "4", name: "Performance Creative" },
+																{ value: "5", name: "Marketing Automation" },
 																{ value: "6", name: "Digital marketing" },
 																{ value: "7", name: "Branding design" },
 															]}

@@ -24,7 +24,7 @@ const Cta3 = () => {
 								/>
 							</div>
 							<div className="h4-cta-newsletter">
-								<h2 className="title text-anim">Subscribe to our newsletter</h2>
+								<h2 className="title text-anim">Join ONE Agency—get insights and updates</h2>
 								<div
 									className="newsletter-form style-4 wow fadeInUp"
 									data-wow-delay="0.4s"

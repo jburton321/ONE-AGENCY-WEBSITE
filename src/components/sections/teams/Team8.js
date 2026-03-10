@@ -6,7 +6,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Team8 = () => {
-	const teamMembers = getTeamMembers()?.slice(0, 5);
+	const teamMembers = getTeamMembers()?.slice(0, 8);
 
 	return (
 		<section className="tj-team-area section-space">
@@ -16,9 +16,9 @@ const Team8 = () => {
 						<div className="sec-heading text-center">
 							<div className="sec-text">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-									Meet our team
+									Leadership
 								</span>
-								<h2 className="sec-title text-anim">Expert team members</h2>
+								<h2 className="sec-title text-anim">The ONE Agency leadership team</h2>
 							</div>
 						</div>
 					</div>

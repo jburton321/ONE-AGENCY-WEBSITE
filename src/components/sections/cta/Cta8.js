@@ -13,7 +13,7 @@ const Cta8 = () => {
 									className="newsletter-title wow fadeInUp"
 									data-wow-delay="0.2s"
 								>
-									<h3 className="title">Subscribe to our newsletter</h3>
+									<h3 className="title">Join ONE Agency—get insights and updates</h3>
 								</div>
 								<div
 									className="newsletter-form wow fadeInUp"

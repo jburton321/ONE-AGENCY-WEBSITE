@@ -4,6 +4,8 @@ import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import PopupVideo from "@/components/shared/popup-video/PopupVideo";
 import Image from "next/image";
 import Link from "next/link";
+import { heroCopy } from "@/data/home-copy";
+const copy = heroCopy[5];
 
 const Hero5 = () => {
 	return (
@@ -16,19 +18,16 @@ const Hero5 = () => {
 								className="hero-subtitle  wow fadeInRight"
 								data-wow-delay="0s"
 							>
-								NUMBER <span>#1</span> SOLVER AGENCY
+								{copy.subtitle}
 							</span>
 							<h1 className="hero-title text-anim">
-								Proven <span>consulting</span> for modern global enterprises
+								{copy.title} <span>{copy.titleHighlight}</span>
 							</h1>
 							<div className="desc wow fadeInUp" data-wow-delay="0.1s">
-								<p>
-									Transform your business with expert consultancy services our
-									team of seasoned consultants unparalleled.
-								</p>
+								<p>{copy.desc}</p>
 							</div>
 							<div className="wow fadeInUp" data-wow-delay="0.3s">
-								<ButtonPrimary text={"Free consultation"} url={"/contact"} />
+								<ButtonPrimary text={copy.cta} url={"/contact"} />
 							</div>
 						</div>
 						<div className="hero-images-box-four">

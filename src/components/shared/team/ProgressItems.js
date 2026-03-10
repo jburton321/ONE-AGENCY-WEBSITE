@@ -12,14 +12,14 @@ const ProgressItems = () => {
 		<div className="team-details__skills" ref={animContainerRef}>
 			<h4 className="team-details__subtitle text-anim">Professional skills</h4>
 			<p className="wow fadeInUp" data-wow-delay="0.3s">
-				Our mission is to empowers businesses size to thrivie in ses ever
-				changing marketplace We are committed to the delivering exceptionals the
-				value thro strategic ins innovative approaches. Our consulting of our
-				missing empowers
+				ONE Agency hyperscales digital growth through customer acquisition
+				and performance creative. We are committed to delivering exceptional
+				value through strategic insight and innovative approaches. We empower
+				brands of all sizes to thrive in changing marketplaces.
 			</p>
 			<ul className="tj-progress__list wow fadeInUp" data-wow-delay="0.5s">
 				<li>
-					<h6 className="tj-progress__title">Business consultants</h6>
+					<h6 className="tj-progress__title">Performance marketing</h6>
 					<div className="tj-progress">
 						<div className="tj-progress__bar" data-perchant="90">
 							<span className="tj-progress__perchant">90%</span>
@@ -35,7 +35,7 @@ const ProgressItems = () => {
 					</div>
 				</li>
 				<li>
-					<h6 className="tj-progress__title">Business strategy</h6>
+					<h6 className="tj-progress__title">Digital strategy</h6>
 					<div className="tj-progress">
 						<div className="tj-progress__bar" data-perchant="88">
 							<span className="tj-progress__perchant">88%</span>

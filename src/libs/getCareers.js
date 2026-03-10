@@ -1,7 +1,7 @@
 import careers from "../../public/fakedata/careers";
 
 const getCareers = () => {
-	return careers;
+	return Array.isArray(careers) ? careers : [];
 };
 
 export default getCareers;

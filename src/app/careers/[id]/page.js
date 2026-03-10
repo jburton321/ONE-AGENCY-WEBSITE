@@ -31,5 +31,5 @@ export default async function CareerDetails({ params }) {
 	);
 }
 export async function generateStaticParams() {
-	return items?.map(({ id }) => ({ id: id.toString() }));
+	return Array.isArray(items) ? items.map(({ id }) => ({ id: id.toString() })) : [];
 }

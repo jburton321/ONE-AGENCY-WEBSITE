@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/thumbs";
 import "venobox/dist/venobox.min.css";
 import "./assets/css/animate.css";
+import "./assets/css/bootstrap.min.css";
 import "./assets/css/font-awesome-pro.min.css";
 import "./assets/css/glightbox.min.css";
 import "./assets/css/meanmenu.css";
@@ -16,7 +17,6 @@ import "./assets/css/nice-select2.css";
 import "./assets/css/odometer-theme-default.css";
 import "./assets/css/solvior-icons.css";
 import "./globals.scss";
-import "./assets/css/bootstrap.min.css";
 import "./tailwind.css";
 export const metadata = {
 	title: "ONE Agency – Digital Growth & Performance Marketing | Orlando",

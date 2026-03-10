@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { heroCopy } from "@/data/home-copy";
+const copy = heroCopy[3];
 
 const Hero3 = () => {
 	return (
@@ -9,8 +11,7 @@ const Hero3 = () => {
 					<div className="hero-wrapper-two">
 						<div className="hero-content-two">
 							<h1 className="hero-title text-anim">
-								Maximize business success with proven strategies &{" "}
-								<span>Expert advice</span>
+								{copy.title} <span>{copy.titleHighlight}</span>
 							</h1>
 							<div className="desc wow fadeInUp" data-wow-delay="0.1s">
 								<p>
@@ -23,7 +24,7 @@ const Hero3 = () => {
 											style={{ height: "auto" }}
 										/>
 									</span>
-									Establish your business growth with our expert consultancy.
+									{copy.desc}
 								</p>
 							</div>
 						</div>

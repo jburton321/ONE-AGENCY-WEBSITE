@@ -1,29 +1,54 @@
 [
   {
     "id": 1,
-    "title": "Customer acquisition",
-    "titleLarge": "Hyperscale your customer growth with lead gen, e-commerce and persuasive creative that converts.",
-    "img": "/images/service/h1-service-1.webp",
+    "title": "Paid Search",
+    "titleLarge": "Scale search campaigns with data-driven bidding and creative that converts.",
+    "img": "/images/service/h1-service-4.webp",
     "imgSm": "/img/icons/services-10-icons-1.svg",
-    "bgImg": "/images/service/h1-service-1.webp",
-    "bgImg2": "/images/service/h3-service-1.webp",
-    "iconName": "tji-optimization",
+    "bgImg": "/images/service/h1-service-4.webp",
+    "bgImg2": "/images/service/h3-service-4.webp",
+    "iconName": "tji-business",
     "svg": "/images/icons/service-1.svg",
-    "desc": "Leverage 3rd-party data and persuasive creative to generate highly qualified leads. Frictionless e-commerce journeys and speed to market.",
-    "shortDesc": "Get more customers, optimize for conversions and generate qualified leads with our proven methodology.",
-    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics. We work backwards from your objectives to identify quick wins and longer-term tactics that propel brands to lasting market leadership.",
-    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash. We integrate with your existing platforms so campaigns go live quickly and start delivering measurable results.",
+    "desc": "Maximize ROI on Google, Bing and beyond with audience targeting and conversion tracking.",
+    "shortDesc": "Scale search campaigns with data-driven bidding and creative that converts.",
+    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics.",
+    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash.",
     "totalProject": "10 Projects",
+    "serviceOverview": "We align paid search strategy with your goals: keyword research, audience targeting, and conversion tracking on Google, Bing and beyond. Campaigns are optimized for CPL and CPA with real-time visibility in myONE Dash.",
+    "keyFeatures": [
+      "Google and Bing search campaigns with smart bidding",
+      "Audience and intent-based targeting",
+      "Conversion tracking and attribution",
+      "Real-time performance in myONE Dash",
+      "Ongoing optimization for CPL and ROI"
+    ],
+    "featureCards": [
+      {
+        "title": "Smart bidding & keywords",
+        "desc": "Keyword research, match types and bid strategies tuned for Google and Bing so you capture intent and control CPA.",
+        "icon": "tji-optimization"
+      },
+      {
+        "title": "Audience & conversion tracking",
+        "desc": "Audience targeting and conversion tracking so you see which searches and segments drive leads and sales.",
+        "icon": "tji-results"
+      },
+      {
+        "title": "Real-time search performance",
+        "desc": "CPL, CPA and search metrics in myONE Dash so you can optimize and scale with full visibility.",
+        "icon": "tji-personalization"
+      }
+    ],
     "process": {
-      "title": "How we partner",
-      "titleLarge": "From strategy to execution we work backwards from your objectives to quick wins and long-term growth.",
+      "title": "How We Partner",
+      "titleLarge": "From strategy to execution we work backwards from your objectives.",
       "img": "/img/services/service-details.jpg",
       "imgSm": "/img/icons/services-10-icons-2.svg",
       "bgImg": "/images/service/h1-service-1.webp",
       "bgImg2": "/images/service/h3-service-1.webp",
-      "iconName": "flaticon-ux-design ",
+      "iconName": "flaticon-ux-design",
       "svg": "/images/icons/service-1.svg",
-      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
+      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns.",
       "processItems": [
         "Define goals and KPIs",
         "Audit data and creative",
@@ -36,29 +61,54 @@
   },
   {
     "id": 2,
-    "title": "Performance creative",
-    "titleLarge": "Immersive creative that attracts and converts. Thumb-stopping ads, landing pages and campaigns that move prospects.",
-    "img": "/images/service/h1-service-2.webp",
-    "imgSm": "/img/icons/services-10-icons-3.svg",
-    "bgImg": "/images/service/h1-service-2.webp",
-    "bgImg2": "/images/service/h3-service-2.webp",
-    "iconName": "tji-strategic",
-    "svg": "/images/icons/service-2.svg",
-    "desc": "Our creative savants architect websites, landing pages and campaigns that speak to your ideal prospect in the way that moves them.",
-    "shortDesc": "Create an insatiable brand, expand audience strategy and improve ad CTR with conversion-centric design.",
-    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics. We work backwards from your objectives to identify quick wins and longer-term tactics that propel brands to lasting market leadership.",
-    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash. We integrate with your existing platforms so campaigns go live quickly and start delivering measurable results.",
-    "totalProject": "11 Projects",
+    "title": "Paid Social",
+    "titleLarge": "Reach and convert audiences across Meta, LinkedIn, TikTok and more.",
+    "img": "/images/service/h1-service-5.webp",
+    "imgSm": "/img/icons/services-10-icons-1.svg",
+    "bgImg": "/images/service/h1-service-5.webp",
+    "bgImg2": "/images/service/h3-service-1.webp",
+    "iconName": "tji-executive",
+    "svg": "/images/icons/service-1.svg",
+    "desc": "Paid social campaigns built for awareness, consideration and direct response.",
+    "shortDesc": "Reach and convert audiences across Meta, LinkedIn, TikTok and more.",
+    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics.",
+    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash.",
+    "totalProject": "10 Projects",
+    "serviceOverview": "We run paid social campaigns across Meta, LinkedIn, TikTok and more—built for awareness, consideration and direct response. Creative and targeting are aligned to your audience and KPIs, with full-funnel reporting in myONE Dash.",
+    "keyFeatures": [
+      "Meta, LinkedIn, TikTok and cross-platform paid social",
+      "Audience targeting and lookalike expansion",
+      "Creative testing and conversion optimization",
+      "Lead and sales attribution",
+      "Real-time reporting and scaling"
+    ],
+    "featureCards": [
+      {
+        "title": "Cross-platform paid social",
+        "desc": "Campaigns on Meta, LinkedIn, TikTok and more—unified strategy and creative so you reach the right audiences everywhere.",
+        "icon": "tji-executive"
+      },
+      {
+        "title": "Audience & creative testing",
+        "desc": "Lookalikes, interests and creative tests so you scale what converts and improve CPL and ROAS.",
+        "icon": "tji-strategic"
+      },
+      {
+        "title": "Full-funnel reporting",
+        "desc": "From awareness to conversion in myONE Dash so you see performance by platform, audience and creative.",
+        "icon": "tji-results"
+      }
+    ],
     "process": {
-      "title": "How we partner",
-      "titleLarge": "From strategy to execution we work backwards from your objectives to quick wins and long-term growth.",
+      "title": "How We Partner",
+      "titleLarge": "From strategy to execution we work backwards from your objectives.",
       "img": "/img/services/service-details.jpg",
-      "imgSm": "/img/icons/services-10-icons-1.svg",
+      "imgSm": "/img/icons/services-10-icons-2.svg",
       "bgImg": "/images/service/h1-service-1.webp",
       "bgImg2": "/images/service/h3-service-1.webp",
       "iconName": "flaticon-design",
-      "svg": "/images/icons/service-2.svg",
-      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
+      "svg": "/images/icons/service-1.svg",
+      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns.",
       "processItems": [
         "Define goals and KPIs",
         "Audit data and creative",
@@ -71,29 +121,54 @@
   },
   {
     "id": 3,
-    "title": "Software development & integration",
-    "titleLarge": "Integrate with virtually every platform, system and interface. Get live and start delivering results.",
-    "img": "/images/service/h1-service-3.webp",
+    "title": "Programmatic",
+    "titleLarge": "Programmatic advertising at scale with precision targeting and real-time optimization.",
+    "img": "/images/service/h1-service-1.webp",
     "imgSm": "/img/icons/services-10-icons-1.svg",
-    "bgImg": "/images/service/h1-service-3.webp",
-    "bgImg2": "/images/service/h3-service-3.webp",
-    "iconName": "tji-leadership",
-    "svg": "/images/icons/service-3.svg",
-    "desc": "Our proprietary myONE Dash suite delivers real-time insights, CRM, automations and data—integrating seamlessly with any platform.",
-    "shortDesc": "Launch campaigns fast, reverse-append data, integrate disparate systems and view real-time performance.",
-    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics. We work backwards from your objectives to identify quick wins and longer-term tactics that propel brands to lasting market leadership.",
-    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash. We integrate with your existing platforms so campaigns go live quickly and start delivering measurable results.",
-    "totalProject": "15 Projects",
+    "bgImg": "/images/service/h1-service-1.webp",
+    "bgImg2": "/images/service/h3-service-1.webp",
+    "iconName": "tji-optimization",
+    "svg": "/images/icons/service-1.svg",
+    "desc": "Reach audiences across the open web with data-driven programmatic campaigns.",
+    "shortDesc": "Programmatic advertising at scale with precision targeting.",
+    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics.",
+    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash.",
+    "totalProject": "10 Projects",
+    "serviceOverview": "We plan and execute programmatic campaigns across the open web with precision targeting and real-time optimization. Audiences are built from data and behavior so your message reaches the right users at the right time.",
+    "keyFeatures": [
+      "Open web and PMP programmatic buying",
+      "Data-driven audience and frequency control",
+      "Creative and format optimization",
+      "Attribution and cross-channel reporting",
+      "Real-time optimization and scale"
+    ],
+    "featureCards": [
+      {
+        "title": "Open web & PMP scale",
+        "desc": "Programmatic buying across the open web and private marketplaces so you reach audiences at scale with controlled frequency.",
+        "icon": "tji-optimization"
+      },
+      {
+        "title": "Data-driven audiences",
+        "desc": "Audience and frequency rules driven by data and behavior so your spend goes to the right users.",
+        "icon": "tji-process"
+      },
+      {
+        "title": "Attribution & reporting",
+        "desc": "Cross-channel attribution and reporting in myONE Dash so you see programmatic impact on leads and sales.",
+        "icon": "tji-results"
+      }
+    ],
     "process": {
-      "title": "How we partner",
-      "titleLarge": "From strategy to execution we work backwards from your objectives to quick wins and long-term growth.",
+      "title": "How We Partner",
+      "titleLarge": "From strategy to execution we work backwards from your objectives.",
       "img": "/img/services/service-details.jpg",
-      "imgSm": "/img/icons/services-10-icons-1.svg",
+      "imgSm": "/img/icons/services-10-icons-2.svg",
       "bgImg": "/images/service/h1-service-1.webp",
       "bgImg2": "/images/service/h3-service-1.webp",
       "iconName": "flaticon-design",
-      "svg": "/images/icons/service-3.svg",
-      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
+      "svg": "/images/icons/service-1.svg",
+      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns.",
       "processItems": [
         "Define goals and KPIs",
         "Audit data and creative",
@@ -106,29 +181,54 @@
   },
   {
     "id": 4,
-    "title": "Paid Search",
-    "titleLarge": "Scale search campaigns with data-driven bidding and creative that converts.",
-    "img": "/images/service/h1-service-4.webp",
+    "title": "Marketing Automation",
+    "titleLarge": "Streamline nurture flows, lead scoring and lifecycle campaigns.",
+    "img": "/images/service/h1-service-3.webp",
     "imgSm": "/img/icons/services-10-icons-1.svg",
-    "bgImg": "/images/service/h1-service-4.webp",
-    "bgImg2": "/images/service/h3-service-4.webp",
-    "iconName": "tji-business",
-    "svg": "/images/icons/service-1.svg",
-    "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
-    "shortDesc": "Maximize ROI on Google, Bing and beyond with audience targeting and conversion tracking.",
-    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics. We work backwards from your objectives to identify quick wins and longer-term tactics that propel brands to lasting market leadership.",
-    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash. We integrate with your existing platforms so campaigns go live quickly and start delivering measurable results.",
-    "totalProject": "10 Projects",
+    "bgImg": "/images/service/h1-service-3.webp",
+    "bgImg2": "/images/service/h3-service-3.webp",
+    "iconName": "tji-leadership",
+    "svg": "/images/icons/service-3.svg",
+    "desc": "Connect channels and automate journeys for scalable growth.",
+    "shortDesc": "Streamline nurture flows, lead scoring and lifecycle campaigns.",
+    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics.",
+    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash.",
+    "totalProject": "15 Projects",
+    "serviceOverview": "We design and implement marketing automation that connects your channels and automates nurture flows, lead scoring and lifecycle campaigns. Workflows are built around your data and goals so you scale without losing personalization.",
+    "keyFeatures": [
+      "Email, SMS and multi-channel automation",
+      "Lead scoring and lifecycle segments",
+      "CRM and ad platform integrations",
+      "Nurture and re-engagement flows",
+      "Reporting and optimization in myONE Dash"
+    ],
+    "featureCards": [
+      {
+        "title": "Multi-channel automation",
+        "desc": "Email, SMS and cross-channel workflows that trigger from behavior so every touchpoint is relevant and timely.",
+        "icon": "tji-leadership"
+      },
+      {
+        "title": "Lead scoring & lifecycle",
+        "desc": "Scoring and lifecycle segments so you nurture leads and customers with the right message at the right stage.",
+        "icon": "tji-personalization"
+      },
+      {
+        "title": "CRM & platform integration",
+        "desc": "Integrations with your CRM and ad platforms so automation and reporting stay in sync with your stack.",
+        "icon": "tji-results"
+      }
+    ],
     "process": {
-      "title": "How we partner",
-      "titleLarge": "From strategy to execution we work backwards from your objectives to quick wins and long-term growth.",
+      "title": "How We Partner",
+      "titleLarge": "From strategy to execution we work backwards from your objectives.",
       "img": "/img/services/service-details.jpg",
-      "imgSm": "/img/icons/services-10-icons-1.svg",
+      "imgSm": "/img/icons/services-10-icons-2.svg",
       "bgImg": "/images/service/h1-service-1.webp",
       "bgImg2": "/images/service/h3-service-1.webp",
       "iconName": "flaticon-design",
-      "svg": "/images/icons/service-1.svg",
-      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
+      "svg": "/images/icons/service-3.svg",
+      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns.",
       "processItems": [
         "Define goals and KPIs",
         "Audit data and creative",
@@ -141,29 +241,54 @@
   },
   {
     "id": 5,
-    "title": "Paid Social",
-    "titleLarge": "Reach and convert audiences across Meta, LinkedIn, TikTok and more.",
-    "img": "/images/service/h1-service-5.webp",
-    "imgSm": "/img/icons/services-10-icons-1.svg",
-    "bgImg": "/images/service/h1-service-5.webp",
-    "bgImg2": "/images/service/h3-service-1.webp",
-    "iconName": "tji-executive",
-    "svg": "/images/icons/service-1.svg",
-    "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
-    "shortDesc": "Paid social campaigns built for awareness, consideration and direct response.",
-    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics. We work backwards from your objectives to identify quick wins and longer-term tactics that propel brands to lasting market leadership.",
-    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash. We integrate with your existing platforms so campaigns go live quickly and start delivering measurable results.",
-    "totalProject": "10 Projects",
+    "title": "Creative",
+    "titleLarge": "Thumb-stopping ads, landing pages and campaigns that move prospects.",
+    "img": "/images/service/h1-service-2.webp",
+    "imgSm": "/img/icons/services-10-icons-3.svg",
+    "bgImg": "/images/service/h1-service-2.webp",
+    "bgImg2": "/images/service/h3-service-2.webp",
+    "iconName": "tji-strategic",
+    "svg": "/images/icons/service-2.svg",
+    "desc": "Our creative savants architect websites, landing pages and campaigns that speak to your ideal prospect.",
+    "shortDesc": "Thumb-stopping ads, landing pages and campaigns that move prospects.",
+    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics.",
+    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash.",
+    "totalProject": "11 Projects",
+    "serviceOverview": "We produce thumb-stopping ads, landing pages and full campaigns that move prospects. Creative is built around your audience and conversion goals, with testing and optimization so messaging and design perform at scale.",
+    "keyFeatures": [
+      "Digital ads, landing pages and full-funnel creative",
+      "Brand and conversion-centered design (CCD)",
+      "A/B testing and creative optimization",
+      "Video and static asset production",
+      "Retargeting and social creative"
+    ],
+    "featureCards": [
+      {
+        "title": "Conversion-centered design",
+        "desc": "Ads and landing pages built with CCD principles so focus, structure and trust drive conversions.",
+        "icon": "tji-strategic"
+      },
+      {
+        "title": "Creative testing & optimization",
+        "desc": "A/B tests and creative iteration so you scale what works and improve CTR and conversion rates.",
+        "icon": "tji-results"
+      },
+      {
+        "title": "Video & static production",
+        "desc": "Video and static assets for every channel so your brand and offers look and perform their best.",
+        "icon": "tji-personalization"
+      }
+    ],
     "process": {
-      "title": "How we partner",
-      "titleLarge": "From strategy to execution we work backwards from your objectives to quick wins and long-term growth.",
+      "title": "How We Partner",
+      "titleLarge": "From strategy to execution we work backwards from your objectives.",
       "img": "/img/services/service-details.jpg",
       "imgSm": "/img/icons/services-10-icons-1.svg",
       "bgImg": "/images/service/h1-service-1.webp",
       "bgImg2": "/images/service/h3-service-1.webp",
       "iconName": "flaticon-design",
-      "svg": "/images/icons/service-1.svg",
-      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
+      "svg": "/images/icons/service-2.svg",
+      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns.",
       "processItems": [
         "Define goals and KPIs",
         "Audit data and creative",
@@ -176,29 +301,54 @@
   },
   {
     "id": 6,
-    "title": "Data solutions",
-    "titleLarge": "Clean data, attribution and dashboards that power better decisions.",
+    "title": "Online Reputation Management",
+    "titleLarge": "Build and protect your brand reputation across channels.",
     "img": "/images/service/h1-service-6.webp",
     "imgSm": "/img/icons/services-10-icons-1.svg",
     "bgImg": "/images/service/h1-service-6.webp",
     "bgImg2": "/images/service/h3-service-1.webp",
     "iconName": "tji-process",
     "svg": "/images/icons/service-1.svg",
-    "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
-    "shortDesc": "Integrations, reporting and analytics so you see what drives growth.",
-    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics. We work backwards from your objectives to identify quick wins and longer-term tactics that propel brands to lasting market leadership.",
-    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash. We integrate with your existing platforms so campaigns go live quickly and start delivering measurable results.",
+    "desc": "Monitor, respond and improve how your brand is perceived online.",
+    "shortDesc": "Build and protect your brand reputation across channels.",
+    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics.",
+    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash.",
     "totalProject": "10 Projects",
+    "serviceOverview": "We monitor, respond and improve how your brand is perceived online. From review management to social listening and response workflows, we help you build and protect reputation across the channels that matter.",
+    "keyFeatures": [
+      "Review monitoring and response",
+      "Social listening and sentiment",
+      "Crisis and escalation workflows",
+      "Benchmarking and reporting",
+      "Integration with support and marketing"
+    ],
+    "featureCards": [
+      {
+        "title": "Review monitoring & response",
+        "desc": "Monitor and respond to reviews and ratings so you protect reputation and turn feedback into improvement.",
+        "icon": "tji-process"
+      },
+      {
+        "title": "Social listening & sentiment",
+        "desc": "Listening and sentiment across social and review sites so you see trends and act before issues grow.",
+        "icon": "tji-executive"
+      },
+      {
+        "title": "Crisis & escalation workflows",
+        "desc": "Escalation and response playbooks so your team can handle spikes and crises quickly and consistently.",
+        "icon": "tji-results"
+      }
+    ],
     "process": {
-      "title": "How we partner",
-      "titleLarge": "From strategy to execution we work backwards from your objectives to quick wins and long-term growth.",
+      "title": "How We Partner",
+      "titleLarge": "From strategy to execution we work backwards from your objectives.",
       "img": "/img/services/service-details.jpg",
-      "imgSm": "/img/icons/services-10-icons-1.svg",
+      "imgSm": "/img/icons/services-10-icons-2.svg",
       "bgImg": "/images/service/h1-service-1.webp",
       "bgImg2": "/images/service/h3-service-1.webp",
       "iconName": "flaticon-design",
       "svg": "/images/icons/service-1.svg",
-      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
+      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns.",
       "processItems": [
         "Define goals and KPIs",
         "Audit data and creative",
@@ -211,29 +361,54 @@
   },
   {
     "id": 7,
-    "title": "Remarketing & retargeting",
-    "titleLarge": "Re-engage site visitors and warm leads with precision retargeting.",
-    "img": "/images/service/h1-service-2.webp",
-    "imgSm": "/img/icons/services-10-icons-3.svg",
-    "bgImg": "/images/service/h1-service-2.webp",
-    "bgImg2": "/images/service/h3-service-2.webp",
-    "iconName": "tji-strategic",
-    "svg": "/images/icons/service-2.svg",
-    "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
-    "shortDesc": "Bring back drop-offs and nurture prospects with tailored messaging.",
-    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics. We work backwards from your objectives to identify quick wins and longer-term tactics that propel brands to lasting market leadership.",
-    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash. We integrate with your existing platforms so campaigns go live quickly and start delivering measurable results.",
-    "totalProject": "11 Projects",
+    "title": "Software Development & Integration",
+    "titleLarge": "Integrate with virtually every platform, system and interface. Get live and start delivering results.",
+    "img": "/images/service/h1-service-3.webp",
+    "imgSm": "/img/icons/services-10-icons-1.svg",
+    "bgImg": "/images/service/h1-service-3.webp",
+    "bgImg2": "/images/service/h3-service-3.webp",
+    "iconName": "tji-leadership",
+    "svg": "/images/icons/service-3.svg",
+    "desc": "Our proprietary myONE Dash suite delivers real-time insights, CRM, automations and data—integrating seamlessly with any platform.",
+    "shortDesc": "Launch campaigns fast, reverse-append data, integrate disparate systems and view real-time performance.",
+    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics.",
+    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash.",
+    "totalProject": "15 Projects",
+    "serviceOverview": "We build and integrate software so you connect with virtually every platform, system and interface. The myONE Dash suite—CRM, automations, DataCloud and more—integrates with your stack so you get live faster and keep full visibility.",
+    "keyFeatures": [
+      "myONE Dash, CRM, Automations and DataCloud",
+      "API and platform integrations",
+      "Custom workflows and ETL",
+      "Security, scale and compliance",
+      "Ongoing support and iteration"
+    ],
+    "featureCards": [
+      {
+        "title": "myONE Dash & integrations",
+        "desc": "CRM, automations and DataCloud that plug into your stack so you go live quickly and keep one source of truth.",
+        "icon": "tji-leadership"
+      },
+      {
+        "title": "APIs & custom workflows",
+        "desc": "API integrations and custom ETL so data and actions flow between your platforms without manual work.",
+        "icon": "tji-optimization"
+      },
+      {
+        "title": "Security & scale",
+        "desc": "Built for security, scale and compliance so you can grow and adapt without re-platforming.",
+        "icon": "tji-results"
+      }
+    ],
     "process": {
-      "title": "How we partner",
-      "titleLarge": "From strategy to execution we work backwards from your objectives to quick wins and long-term growth.",
+      "title": "How We Partner",
+      "titleLarge": "From strategy to execution we work backwards from your objectives.",
       "img": "/img/services/service-details.jpg",
       "imgSm": "/img/icons/services-10-icons-1.svg",
       "bgImg": "/images/service/h1-service-1.webp",
       "bgImg2": "/images/service/h3-service-1.webp",
       "iconName": "flaticon-design",
-      "svg": "/images/icons/service-2.svg",
-      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
+      "svg": "/images/icons/service-3.svg",
+      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns.",
       "processItems": [
         "Define goals and KPIs",
         "Audit data and creative",
@@ -246,29 +421,54 @@
   },
   {
     "id": 8,
-    "title": "Marketing automation",
-    "titleLarge": "Streamline nurture flows, lead scoring and lifecycle campaigns.",
-    "img": "/images/service/h1-service-3.webp",
-    "imgSm": "/img/icons/services-10-icons-1.svg",
-    "bgImg": "/images/service/h1-service-3.webp",
-    "bgImg2": "/images/service/h3-service-3.webp",
-    "iconName": "tji-leadership",
-    "svg": "/images/icons/service-3.svg",
-    "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
-    "shortDesc": "Connect channels and automate journeys for scalable growth.",
-    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics. We work backwards from your objectives to identify quick wins and longer-term tactics that propel brands to lasting market leadership.",
-    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash. We integrate with your existing platforms so campaigns go live quickly and start delivering measurable results.",
-    "totalProject": "15 Projects",
+    "title": "Remarketing & Retargeting",
+    "titleLarge": "Re-engage site visitors and warm leads with precision retargeting.",
+    "img": "/images/service/h1-service-2.webp",
+    "imgSm": "/img/icons/services-10-icons-3.svg",
+    "bgImg": "/images/service/h1-service-2.webp",
+    "bgImg2": "/images/service/h3-service-2.webp",
+    "iconName": "tji-strategic",
+    "svg": "/images/icons/service-2.svg",
+    "desc": "Bring back drop-offs and nurture prospects with tailored messaging.",
+    "shortDesc": "Re-engage site visitors and warm leads with precision retargeting.",
+    "desc1": "ONE Agency delivers performance-driven digital strategies through a fusion of our proprietary tech stack, persuasive creative and actionable data analytics.",
+    "desc2": "Real-time visibility into leads, sales, CPL, CPA, creative performance and more is available in myONE Dash.",
+    "totalProject": "11 Projects",
+    "serviceOverview": "We re-engage site visitors and warm leads with precision retargeting. Audiences are built from your site and campaign data so you bring back drop-offs and nurture prospects with tailored messaging and creative.",
+    "keyFeatures": [
+      "Site and campaign-based audience building",
+      "Cross-channel retargeting (Meta, Google, programmatic)",
+      "Creative and offer testing",
+      "Attribution and incrementality",
+      "Integration with acquisition and nurture"
+    ],
+    "featureCards": [
+      {
+        "title": "Audience building",
+        "desc": "Audiences from site and campaign data so you retarget visitors and warm leads with the right message.",
+        "icon": "tji-process"
+      },
+      {
+        "title": "Cross-channel retargeting",
+        "desc": "Retargeting on Meta, Google and programmatic so you stay in front of prospects wherever they are.",
+        "icon": "tji-strategic"
+      },
+      {
+        "title": "Creative & attribution",
+        "desc": "Creative and offer tests plus attribution so you know what brings people back and converts.",
+        "icon": "tji-results"
+      }
+    ],
     "process": {
-      "title": "How we partner",
-      "titleLarge": "From strategy to execution we work backwards from your objectives to quick wins and long-term growth.",
+      "title": "How We Partner",
+      "titleLarge": "From strategy to execution we work backwards from your objectives.",
       "img": "/img/services/service-details.jpg",
       "imgSm": "/img/icons/services-10-icons-1.svg",
       "bgImg": "/images/service/h1-service-1.webp",
       "bgImg2": "/images/service/h3-service-1.webp",
       "iconName": "flaticon-design",
-      "svg": "/images/icons/service-3.svg",
-      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns, then report in real time via myONE Dash.",
+      "svg": "/images/icons/service-2.svg",
+      "desc": "We focus on outcomes: define goals and KPIs, audit data and creative, launch and optimize campaigns.",
       "processItems": [
         "Define goals and KPIs",
         "Audit data and creative",

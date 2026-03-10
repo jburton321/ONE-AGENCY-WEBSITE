@@ -1,5 +1,7 @@
 import Accordion from "@/components/shared/accordion/Accordion";
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
+import { aboutCopy } from "@/data/home-copy";
+const copy = aboutCopy[10];
 
 const About10 = () => {
 	return (
@@ -15,10 +17,10 @@ const About10 = () => {
 						<div className="h10-about-content-wrap">
 							<div className="sec-heading style-2 ">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.2s">
-									[ NUMBER #1 SOLVER COMPANY ]
+									[ ONE AGENCY ]
 								</span>
 								<h2 className="sec-title text-anim">
-									Building new businesses through our strategic
+									{copy.secTitle}
 								</h2>
 							</div>
 							<Accordion>
@@ -37,7 +39,7 @@ const About10 = () => {
 										>
 											<span className="subtitle">01.</span>
 											<span className="title">
-												Strategic planning & execution
+												Define goals & KPIs
 											</span>
 										</button>
 										<div
@@ -46,10 +48,7 @@ const About10 = () => {
 											data-bs-parent="#about10Accordion"
 										>
 											<div className="accordion-body">
-												Our mission is to empowers businesses off our all size
-												thrives an businesses changing marketplaces. In today
-												dynamics business environment, the key to the success
-												lies Our mission is to empower our mission
+												{copy.desc}
 											</div>
 										</div>
 									</div>
@@ -64,7 +63,7 @@ const About10 = () => {
 										>
 											<span className="subtitle">02.</span>
 											<span className="title">
-												Leadership executive coaching
+												Launch & optimize
 											</span>
 										</button>
 										<div
@@ -73,10 +72,7 @@ const About10 = () => {
 											data-bs-parent="#about10Accordion"
 										>
 											<div className="accordion-body">
-												Our consultant specialize in delivering rapid,
-												actionable solutions that address your most pressing
-												business on challenges. Whether you are facing
-												operational inefficiencies, stalled growth.
+												We launch campaigns and optimize with real-time data in myONE Dash. We work backwards from your objectives to deliver results.
 											</div>
 										</div>
 									</div>
@@ -91,7 +87,7 @@ const About10 = () => {
 										>
 											<span className="subtitle">03.</span>
 											<span className="title">
-												Business process optimization
+												Scale with confidence
 											</span>
 										</button>
 										<div
@@ -100,10 +96,7 @@ const About10 = () => {
 											data-bs-parent="#about10Accordion"
 										>
 											<div className="accordion-body">
-												Our Strategic Planning and Execution service offers
-												formulating and implementing business goals. We begin
-												with an in-depth analysis of your business and market to
-												identify opportunities and challenges.
+												We iterate for scale and deliver ongoing optimization. Transparent reporting so you see performance and can grow with ONE Agency.
 											</div>
 										</div>
 									</div>
@@ -111,7 +104,7 @@ const About10 = () => {
 							</Accordion>
 
 							<div className="btn-area wow fadeInUp" data-wow-delay="0.5s">
-								<ButtonPrimary text={"Know more us"} url={"/about"} />
+								<ButtonPrimary text={copy.cta} url={"/about"} />
 							</div>
 						</div>
 					</div>

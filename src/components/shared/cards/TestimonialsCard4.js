@@ -37,7 +37,7 @@ const TestimonialsCard4 = ({ testimonial }) => {
 						streamline our operations and improve our overall efficiency. We saw
 						a significant increase in our bottom line and were able to make
 						data-driven decisions that positively impacted our business. The
-						consultants were not just advisors in our success
+						ONE Agency was not just an advisor in our success
 					</p>
 				</div>
 			</div>

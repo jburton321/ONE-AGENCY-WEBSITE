@@ -3,6 +3,7 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import ServiceCard3 from "@/components/shared/cards/ServiceCard3";
 import getALlServices from "@/libs/getALlServices";
+import { servicesCopy } from "@/data/home-copy";
 
 const Services3 = () => {
 	const services = getALlServices()?.slice(0, 4);
@@ -14,10 +15,10 @@ const Services3 = () => {
 						<div className="sec-heading style-2">
 							<div className="sec-text">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-									Transformative solution
+									{servicesCopy.subTitleTransformative}
 								</span>
 								<h2 className="sec-title text-anim">
-									Get our comprehensive service offerings
+									{servicesCopy.secTitleComprehensive}
 								</h2>
 							</div>
 							<div

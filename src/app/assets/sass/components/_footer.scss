@@ -1,6 +1,56 @@
 @use "../utilities" as *;
 
 /* START: Footer CSS */
+/* Footer CTA / tagline block – match oneagency.com */
+.footer-cta-block {
+	padding: 50px 0 30px;
+	text-align: center;
+	.footer-cta-heading {
+		font-size: clamp(1.25rem, 2vw, 1.5rem);
+		font-weight: 600;
+		color: var(--tj-color-common-white);
+		margin-bottom: 0.5rem;
+	}
+	.footer-cta-subheading {
+		font-size: 1.125rem;
+		color: var(--tj-color-text-body);
+		margin-bottom: 1.25rem;
+	}
+	.footer-cta-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+		.tj-btn {
+			padding: 10px 24px;
+			border-radius: 4px;
+			font-weight: 500;
+			text-decoration: none;
+			transition: opacity 0.2s;
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+		.tj-btn-primary {
+			background: var(--tj-color-theme-primary);
+			color: var(--tj-color-common-white);
+			border: none;
+		}
+		.tj-btn-outline {
+			background: transparent;
+			color: var(--tj-color-common-white);
+			border: 1px solid var(--tj-color-border-1);
+		}
+	}
+	.footer-tagline {
+		font-size: 0.9375rem;
+		color: var(--tj-color-text-body);
+		margin: 0;
+		opacity: 0.9;
+	}
+}
+
 .tj-footer-area {
 	position: relative;
 	background: var(--tj-color-theme-dark);

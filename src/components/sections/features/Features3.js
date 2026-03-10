@@ -4,9 +4,11 @@ import FeatureCard from "@/components/shared/cards/FeatureCard";
 import tjSvgAnimation from "@/libs/tjSvgAnimation";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import { featuresCopy } from "@/data/home-copy";
 
 const Features3 = () => {
 	const animContainerRef = useRef();
+	const copy = featuresCopy[3];
 	useGSAP(
 		() => {
 			tjSvgAnimation(animContainerRef);
@@ -15,8 +17,8 @@ const Features3 = () => {
 	);
 	const features = [
 		{
-			title: "Quick solutions",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[0].title,
+			desc: copy.cards[0].desc,
 			icon: (
 				<svg
 					width="81"
@@ -62,8 +64,8 @@ const Features3 = () => {
 			),
 		},
 		{
-			title: "Expert advice",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[1].title,
+			desc: copy.cards[1].desc,
 			icon: (
 				<svg
 					width="80"
@@ -123,8 +125,8 @@ const Features3 = () => {
 			),
 		},
 		{
-			title: "Strategic planning",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[2].title,
+			desc: copy.cards[2].desc,
 			icon: (
 				<svg
 					width="80"
@@ -157,8 +159,8 @@ const Features3 = () => {
 			),
 		},
 		{
-			title: "Efficient operations",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[3].title,
+			desc: copy.cards[3].desc,
 			icon: (
 				<svg
 					width="80"
@@ -197,13 +199,11 @@ const Features3 = () => {
 					<div className="col-12">
 						<div className="sec-heading style-3 text-center">
 							<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-								// Number #1 Solver
+								// {copy.subTitle}
 							</span>
-							<h2 className="sec-title text-anim">Explore our core features</h2>
+							<h2 className="sec-title text-anim">{copy.secTitle}</h2>
 							<div className="desc wow fadeInUp" data-wow-delay="0.3s">
-								<p>
-									Our mission is to empower businesses of thrive in solutions
-								</p>
+								<p>{copy.desc}</p>
 							</div>
 						</div>
 					</div>

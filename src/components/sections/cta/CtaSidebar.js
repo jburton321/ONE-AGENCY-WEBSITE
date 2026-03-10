@@ -16,7 +16,7 @@ const CtaSidebar = () => {
 					Need help? <br /> Feel free contact us
 				</h3>
 				<p>
-					Our mission is to empowers businesses off all size in an businesses.
+					Delivering a Symphony of Digital Performance.
 				</p>
 			</div>
 			<div className="cta-btn">

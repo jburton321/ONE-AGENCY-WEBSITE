@@ -7,6 +7,25 @@
 	background-color: var(--tj-color-theme-dark);
 	z-index: 1;
 	overflow: hidden;
+	/* Hero titles stay at h1 scale; section title sizes never apply here */
+	.sec-title {
+		font-size: var(--tj-fs-h1);
+		@media #{$xl} {
+			font-size: 72px;
+		}
+		@media #{$lg} {
+			font-size: 58px;
+		}
+		@media #{$md} {
+			font-size: 52px;
+		}
+		@media #{$sm} {
+			font-size: 46px;
+		}
+		@media #{$xs} {
+			font-size: 40px;
+		}
+	}
 	&::before {
 		position: absolute;
 		content: "";
@@ -216,7 +235,7 @@
 			color: var(--tj-color-theme-primary);
 		}
 		@media #{$sm, $xs} {
-			font-size: 45px;
+			font-size: 48px;
 		}
 	}
 	.desc {
@@ -226,6 +245,13 @@
 		max-width: 530px;
 		width: 100%;
 		line-height: 1.5;
+		background: none !important;
+		background-color: transparent !important;
+		p,
+		mark {
+			background: none !important;
+			background-color: transparent !important;
+		}
 		p {
 			&:last-child {
 				margin-bottom: 0;

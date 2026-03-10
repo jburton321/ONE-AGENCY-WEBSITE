@@ -3,6 +3,7 @@ import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import ServiceCard5 from "@/components/shared/cards/ServiceCard5";
 import getALlServices from "@/libs/getALlServices";
 import { useState } from "react";
+import { servicesCopy } from "@/data/home-copy";
 
 const Services5 = () => {
 	const services = getALlServices()?.slice(0, 6);
@@ -18,18 +19,17 @@ const Services5 = () => {
 						<div className="sec-heading-wrap">
 							<div className="sec-heading style-4">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.3s">
-									TRANSFORMATIVE SOLUTION
+									{servicesCopy.subTitleTransformative.toUpperCase()}
 								</span>
 								<h2 className="sec-title text-anim">
-									In comprehensive service offer.
+									{servicesCopy.secTitleComprehensive}
 								</h2>
 							</div>
 
 							<div className="desc">
-								In today's dynamic business environment, the key to success
-								strategics..
+								We focus on outcomes and work backwards from your objectives. Quick wins and longer-term tactics.
 							</div>
-							<ButtonPrimary text={"More services"} url={"/services"} />
+							<ButtonPrimary text={"More Services"} url={"/services"} />
 						</div>
 					</div>
 				</div>

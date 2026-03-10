@@ -1,4 +1,6 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
+import { aboutCopy } from "@/data/home-copy";
+const copy = aboutCopy[8];
 
 const About8 = () => {
 	return (
@@ -13,55 +15,33 @@ const About8 = () => {
 										className="sub-title wow fadeInUp"
 										data-wow-delay="0.3s"
 									>
-										Our company
+										{copy.subTitle}
 									</span>
 									<h2 className="sec-title text-anim">
-										Expert on business mind crafting your path into ultimate
-										success
+										{copy.secTitle}
 									</h2>
 								</div>
 								<div className="desc wow fadeInUp" data-wow-delay="0.5s">
-									<p>
-										Our mission is to empowers businesses off our all size
-										thrives an businesses changing marketplaces. In today
-										dynamics business environment, the key to the success lies
-										Our mission is to empower our mission
-									</p>
+									<p>{copy.desc}</p>
 								</div>
 								<div
 									className="check-list-one wow fadeInUp"
 									data-wow-delay="0.7s"
 								>
 									<ul>
-										<li>
-											<i className="tji-double-check"></i>Expertise and
-											experience
-										</li>
-										<li>
-											<i className="tji-double-check"></i>Client Centric
-											approach
-										</li>
-										<li>
-											<i className="tji-double-check"></i>Commitment excellences
-										</li>
+										{copy.list.map((item, i) => (
+											<li key={i}><i className="tji-double-check"></i> {item}</li>
+										))}
 									</ul>
 									<div className="vr-line"></div>
 									<ul>
-										<li>
-											<i className="tji-double-check"></i>Expertise and
-											experience
-										</li>
-										<li>
-											<i className="tji-double-check"></i>Client Centric
-											approach
-										</li>
-										<li>
-											<i className="tji-double-check"></i>Commitment team
-										</li>
+										{copy.list.map((item, i) => (
+											<li key={i}><i className="tji-double-check"></i> {item}</li>
+										))}
 									</ul>
 								</div>
 								<div className="btn-area wow fadeInUp" data-wow-delay="0.9s">
-									<ButtonPrimary text="Know more us" href="/about" />
+									<ButtonPrimary text={copy.cta} url="/about" />
 								</div>
 							</div>
 							<div

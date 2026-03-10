@@ -25,7 +25,7 @@ const Team5 = () => {
 									Meet our team
 								</span>
 								<h2 className="sec-title text-anim">
-									Decades of our combined consultant expert
+									Decades of our combined performance and creative expertise
 								</h2>
 							</div>
 						</div>

@@ -1,7 +1,7 @@
 import services from "../../public/fakedata/services";
 
 const getALlServices = () => {
-  return services;
+	return Array.isArray(services) ? services : [];
 };
 
 export default getALlServices;

@@ -34,11 +34,10 @@ const Progress1 = () => {
 								</h2>
 								<div className="desc wow fadeInUp" data-wow-delay="0.3s">
 									<p>
-										Our mission is to empowers businesses off our all size too
-										thrive in an businesses ever changing marketplaces. In
-										today's dynamicis business environment, the key to success
-										lies. Exceptionalis values through out strategic innovative
-										consult business
+										ONE Agency hyperscales digital growth through customer acquisition
+										and performance creative. We deliver a symphony of digital
+										performance and actionable data analytics. Exceptional value
+										through our strategic, innovative approach. All you need is ONE.
 									</p>
 								</div>
 								<div
@@ -51,7 +50,7 @@ const Progress1 = () => {
 										</div>
 										<div className="proggess-text">
 											<span className="sub-title">
-												Business <br /> consultants
+												Performance <br /> marketing
 											</span>
 										</div>
 									</div>

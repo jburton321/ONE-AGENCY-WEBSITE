@@ -9,9 +9,10 @@ const MobileNavbar = () => {
 	const homeNav = navItems[0];
 	const pagesNav = navItems[1];
 	const serviceNav = navItems[2];
-	const portfolioNav = navItems[3];
-	const blogNav = navItems[4];
-	const contactNav = navItems[5];
+	const solutionsNav = navItems[3];
+	const portfolioNav = navItems[4];
+	const blogNav = navItems[5];
+	const contactNav = navItems[6];
 	return (
 		<div className="hamburger_menu d-block d-lg-none">
 			<div className="mobile_menu mean-container">
@@ -156,8 +157,7 @@ const MobileNavbar = () => {
 															Need help? <br /> Feel free contact us
 														</h3>
 														<p>
-															Our mission is to empowers businesses off all size
-															in an businesses.
+															Delivering a Symphony of Digital Performance.
 														</p>
 													</div>
 													<div className="cta-btn">
@@ -185,36 +185,272 @@ const MobileNavbar = () => {
 							<MobileMenuItem
 								text={serviceNav?.name}
 								url={serviceNav?.path ? serviceNav?.path : "#"}
-								submenuClass={"mega-menu-service"}
+								submenuClass={"header__mega-menu mega-menu mega-menu-pages"}
 							>
-								{serviceNav?.submenu?.length
-									? serviceNav?.submenu?.map((item, idx) => (
-											<li key={idx}>
-												<Link
-													className="mega-menu-service-single"
-													href={item?.path ? item?.path : "/"}
+								<li>
+									<div className="mega-menu-wrapper">
+										<div className="mega-menu-pages-single">
+											<div className="mega-menu-pages-single-inner">
+												<h6 className="mega-menu-title">Paid Media</h6>
+												<div className="mega-menu-list">
+													{serviceNav?.submenu?.length
+														? serviceNav?.submenu?.slice(0, 2).map((item, idx) => (
+																<Link
+																	key={idx}
+																	href={item?.path ? item?.path : "/"}
+																	className={
+																		item?.isActive ? "active" : ""
+																	}
+																>
+																	{item?.name ?? ""}
+																</Link>
+														  ))
+														: ""}
+												</div>
+											</div>
+										</div>
+										<div className="mega-menu-pages-single">
+											<div className="mega-menu-pages-single-inner">
+												<h6 className="mega-menu-title">Programmatic & Data</h6>
+												<div className="mega-menu-list">
+													{serviceNav?.submenu?.length
+														? serviceNav?.submenu?.slice(2, 4).map((item, idx) => (
+																<Link
+																	key={idx}
+																	href={item?.path ? item?.path : "/"}
+																	className={
+																		item?.isActive ? "active" : ""
+																	}
+																>
+																	{item?.name ?? ""}
+																</Link>
+														  ))
+														: ""}
+												</div>
+											</div>
+										</div>
+										<div className="mega-menu-pages-single">
+											<div className="mega-menu-pages-single-inner">
+												<h6 className="mega-menu-title">Creative & ORM</h6>
+												<div className="mega-menu-list">
+													{serviceNav?.submenu?.length
+														? serviceNav?.submenu?.slice(4, 6).map((item, idx) => (
+																<Link
+																	key={idx}
+																	href={item?.path ? item?.path : "/"}
+																	className={
+																		item?.isActive ? "active" : ""
+																	}
+																>
+																	{item?.name ?? ""}
+																</Link>
+														  ))
+														: ""}
+												</div>
+											</div>
+										</div>
+										<div className="mega-menu-pages-single">
+											<div className="mega-menu-pages-single-inner">
+												<h6 className="mega-menu-title">Technology</h6>
+												<div className="mega-menu-list">
+													{serviceNav?.submenu?.length
+														? serviceNav?.submenu?.slice(6, 8).map((item, idx) => (
+																<Link
+																	key={idx}
+																	href={item?.path ? item?.path : "/"}
+																	className={
+																		item?.isActive ? "active" : ""
+																	}
+																>
+																	{item?.name ?? ""}
+																</Link>
+														  ))
+														: ""}
+												</div>
+											</div>
+										</div>
+										<div className="col-12 col-lg-3 mega-menu-pages-single">
+											<div className="mega-menu-pages-single-inner">
+												<div
+													className="tj-sidebar-cta"
+													style={{
+														backgroundImage:
+															"url('/images/blog/widget-cta.webp')",
+													}}
 												>
-													{" "}
-													<span className="mega-menu-service-icon">
-														<i
-															className={
-																item?.icon ? item?.icon : "tji-service-1"
-															}
-														></i>
-													</span>{" "}
-													<span className="mega-menu-service-title">
-														{item?.name
-															? item?.name
-															: "Business process optimization"}
-													</span>{" "}
-													<span className="mega-menu-service-nav">
-														<i className="tji-arrow-right"></i>
-														<i className="tji-arrow-right"></i>
-													</span>
-												</Link>
-											</li>
-									  ))
-									: ""}
+													<div className="content">
+														<div className="icon">
+															<Image
+																width={55}
+																height={55}
+																style={{ height: "auto" }}
+																src="/images/shapes/widget-cta-icon.png"
+																alt="image"
+															/>
+														</div>
+														<h3>
+															Need help? <br /> Feel free contact us
+														</h3>
+														<p>
+															Delivering a Symphony of Digital Performance.
+														</p>
+													</div>
+													<div className="cta-btn">
+														<ButtonPrimary
+															text={"Get in touch"}
+															url={"/contact"}
+															className={"white-btn"}
+														/>
+
+														<Image
+															width={115}
+															height={117}
+															style={{ height: "auto" }}
+															className="shapes move-anim-2"
+															src="/images/shapes/carrow.png"
+															alt="shape"
+														/>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</MobileMenuItem>
+							<MobileMenuItem
+								text={solutionsNav?.name}
+								url={solutionsNav?.path ? solutionsNav?.path : "#"}
+								submenuClass={"header__mega-menu mega-menu mega-menu-pages"}
+							>
+								<li>
+									<div className="mega-menu-wrapper">
+										<div className="mega-menu-pages-single">
+											<div className="mega-menu-pages-single-inner">
+												<h6 className="mega-menu-title">Acquisition & Creative</h6>
+												<div className="mega-menu-list">
+													{solutionsNav?.submenu?.length
+														? solutionsNav?.submenu?.slice(0, 2).map((item, idx) => (
+																<Link
+																	key={idx}
+																	href={item?.path ? item?.path : "/"}
+																	className={
+																		item?.isActive ? "active" : ""
+																	}
+																>
+																	{item?.name ?? ""}
+																</Link>
+														  ))
+														: ""}
+												</div>
+											</div>
+										</div>
+										<div className="mega-menu-pages-single">
+											<div className="mega-menu-pages-single-inner">
+												<h6 className="mega-menu-title">Engagement & Growth</h6>
+												<div className="mega-menu-list">
+													{solutionsNav?.submenu?.length
+														? solutionsNav?.submenu?.slice(2, 4).map((item, idx) => (
+																<Link
+																	key={idx}
+																	href={item?.path ? item?.path : "/"}
+																	className={
+																		item?.isActive ? "active" : ""
+																	}
+																>
+																	{item?.name ?? ""}
+																</Link>
+														  ))
+														: ""}
+												</div>
+											</div>
+										</div>
+										<div className="mega-menu-pages-single">
+											<div className="mega-menu-pages-single-inner">
+												<h6 className="mega-menu-title">Data & Platform</h6>
+												<div className="mega-menu-list">
+													{solutionsNav?.submenu?.length
+														? solutionsNav?.submenu?.slice(4, 6).map((item, idx) => (
+																<Link
+																	key={idx}
+																	href={item?.path ? item?.path : "/"}
+																	className={
+																		item?.isActive ? "active" : ""
+																	}
+																>
+																	{item?.name ?? ""}
+																</Link>
+														  ))
+														: ""}
+												</div>
+											</div>
+										</div>
+										<div className="mega-menu-pages-single">
+											<div className="mega-menu-pages-single-inner">
+												<h6 className="mega-menu-title">AI & Integration</h6>
+												<div className="mega-menu-list">
+													{solutionsNav?.submenu?.length
+														? solutionsNav?.submenu?.slice(6, 8).map((item, idx) => (
+																<Link
+																	key={idx}
+																	href={item?.path ? item?.path : "/"}
+																	className={
+																		item?.isActive ? "active" : ""
+																	}
+																>
+																	{item?.name ?? ""}
+																</Link>
+														  ))
+														: ""}
+												</div>
+											</div>
+										</div>
+										<div className="col-12 col-lg-3 mega-menu-pages-single">
+											<div className="mega-menu-pages-single-inner">
+												<div
+													className="tj-sidebar-cta"
+													style={{
+														backgroundImage:
+															"url('/images/blog/widget-cta.webp')",
+													}}
+												>
+													<div className="content">
+														<div className="icon">
+															<Image
+																width={55}
+																height={55}
+																style={{ height: "auto" }}
+																src="/images/shapes/widget-cta-icon.png"
+																alt="image"
+															/>
+														</div>
+														<h3>
+															Need help? <br /> Feel free contact us
+														</h3>
+														<p>
+															Delivering a Symphony of Digital Performance.
+														</p>
+													</div>
+													<div className="cta-btn">
+														<ButtonPrimary
+															text={"Get in touch"}
+															url={"/contact"}
+															className={"white-btn"}
+														/>
+
+														<Image
+															width={115}
+															height={117}
+															style={{ height: "auto" }}
+															className="shapes move-anim-2"
+															src="/images/shapes/carrow.png"
+															alt="shape"
+														/>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
 							</MobileMenuItem>
 							<MobileMenuItem
 								text={portfolioNav?.name}

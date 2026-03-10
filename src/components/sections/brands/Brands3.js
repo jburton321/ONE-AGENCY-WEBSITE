@@ -32,7 +32,7 @@ const Brands3 = () => {
 					<div className="col-12 col-lg-6 col-xl-4">
 						<div className="sec-heading h7-section-heading ">
 							<h2 className="sec-title text-anim">
-								Join over <span>1000+</span> companies with Solvior
+								Join over <span>1000+</span> companies with ONE Agency
 							</h2>
 
 							<Link className="service-button text-btn" href="/contact">

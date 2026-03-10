@@ -7,23 +7,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import Image from "next/image";
 
+import { heroCopy } from "@/data/home-copy";
+const copy = heroCopy[2];
+
 const Hero2 = () => {
 	const heroSlides = [
-		{
-			subtitle: "number #1 solver agency",
-			title: "Transform your business with expert consultation",
-			img: "/images/slider/slider-1.webp",
-		},
-		{
-			subtitle: "number #1 solver agency",
-			title: "Transform your business with expert consultation",
-			img: "/images/slider/slider-2.webp",
-		},
-		{
-			subtitle: "number #1 solver agency",
-			title: "Transform your business with expert consultation",
-			img: "/images/slider/slider-3.webp",
-		},
+		{ subtitle: copy.subtitle, title: copy.title, img: "/images/slider/slider-1.webp" },
+		{ subtitle: copy.subtitle, title: copy.title, img: "/images/slider/slider-2.webp" },
+		{ subtitle: copy.subtitle, title: copy.title, img: "/images/slider/slider-3.webp" },
 	];
 
 	function updateDashWidth(swiper) {
@@ -72,7 +63,7 @@ const Hero2 = () => {
 											<span className="sub-title">{subtitle}</span>
 											<h1 className="slider-title">{title}</h1>
 											<ButtonPrimary
-												text={"Free consultation"}
+												text={copy.cta}
 												url={"/contact"}
 												className={"slider-button"}
 											/>
@@ -90,7 +81,7 @@ const Hero2 = () => {
 											<div className="desc">
 												<p>
 													Transform your business growth with expert consultancy
-													services by our team of seasoned consultants
+													services by our team of performance and creative experts
 													unparalleled.
 												</p>
 											</div>

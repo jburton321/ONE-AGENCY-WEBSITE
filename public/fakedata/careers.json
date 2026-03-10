@@ -1,81 +1,81 @@
 [
 	{
 		"id": 1,
-		"title": "Business strategy consultant",
+		"title": "Paid Media Strategist",
 		"iconName": "tji-strategy",
 		"price": "$400-$550",
 		"duration": "week",
-		"location": "London,UK",
+		"location": "Orlando, FL",
 		"category": "Full time job/on site",
 		"need": "Urgent"
 	},
 	{
 		"id": 2,
-		"title": "Management consultant",
+		"title": "Performance Creative Lead",
 		"iconName": "tji-manage",
 		"price": "$400-$550",
 		"duration": "week",
-		"location": "London,UK",
+		"location": "Orlando, FL",
 		"category": "Full time job/on site",
 		"need": "Urgent"
 	},
 	{
 		"id": 3,
-		"title": "Business process consultant",
+		"title": "Marketing Automation Specialist",
 		"iconName": "tji-process-1",
 		"price": "$400-$550",
 		"duration": "week",
-		"location": "London,UK",
+		"location": "Scottsdale, AZ",
 		"category": "Full time job/on site",
 		"need": "Urgent"
 	},
 	{
 		"id": 4,
-		"title": "Operations consultant",
+		"title": "Data & Analytics Consultant",
 		"iconName": "tji-operations",
 		"price": "$400-$550",
 		"duration": "week",
-		"location": "London,UK",
+		"location": "Orlando, FL",
 		"category": "Full time job/on site",
 		"need": "Urgent"
 	},
 	{
 		"id": 5,
-		"title": "Organizational development",
+		"title": "Customer Acquisition Manager",
 		"iconName": "tji-organize",
 		"price": "$400-$550",
 		"duration": "week",
-		"location": "London,UK",
+		"location": "Uxbridge, UK",
 		"category": "Full time job/on site",
 		"need": "Urgent"
 	},
 	{
 		"id": 6,
-		"title": "Performance optimization",
+		"title": "MarTech Integration Engineer",
 		"iconName": "tji-performance",
 		"price": "$400-$550",
 		"duration": "week",
-		"location": "London,UK",
+		"location": "Orlando, FL",
 		"category": "Full time job/on site",
 		"need": "Urgent"
 	},
 	{
 		"id": 7,
-		"title": "Management consultant",
+		"title": "Programmatic Media Buyer",
 		"iconName": "tji-manage",
 		"price": "$400-$550",
 		"duration": "week",
-		"location": "London,UK",
+		"location": "Scottsdale, AZ",
 		"category": "Full time job/on site",
 		"need": "Urgent"
 	},
 	{
 		"id": 8,
-		"title": "Business process consultant",
+		"title": "Conversion Rate Optimization Lead",
 		"iconName": "tji-process-1",
 		"price": "$400-$550",
 		"duration": "week",
-		"location": "London,UK",
+		"location": "Orlando, FL",
 		"category": "Full time job/on site",
 		"need": "Urgent"
 	}

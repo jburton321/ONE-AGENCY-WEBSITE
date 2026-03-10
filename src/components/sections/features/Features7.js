@@ -4,6 +4,7 @@ import tjSvgAnimation from "@/libs/tjSvgAnimation";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { useRef } from "react";
+import { featuresCopy } from "@/data/home-copy";
 
 const Features7 = () => {
 	const animContainerRef = useRef();
@@ -25,10 +26,10 @@ const Features7 = () => {
 					<div className="col-12">
 						<div className="sec-heading h9-section-heading text-center">
 							<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-								[ OUR COMPANY FEATUERS ]
+								[ GET BIG WINS, FASTER ]
 							</span>
 							<h2 className="sec-title text-anim mb-0">
-								Empowering organizations navigate change maximize{" "}
+								Empowering organizations to navigate change, maximize{" "}
 								<Image
 									className="wow fadeInRight"
 									data-wow-delay="1.1s"
@@ -37,7 +38,7 @@ const Features7 = () => {
 									width={44}
 									height={44}
 								/>{" "}
-								are efficiency, and unlock{" "}
+								efficiency, and unlock{" "}
 								<Image
 									className="wow fadeInRight"
 									data-wow-delay="1.7s"
@@ -46,7 +47,7 @@ const Features7 = () => {
 									width={44}
 									height={44}
 								/>{" "}
-								their business <span>potential to our confidence</span>
+								their business <span>potential with ONE Agency</span>
 							</h2>
 						</div>
 					</div>
@@ -101,12 +102,9 @@ const Features7 = () => {
 								</svg>
 							</div>
 							<div className="feature-content">
-								<h5 className="title">Quick solutions</h5>
+								<h5 className="title">{featuresCopy[7].cards[0].title}</h5>
 								<div className="desc">
-									<p>
-										Our consultancy excels in providing quick solutions tailored
-										to your business challenges
-									</p>
+									<p>{featuresCopy[7].cards[0].desc}</p>
 								</div>
 							</div>
 						</div>
@@ -125,7 +123,7 @@ const Features7 = () => {
 								/>
 							</div>
 							<div className="feature-content">
-								<h5 className="title">Expert business advices</h5>
+								<h5 className="title">{featuresCopy[7].cards[1].title}</h5>
 							</div>
 						</div>
 					</div>
@@ -135,12 +133,9 @@ const Features7 = () => {
 							data-wow-delay="0.5s"
 						>
 							<div className="feature-content">
-								<h5 className="title">Strategic planning</h5>
+								<h5 className="title">{featuresCopy[7].cards[2].title}</h5>
 								<div className="desc">
-									<p>
-										Our consultancy excels in providing quick solutions tailored
-										to your business challenges
-									</p>
+									<p>{featuresCopy[7].cards[2].desc}</p>
 								</div>
 							</div>
 
@@ -169,7 +164,7 @@ const Features7 = () => {
 								/>
 							</div>
 							<div className="feature-content">
-								<h5 className="title">Efficient operations</h5>
+								<h5 className="title">{featuresCopy[7].cards[3].title}</h5>
 							</div>
 						</div>
 					</div>

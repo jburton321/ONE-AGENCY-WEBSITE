@@ -46,15 +46,15 @@ const Team1 = ({ type }) => {
 										className="sub-title wow fadeInUp"
 										data-wow-delay="0.1s"
 									>
-										// Meet our team
+										// Leadership
 									</span>
-									<h2 className="sec-title text-anim">Expert team members</h2>
+									<h2 className="sec-title text-anim">The ONE Agency leadership team</h2>
 								</div>
 								<div
 									className="d-none d-md-inline-block wow fadeInUp"
 									data-wow-delay="0.3s"
 								>
-									<ButtonPrimary text={"More member"} url={"/team"} />
+									<ButtonPrimary text={"View all leadership"} url={"/team"} />
 								</div>
 							</div>
 						</div>
@@ -76,7 +76,7 @@ const Team1 = ({ type }) => {
 						className="team-btn d-md-none mt-40 text-center wow fadeInUp"
 						data-wow-delay="0.9s"
 					>
-						<ButtonPrimary text={"More member"} url={"/team"} />
+						<ButtonPrimary text={"View all leadership"} url={"/team"} />
 					</div>
 				)}
 				{type === 2 && totalItemsToShow < totalItems ? (

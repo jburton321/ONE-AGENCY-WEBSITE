@@ -1,5 +1,7 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import FunfactSingle from "@/components/shared/funfact/FunfactSingle";
+import { aboutCopy } from "@/data/home-copy";
+const copy = aboutCopy[9];
 
 const About9 = () => {
 	return (
@@ -20,19 +22,14 @@ const About9 = () => {
 										className="sub-title wow fadeInUp"
 										data-wow-delay="0.3s"
 									>
-										[ TRANSFORMATIVE SOLUTION ]
+										[ {copy.subTitle.toUpperCase().replace("ABOUT ", "")} ]
 									</span>
 									<h2 className="sec-title text-anim">
-										Building new businesses through our strategic
+										{copy.secTitle}
 									</h2>
 								</div>
 								<div className="desc wow fadeInUp" data-wow-delay="0.4s">
-									<p>
-										Our mission is to empowers businesses off our all size
-										thrives an businesses changing marketplaces. In today
-										dynamics business environment, the key to the success lies
-										Our mission is to empower our mission
-									</p>
+									<p>{copy.desc}</p>
 								</div>
 
 								<div
@@ -40,22 +37,20 @@ const About9 = () => {
 									data-wow-delay="0.5s"
 								>
 									<div className="h9-about-list-item">
-										<h5 className="h9-about-list-title">
-											Efficient operations
-										</h5>
+										<h5 className="h9-about-list-title">Proprietary tech stack</h5>
 										<p className="h9-about-list-desc">
-											Our consultancy specializes in optimizing operational
+											We deliver performance-driven digital strategies that propel brands.
 										</p>
 									</div>
 									<div className="h9-about-list-item">
-										<h5 className="h9-about-list-title">Strategic planning</h5>
+										<h5 className="h9-about-list-title">Persuasive creative</h5>
 										<p className="h9-about-list-desc">
-											Our consultancy specializes in optimizing operational
+											Thumb-stopping creative and actionable data analytics at scale.
 										</p>
 									</div>
 								</div>
 								<div className="btn-area wow fadeInUp" data-wow-delay="0.6s">
-									<ButtonPrimary text="Know more us" href="/contact" />
+									<ButtonPrimary text={copy.cta} url="/contact" />
 								</div>
 							</div>
 						</div>

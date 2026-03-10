@@ -1,7 +1,7 @@
 import portfolio from "../../public/fakedata/portfolio";
 
 const getPortfolio = () => {
-  return portfolio;
+	return Array.isArray(portfolio) ? portfolio : [];
 };
 
 export default getPortfolio;

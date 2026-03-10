@@ -23,7 +23,7 @@ const Progress2 = () => {
 										<ProgressBar size={140} value={88} />
 									</div>
 									<div className="proggess-text">
-										<span className="sub-title">Business consultants</span>
+										<span className="sub-title">Performance marketing</span>
 									</div>
 								</div>
 								<div className="proggess-item">

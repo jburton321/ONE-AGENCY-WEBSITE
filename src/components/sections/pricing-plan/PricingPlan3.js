@@ -163,7 +163,7 @@ const PricingPlan3 = () => {
 											</li>
 											<li className="active">
 												<i className="tji-double-check"></i> Quick email support
-												with priority access to our consulting
+												with priority access to our performance team
 											</li>
 											<li className="active">
 												<i className="tji-double-check"></i> Monthly strategic
@@ -175,7 +175,7 @@ const PricingPlan3 = () => {
 											</li>
 											<li>
 												<i className="tji-double-check"></i> Quick email support
-												with priority access to our consulting
+												with priority access to our performance team
 											</li>
 											<li>
 												<i className="tji-double-check"></i> 24/7 dedicated
@@ -209,7 +209,7 @@ const PricingPlan3 = () => {
 											</li>
 											<li className="active">
 												<i className="tji-double-check"></i> Quick email support
-												with priority access to our consulting
+												with priority access to our performance team
 											</li>
 											<li className="active">
 												<i className="tji-double-check"></i> Monthly strategic
@@ -221,7 +221,7 @@ const PricingPlan3 = () => {
 											</li>
 											<li className="active">
 												<i className="tji-double-check"></i> Quick email support
-												with priority access to our consulting
+												with priority access to our performance team
 											</li>
 											<li>
 												<i className="tji-double-check"></i> 24/7 dedicated
@@ -256,7 +256,7 @@ const PricingPlan3 = () => {
 											</li>
 											<li className="active">
 												<i className="tji-double-check"></i> Quick email support
-												with priority access to our consulting
+												with priority access to our performance team
 											</li>
 											<li className="active">
 												<i className="tji-double-check"></i> Monthly strategic
@@ -268,7 +268,7 @@ const PricingPlan3 = () => {
 											</li>
 											<li className="active">
 												<i className="tji-double-check"></i> Quick email support
-												with priority access to our consulting
+												with priority access to our performance team
 											</li>
 											<li className="active">
 												<i className="tji-double-check"></i> 24/7 dedicated
@@ -341,7 +341,7 @@ const PricingPlan3 = () => {
 												</li>
 												<li className="active">
 													<i className="tji-double-check"></i> Quick email
-													support with priority access to our consulting
+													support with priority access to our performance team
 												</li>
 												<li className="active">
 													<i className="tji-double-check"></i> Monthly strategic
@@ -353,7 +353,7 @@ const PricingPlan3 = () => {
 												</li>
 												<li className="active">
 													<i className="tji-double-check"></i> Quick email
-													support with priority access to our consulting
+													support with priority access to our performance team
 												</li>
 												<li>
 													<i className="tji-double-check"></i> 24/7 dedicated
@@ -425,7 +425,7 @@ const PricingPlan3 = () => {
 												</li>
 												<li className="active">
 													<i className="tji-double-check"></i> Quick email
-													support with priority access to our consulting
+													support with priority access to our performance team
 												</li>
 												<li className="active">
 													<i className="tji-double-check"></i> Monthly strategic
@@ -437,7 +437,7 @@ const PricingPlan3 = () => {
 												</li>
 												<li className="active">
 													<i className="tji-double-check"></i> Quick email
-													support with priority access to our consulting
+													support with priority access to our performance team
 												</li>
 												<li>
 													<i className="tji-double-check"></i> 24/7 dedicated
@@ -509,7 +509,7 @@ const PricingPlan3 = () => {
 												</li>
 												<li className="active">
 													<i className="tji-double-check"></i> Quick email
-													support with priority access to our consulting
+													support with priority access to our performance team
 												</li>
 												<li className="active">
 													<i className="tji-double-check"></i> Monthly strategic
@@ -521,7 +521,7 @@ const PricingPlan3 = () => {
 												</li>
 												<li className="active">
 													<i className="tji-double-check"></i> Quick email
-													support with priority access to our consulting
+													support with priority access to our performance team
 												</li>
 												<li>
 													<i className="tji-double-check"></i> 24/7 dedicated

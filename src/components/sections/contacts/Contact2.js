@@ -19,9 +19,9 @@ const Contact2 = () => {
 									See how we drive real <span>business</span> growth
 								</h2>
 								<div className="desc wow fadeInUp" data-wow-delay="0.4s">
-									Our mission is to empowers businesses off our all size too
-									thrive in an businesses ever changing marketplaces. In today's
-									dynamicis business environment, the key to success lies.
+									ONE Agency hyperscales digital growth through customer acquisition
+									and performance creative. We deliver a symphony of digital
+									performance and actionable data analytics. Request Demo today.
 								</div>
 								<div
 									className="video-btn-wrap wow fadeInUp"
@@ -29,12 +29,12 @@ const Contact2 = () => {
 								>
 									<Link
 										className="video-btn vbox-item"
-										href="milto:support@solvior.com"
+										href="mailto:info@oneagency.com"
 									>
 										<span className="play-btn">
 											<i className="tji-email"></i>
 										</span>
-										<span className="video-text">support@solvior.com</span>
+										<span className="video-text">info@oneagency.com</span>
 									</Link>
 								</div>
 							</div>
@@ -87,13 +87,13 @@ const Contact2 = () => {
 													<FormSelect
 														id={"contact"}
 														className="nice-select"
-														defaultValue={"Chose a option"}
+														defaultValue={"Choose an option"}
 														items={[
-															{ value: "1", name: "Chose a option" },
-															{ value: "2", name: "IT consulting" },
-															{ value: "3", name: "Market research" },
-															{ value: "4", name: "Business process" },
-															{ value: "5", name: "Business consultancy" },
+															{ value: "1", name: "Choose an option" },
+															{ value: "2", name: "Paid Search" },
+															{ value: "3", name: "Paid Social" },
+															{ value: "4", name: "Performance Creative" },
+															{ value: "5", name: "Marketing Automation" },
 															{ value: "6", name: "Digital marketing" },
 															{ value: "7", name: "Branding design" },
 														]}

@@ -23,7 +23,7 @@ export default function About() {
 			<Header isHeaderTop={true} />
 			<Header isStickyHeader={true} />
 			<main>
-				<HeroInner title={"About"} text={"About"} />
+				<HeroInner title={"About"} text={"We are a Customer Acquisition Digital Growth Agency"} />
 				<About11 />
 				<Features type={2} />
 				<Funfact3 />

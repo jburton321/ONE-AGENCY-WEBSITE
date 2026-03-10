@@ -1,23 +1,10 @@
 import Accordion from "@/components/shared/accordion/Accordion";
 import FunfactSingle from "@/components/shared/funfact/FunfactSingle";
+import { processCopy } from "@/data/home-copy";
+
 const Process2 = () => {
-	const process = [
-		{
-			id: 1,
-			title: "Understand business",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
-		},
-		{
-			id: 1,
-			title: "Custom strategy",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
-		},
-		{
-			id: 1,
-			title: "Execute & optimize",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
-		},
-	];
+	const copy = processCopy[2];
+	const steps = copy.steps;
 
 	return (
 		<section className="h6-insight-section section-space">
@@ -26,10 +13,10 @@ const Process2 = () => {
 					<div className="col-lg-6">
 						<div className="sec-heading style-2 ">
 							<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-								// FROM INSIGHT TO IMPACT
+								// {copy.subTitle}
 							</span>
 							<h2 className="sec-title text-anim">
-								Three steps to business transformation
+								{copy.secTitle}
 							</h2>
 						</div>
 
@@ -48,7 +35,7 @@ const Process2 = () => {
 										aria-expanded="true"
 									>
 										<span className="subtitle">01.</span>
-										<span className="title">Quick solutions</span>
+										<span className="title">{steps[0].title}</span>
 									</button>
 									<div
 										id="collapseOne"
@@ -56,10 +43,7 @@ const Process2 = () => {
 										data-bs-parent="#insightAccordion"
 									>
 										<div className="accordion-body">
-											Our consultant specialize in delivering rapid, actionable
-											solutions that address your most pressing business on
-											challenges. Whether you are facing operational
-											inefficiencies, stalled growth.
+											{steps[0].desc}
 										</div>
 									</div>
 								</div>
@@ -73,7 +57,7 @@ const Process2 = () => {
 										aria-expanded="false"
 									>
 										<span className="subtitle">02.</span>
-										<span className="title">Strategic planning</span>
+										<span className="title">{steps[1].title}</span>
 									</button>
 									<div
 										id="collapseTwo"
@@ -81,10 +65,7 @@ const Process2 = () => {
 										data-bs-parent="#insightAccordion"
 									>
 										<div className="accordion-body">
-											Our consultant specialize in delivering rapid, actionable
-											solutions that address your most pressing business on
-											challenges. Whether you are facing operational
-											inefficiencies, stalled growth.
+											{steps[1].desc}
 										</div>
 									</div>
 								</div>
@@ -98,7 +79,7 @@ const Process2 = () => {
 										aria-expanded="false"
 									>
 										<span className="subtitle">03.</span>
-										<span className="title">Scalable growth</span>
+										<span className="title">{steps[2].title}</span>
 									</button>
 									<div
 										id="collapseThree"
@@ -106,10 +87,7 @@ const Process2 = () => {
 										data-bs-parent="#insightAccordion"
 									>
 										<div className="accordion-body">
-											Our consultant specialize in delivering rapid, actionable
-											solutions that address your most pressing business on
-											challenges. Whether you are facing operational
-											inefficiencies, stalled growth.
+											{steps[2].desc}
 										</div>
 									</div>
 								</div>
@@ -123,7 +101,7 @@ const Process2 = () => {
 						>
 							<div className="chart_content">
 								<div className="title">
-									From strategy to scalable business success
+									From strategy to scalable growth with ONE Agency
 								</div>
 								<div className="counter">
 									<FunfactSingle currentValue={8.2} />

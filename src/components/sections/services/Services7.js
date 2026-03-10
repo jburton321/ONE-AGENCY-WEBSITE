@@ -2,6 +2,7 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import ServiceCard7 from "@/components/shared/cards/ServiceCard7";
 import getALlServices from "@/libs/getALlServices";
+import { servicesCopy } from "@/data/home-copy";
 
 const Services7 = () => {
 	const services = getALlServices()?.slice(0, 4);
@@ -13,18 +14,17 @@ const Services7 = () => {
 						<div className="sec-heading-wrap">
 							<div className="sec-heading h7-section-heading style-4">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.3s">
-									OUR SOLUTIONS
+									{servicesCopy.subTitleTransformative.toUpperCase()}
 								</span>
 								<h2 className="sec-title text-anim">
-									Best comprehensive service offer.
+									{servicesCopy.secTitleComprehensive}
 								</h2>
 							</div>
 							<div className="desc">
-								In today's dynamic business environment, the key to success
-								strategics..
+								We focus on outcomes and work backwards from your objectives. Quick wins and longer-term tactics.
 							</div>
 							<ButtonPrimary
-								text={"More services"}
+								text={"More Services"}
 								url={"/services"}
 								className={"d-none d-lg-inline-flex"}
 							/>

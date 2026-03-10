@@ -1,5 +1,7 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import FunfactSingle from "@/components/shared/funfact/FunfactSingle";
+import { aboutCopy } from "@/data/home-copy";
+const copy = aboutCopy[5];
 
 const About5 = () => {
 	return (
@@ -31,41 +33,34 @@ const About5 = () => {
 							</div>
 							<div className="about-content-five">
 								<div className="sec-heading style-4">
-									<span
-										className="sub-title wow fadeInUp"
-										data-wow-delay="0.3s"
-									>
-										ABOUT OUR COMPANY
-									</span>
-									<h2 className="sec-title text-anim">
-										Crafting success tailored solution for each & every
-										challenges
-									</h2>
-								</div>
-								<div className="desc wow fadeInUp" data-wow-delay="0.7s">
-									<p>
-										Our mission is to empoiwers businesses off our all size too
-										thrive in an businesses changing marketplaces. In toda
-										dynamicis business environment, the key to the success lies
-										Our mission is to empower. Our consultancy excels in
-										providing quick solutions tailored.
-									</p>
-								</div>
-								<div className="about-funfact">
-									<div className="counter-item">
-										<FunfactSingle currentValue={8} symbol={".5x"} />
-										<span className="sub-title">Faster growth</span>
-									</div>
-									<div className="counter-item">
-										<FunfactSingle currentValue={20} symbol={"M"} />
-										<span className="sub-title">Reach worldwide</span>
-									</div>
-								</div>
-								<div
-									className="about-button wow fadeInUp"
-									data-wow-delay="0.9s"
+<span
+									className="sub-title wow fadeInUp"
+									data-wow-delay="0.3s"
 								>
-									<ButtonPrimary text={"Know More"} url={"/contact"} />
+									{copy.subTitle}
+								</span>
+								<h2 className="sec-title text-anim">
+									{copy.secTitle}
+								</h2>
+							</div>
+							<div className="desc wow fadeInUp" data-wow-delay="0.7s">
+								<p>{copy.desc}</p>
+							</div>
+							<div className="about-funfact">
+								<div className="counter-item">
+									<FunfactSingle currentValue={8} symbol={".5x"} />
+									<span className="sub-title">{copy.counterLabels[0]}</span>
+								</div>
+								<div className="counter-item">
+									<FunfactSingle currentValue={20} symbol={"M"} />
+									<span className="sub-title">{copy.counterLabels[1]}</span>
+								</div>
+							</div>
+							<div
+								className="about-button wow fadeInUp"
+								data-wow-delay="0.9s"
+							>
+								<ButtonPrimary text={copy.cta} url={"/contact"} />
 								</div>
 							</div>
 							<div

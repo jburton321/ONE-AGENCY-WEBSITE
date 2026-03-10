@@ -3,6 +3,8 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import HeroSlider from "@/components/shared/sliders/HeroSlider";
 import Image from "next/image";
+import { heroCopy } from "@/data/home-copy";
+const copy = heroCopy[6];
 
 const Hero6 = () => {
 	return (
@@ -12,21 +14,17 @@ const Hero6 = () => {
 					<div className="h6-hero-wrapper">
 						<div className="h6-hero-content">
 							<div className="sub-title wow fadeInRight" data-wow-delay="0s">
-								<i className="tji-check"></i>Trusted partner in business
-								excellence
+								<i className="tji-check"></i> {copy.subTitle}
 							</div>
 							<h1 className="hero-title text-anim">
-								Business growth through <span>strategic</span> thinking
+								{copy.title} <span>{copy.titleHighlight}</span>
 							</h1>
 							<div className="desc wow fadeInUp" data-wow-delay="0.3s">
-								<p>
-									Transform your business with expert consultancy services our
-									team of seasoned consultants unparalleled.
-								</p>
+								<p>{copy.desc}</p>
 							</div>
 							<div className="hero-btn-area wow fadeInUp" data-wow-delay="0.5s">
-								<ButtonPrimary text={"Free consultation"} url={"/contact"} />
-								<ButtonPrimary text={"Learn more"} url={"/about"} />
+								<ButtonPrimary text={copy.ctaPrimary} url={"/contact"} />
+								<ButtonPrimary text={copy.ctaSecondary} url={"/about"} />
 							</div>
 						</div>
 					</div>

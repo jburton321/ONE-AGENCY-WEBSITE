@@ -1,0 +1,18 @@
+---
+description: Reference site for tone, copy, and structure — ONE Agency (oneagency.com)
+alwaysApply: true
+---
+
+# Reference Site: ONE Agency
+
+**Content and structure reference:** https://oneagency.com/
+
+Use ONE Agency as the source for:
+- **Tone and messaging** — Headlines, value props, CTAs, and body copy
+- **Navigation structure** — Solutions (8) vs Services (11) as separate sections; How We Partner; Resources; Company; Support
+- **Solutions** (outcome-focused): Customer Acquisition, Performance Creative, Customer Engagement, Referral Engine, Data, Booking Engine, AI Solutions, Accelerated API Integrations
+- **Services** (channel/tactic): Paid Search, Paid Social, Programmatic, Marketing Automation, Creative, Online Reputation Management, Software Development & Integration, Remarketing & Retargeting, Conversion Rate Optimization, Social Community Management, Branding & Product Development
+- **Product names** — myONE Dash, myONE DataCloud, myONE Booking Engine, etc.
+- **Locations and contact** — Orlando, Scottsdale, Uxbridge, Cancún (see audit)
+
+Full sitemap, copy, and gaps vs current data: **docs/REFERENCE_SITE_ONEAGENCY_AUDIT.md**. Prefer that doc and oneagency.com when filling or aligning nav, services, solutions, hero text, and marketing copy.

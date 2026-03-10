@@ -5,6 +5,7 @@ import getALlServices from "@/libs/getALlServices";
 import tjStackAnimation from "@/libs/tjStackAnimation";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import { servicesCopy } from "@/data/home-copy";
 
 const Services10 = () => {
 	const animContainerRef = useRef();
@@ -22,10 +23,10 @@ const Services10 = () => {
 					<div className="col-lg-12">
 						<div className="sec-heading style-2 sec-heading-centered">
 							<span className="sub-title wow fadeInUp" data-wow-delay=".3s">
-								[ TRANSFORMATIVE SOLUTION ]
+								[ {servicesCopy.subTitleTransformative.toUpperCase()} ]
 							</span>
 							<h2 className="sec-title text-anim">
-								Explore comprehensive service offer
+								{servicesCopy.secTitleComprehensive}
 							</h2>
 						</div>
 					</div>
@@ -48,7 +49,7 @@ const Services10 = () => {
 							className="service-btn-area text-center wow fadeInUp"
 							data-wow-delay=".3s"
 						>
-							<ButtonPrimary text={"More services"} url={"/services"} />
+							<ButtonPrimary text={"More Services"} url={"/services"} />
 						</div>
 					</div>
 				</div>

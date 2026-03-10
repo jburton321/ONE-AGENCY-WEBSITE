@@ -2,6 +2,8 @@ import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import FunfactSingle from "@/components/shared/funfact/FunfactSingle";
 import PopupVideo from "@/components/shared/popup-video/PopupVideo";
 import Link from "next/link";
+import { aboutCopy } from "@/data/home-copy";
+const copy = aboutCopy[6];
 
 const About6 = () => {
 	return (
@@ -12,19 +14,17 @@ const About6 = () => {
 						<div className="h6-about-content">
 							<div className="sec-heading style-2">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.3s">
-									// NUMBE #1 SOLVER
+									{copy.subTitle}
 								</span>
 								<h2 className="sec-title tj-text-invert">
-									Expert on business transform dedicated to helping achieving
-									long-term success and for sustainable growth with our business
-									consulting.
+									{copy.secTitle}
 								</h2>
 							</div>
 							<div
 								className="about-btn-area wow fadeInUp"
 								data-wow-delay="0.3s"
 							>
-								<ButtonPrimary text={"Know our mission"} url={"/about"} />
+								<ButtonPrimary text={copy.cta} url={"/about"} />
 								<div className="client-experience">
 									<ul className="images-thumb">
 										<li>
@@ -74,10 +74,7 @@ const About6 = () => {
 									<span className="sub-title">Reach worldwide</span>
 								</div>
 								<div className="desc">
-									<p>
-										Our mission is our empower businesses off our all size too
-										thrive in an businesse changing marketplaces. Our mission.
-									</p>
+									<p>{copy.desc}</p>
 								</div>
 							</div>
 							<div className="h6-about-funfact-item">
@@ -87,8 +84,8 @@ const About6 = () => {
 								</div>
 								<div className="desc">
 									<p>
-										Our mission is our empower businesses off our all size too
-										thrive in an businesse changing marketplaces. Our mission.
+										ONE Agency empowers brands of all sizes to thrive in
+										changing marketplaces. We deliver a symphony of digital performance.
 									</p>
 								</div>
 							</div>
@@ -99,8 +96,8 @@ const About6 = () => {
 								</div>
 								<div className="desc">
 									<p>
-										Our mission is our empower businesses off our all size too
-										thrive in an businesse changing marketplaces. Our mission.
+										ONE Agency empowers brands of all sizes to thrive in
+										changing marketplaces. We deliver a symphony of digital performance.
 									</p>
 								</div>
 							</div>

@@ -1,7 +1,22 @@
 import BackToTop from "@/components/shared/others/BackToTop";
 import Link from "next/link";
+import getFooterData from "@/libs/getFooterData";
 
 const Footer10 = () => {
+	const footerData = getFooterData() ?? {};
+	const {
+		tagline,
+		ctaSubheading,
+		ctaHeading,
+		locations = [],
+		contactEmail,
+		brandName,
+		copyrightYear,
+		copyrightText,
+	} = footerData;
+	const offices = locations.slice(0, 2);
+	const ctaText = ctaSubheading ?? ctaHeading ?? "Let's talk business?";
+
 	return (
 		<footer className="tj-footer-area footer-2 style-2  h10-footer">
 			<div className="footer-top-area h10-footer-top fix">
@@ -14,11 +29,11 @@ const Footer10 = () => {
 							>
 								<div className="footer-logo">
 									<Link href="/">
-										<img src="/images/logos/primary-logo.png" alt="solvior" />
+										<img src="/images/logos/primary-logo.png" alt={brandName ?? "ONE Agency"} />
 									</Link>
 								</div>
 								<p className="desc">
-									Receive the latest business news, tips & updates via email
+									{tagline ?? "Receive the latest business news, tips & updates via email"}
 								</p>
 								<div className="newsletter-form">
 									<form>
@@ -44,7 +59,7 @@ const Footer10 = () => {
 									<div className="col-12">
 										<div className="h10-footer-cta">
 											<h1 className="h10-footer-cta-title text-anim">
-												<Link href="/contact">Let’s talk business?</Link>
+												<Link href="/contact">{ctaText}</Link>
 											</h1>
 											<Link
 												className="icon-btn h10-footer-cta-btn wow fadeInRight"
@@ -55,26 +70,34 @@ const Footer10 = () => {
 											</Link>
 										</div>
 									</div>
-									<div className="col-xl-3 col-lg-6">
-										<div className="footer-widget footer-contact-infos">
-											<div className="infos-item">
-												<span>Headquarters - USA</span>
-												<p>993 Renner Burg, West Rond, MT 94251-030</p>
-												<Link href="tel:1009544-7818">+1 (009) 544-7818</Link>
+									{offices[0] && (
+										<div className="col-xl-3 col-lg-6">
+											<div className="footer-widget footer-contact-infos">
+												<div className="infos-item">
+													<span>{offices[0].label}</span>
+													<p>{offices[0].address}</p>
+													{offices[0].phoneHref ? (
+														<Link href={offices[0].phoneHref}>{offices[0].phone}</Link>
+													) : null}
+												</div>
 											</div>
 										</div>
-									</div>
-									<div className="col-xl-4 col-lg-6">
-										<div className="footer-widget footer-contact-infos footer-contact-infos-2">
-											<div className="infos-item">
-												<span>Operations - Canada</span>
-												<p>Suite 452 8082 Boner Parge, Elviraton, CA 48998</p>
-												<Link href="mailto:support@solvior.com">
-													support@solvior.com
-												</Link>
+									)}
+									{offices[1] && (
+										<div className="col-xl-4 col-lg-6">
+											<div className="footer-widget footer-contact-infos footer-contact-infos-2">
+												<div className="infos-item">
+													<span>{offices[1].label}</span>
+													<p>{offices[1].address}</p>
+													{offices[1].phoneHref ? (
+														<Link href={offices[1].phoneHref}>{offices[1].phone}</Link>
+													) : contactEmail ? (
+														<Link href={contactEmail}>{contactEmail.replace("mailto:", "")}</Link>
+													) : null}
+												</div>
 											</div>
 										</div>
-									</div>
+									)}
 									<div className="col-xl-3 col-lg-6">
 										<div className="footer-widget ">
 											<div className="footer-social">
@@ -117,24 +140,27 @@ const Footer10 = () => {
 					<div className="row">
 						<div className="col-12">
 							<div className="copyright-content-area">
+								{tagline && (
+									<div className="copyright-text">
+										<p>
+											<i className="fa-solid fa-shield-check"></i> {tagline}
+										</p>
+									</div>
+								)}
 								<div className="copyright-text">
 									<p>
-										<i className="fa-solid fa-shield-check"></i> Trusted partner
-										in business excellence
-									</p>
-								</div>
-								<div className="copyright-text">
-									<p>
-										© 2025 <Link href="/"> Solvior </Link> All right reserved.
+										© {copyrightYear ?? new Date().getFullYear()}{" "}
+										<Link href="/">{brandName ?? "ONE Agency"}</Link>{" "}
+										{copyrightText ?? "All rights reserved."}
 									</p>
 								</div>
 								<div className="copyright-menu">
 									<ul>
 										<li>
-											<Link href="/contact">Policy & privacy</Link>
+											<Link href="/contact">Privacy Policy</Link>
 										</li>
 										<li>
-											<Link href="/contact">Terms & conditions</Link>
+											<Link href="/contact">Terms &amp; Conditions</Link>
 										</li>
 									</ul>
 								</div>

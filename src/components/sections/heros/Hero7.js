@@ -4,28 +4,16 @@ import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import Link from "next/link";
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { heroCopy } from "@/data/home-copy";
+const copy = heroCopy[7];
 
 const Hero7 = () => {
-	const heroSlides = [
-		{
-			img: "/images/slider/h7-slider-1.webp",
-			subtitle: "NUMBER #1 SOLVER AGENCY",
-			title: "Smartest solutions for agile companies",
-			desc: "Transform your business with expert consultancy services our team of seasoned consultants unparalleled.",
-		},
-		{
-			img: "/images/slider/h7-slider-2.webp",
-			subtitle: "NUMBER #1 SOLVER AGENCY",
-			title: "Cutting-Edge solution for businesses",
-			desc: "Transform your business with expert consultancy services our team of seasoned consultants unparalleled.",
-		},
-		{
-			img: "/images/slider/h7-slider-3.webp",
-			subtitle: "NUMBER #1 SOLVER AGENCY",
-			title: "Intelligent solutions for modern business",
-			desc: "Transform your business with expert consultancy services our team of seasoned consultants unparalleled.",
-		},
-	];
+	const heroSlides = copy.slides.map((slide, i) => ({
+		img: ["/images/slider/h7-slider-1.webp", "/images/slider/h7-slider-2.webp", "/images/slider/h7-slider-3.webp"][i],
+		subtitle: copy.subtitle,
+		title: slide.title,
+		desc: slide.desc,
+	}));
 	return (
 		<section className="tj-hero-slider h7-hero-slider style-1">
 			<Swiper
@@ -60,7 +48,7 @@ const Hero7 = () => {
 											</div>
 											<div className="hero-action">
 												<ButtonPrimary
-													text={"Free consultation"}
+													text={copy.cta}
 													url={"/contact"}
 													className={"slider-button"}
 												/>

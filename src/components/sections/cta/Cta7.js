@@ -14,9 +14,9 @@ const Cta7 = () => {
 								<i className="tji-brand"></i>
 							</div>
 							<h2 className="sec-title text-anim">
-								NEED MORE HELP?{" "}
-								<Link className="line-hover" href="mailto:support@solvior.com">
-									CONTACT US
+								All you need is ONE.{" "}
+								<Link className="line-hover" href="/contact">
+									Request Demo
 								</Link>
 							</h2>
 						</div>

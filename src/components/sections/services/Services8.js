@@ -34,11 +34,11 @@ const Services8 = () => {
 									</div>
 									<div className="h8-services-left-content">
 										<h2 className="title text-anim">
-											Services Built for <span>Business</span> goal Success
+											The ONE solution for <span>digital advertising</span> performance
 										</h2>
 										<div className="wow fadeInUp" data-wow-delay="0.7s">
 											<ButtonPrimary
-												text={"More services"}
+												text={"More Services"}
 												url={"/services"}
 												className={"d-none d-lg-inline-flex"}
 											/>
@@ -56,7 +56,7 @@ const Services8 = () => {
 								</div>
 
 								<div className="mobile_btn text-center d-lg-none">
-									<ButtonPrimary text={"More services"} url={"/services"} />
+									<ButtonPrimary text={"More Services"} url={"/services"} />
 								</div>
 							</div>
 						</div>

@@ -11,12 +11,12 @@ const Cta4 = () => {
 					<div className="col-12">
 						<div className="h5-cta-wrapper">
 							<h2 className="sec-title text-anim">
-								Need a consultation services?
+								All you need is ONE.
 							</h2>
 							<div className="h5-cta-contact wow fadeInUp" data-wow-delay=".3s">
 								<ButtonPrimary
-									text={"Free consultation"}
-									url={"mailto:support@solvior.com"}
+									text={"Request Demo"}
+									url={"/contact"}
 									iconName={"tji-email"}
 								/>
 								<ButtonPrimary

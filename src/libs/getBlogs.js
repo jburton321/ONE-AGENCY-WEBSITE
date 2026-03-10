@@ -1,7 +1,7 @@
 import blogs from "../../public/fakedata/blogs";
 
 const getBlogs = () => {
-  return blogs;
+	return Array.isArray(blogs) ? blogs : [];
 };
 
 export default getBlogs;

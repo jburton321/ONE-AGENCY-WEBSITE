@@ -1,29 +1,15 @@
 "use client";
 import modifyNumber from "@/libs/modifyNumber";
 import { useState } from "react";
+import { processCopy } from "@/data/home-copy";
 
 const Process = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const handleCurrentIndex = idx => {
 		setCurrentIndex(idx);
 	};
-	const process = [
-		{
-			id: 1,
-			title: "Understand business",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
-		},
-		{
-			id: 1,
-			title: "Custom strategy",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
-		},
-		{
-			id: 1,
-			title: "Execute & optimize",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
-		},
-	];
+	const copy = processCopy[1];
+	const process = copy.steps.map((step, i) => ({ id: i + 1, title: step.title, desc: step.desc }));
 	return (
 		<section className="h5-process-section">
 			<div
@@ -37,10 +23,10 @@ const Process = () => {
 					<div className="col">
 						<div className="sec-heading style-4">
 							<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-								HOW ITS WORKS
+								{copy.subTitle}
 							</span>
 							<h2 className="sec-title text-anim">
-								Three steps to transform your business
+								{copy.secTitle}
 							</h2>
 						</div>
 

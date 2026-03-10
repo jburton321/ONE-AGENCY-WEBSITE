@@ -120,11 +120,9 @@ const BlogSingle = ({ blog }) => {
 					<Link href={`/blogs/${id}`}>{title}</Link>
 				</h3>
 				<div className="tj-post-excerpt">
-					Our mission is to empowers businesses size to thrive in an businesses
-					ever changing marketplace. We are committed to the delivering
-					exceptionals the value through strategic inset, innovative approaches.
-					Our consulting of our missing empower businesses of all sizes to
-					delivering...
+					{desc
+						? `${desc.slice(0, 160)}...`
+						: "ONE Agency hyperscales digital growth through customer acquisition, performance creative and MarTech. We deliver a symphony of digital performance and actionable data analytics for brands of all sizes..."}
 				</div>
 				<div className="tj-post-btn">
 					<ButtonPrimary text={"Read more"} url={`/blogs/${id}`} />

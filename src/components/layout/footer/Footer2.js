@@ -1,7 +1,23 @@
 import BackToTop from "@/components/shared/others/BackToTop";
 import Link from "next/link";
+import getFooterData from "@/libs/getFooterData";
+import getALlServices from "@/libs/getALlServices";
 
 const Footer2 = () => {
+	const footerData = getFooterData() ?? {};
+	const services = getALlServices() ?? [];
+	const {
+		footerShortDesc,
+		tagline,
+		locations = [],
+		company = [],
+		brandName,
+		copyrightYear,
+		copyrightText,
+	} = footerData;
+	const desc = footerShortDesc ?? tagline ?? "";
+	const offices = locations.slice(0, 2);
+
 	return (
 		<footer className="tj-footer-area footer-2 fix">
 			<div className="footer-top-area">
@@ -11,13 +27,10 @@ const Footer2 = () => {
 							<div className="footer-widget footer2-col-1 footer-info">
 								<div className="footer-logo">
 									<Link href="/">
-										<img src="/images/logos/primary-logo.png" alt="solvior" />
+										<img src="/images/logos/primary-logo.png" alt={brandName || "ONE Agency"} />
 									</Link>
 								</div>
-								<p className="desc">
-									Our mission is to empowers businesses off our all size too
-									thrive in an businesses ever changing marketplaces.
-								</p>
+								{desc && <p className="desc">{desc}</p>}
 								<div className="footer-social">
 									<h5 className="title">Follow Us:</h5>
 									<ul>
@@ -50,47 +63,29 @@ const Footer2 = () => {
 								<div className="footer-title">
 									<h4 className="title">Our offices</h4>
 								</div>
-								<div className="infos-item">
-									<span>Headquarters - USA</span>
-									<p>993 Renner Burg, West Rond, MT 94251-030</p>
-									<Link href="tel:1009544-7818">+1 (009) 544-7818</Link>
-								</div>
-								<div className="infos-item">
-									<span>Operations - Canada</span>
-									<p>Suite 452 8082 Boner Parge, Elviraton, CA 48998</p>
-								</div>
+								{offices.map((loc, idx) => (
+									<div key={idx} className="infos-item">
+										<span>{loc.label}</span>
+										<p>{loc.address}</p>
+										{loc.phoneHref ? (
+											<Link href={loc.phoneHref}>{loc.phone}</Link>
+										) : null}
+									</div>
+								))}
 							</div>
 						</div>
 						<div className="col-xl-2 col-lg-2 col-md-6 col-sm-6">
 							<div className="footer-widget footer2-col-3 widget_nav_menu">
 								<div className="footer-title">
-									<h4 className="title">Resourses</h4>
+									<h4 className="title">Company</h4>
 								</div>
 								<div className="widget-menu">
 									<ul>
-										<li>
-											<Link href="/contact">Contact us</Link>
-										</li>
-										<li>
-											<Link href="/contact">Privacy policy</Link>
-										</li>
-										<li>
-											<Link href="about">Recognitions</Link>
-										</li>
-										<li>
-											<Link href="careers">
-												Careers <span>New</span>
-											</Link>
-										</li>
-										<li>
-											<Link href="/blog-grid">Blog</Link>
-										</li>
-										<li>
-											<Link href="/team">Feedback</Link>
-										</li>
-										<li>
-											<Link href="/contact">Error 404</Link>
-										</li>
+										{company.map((item, idx) => (
+											<li key={idx}>
+												<Link href={item.path}>{item.label}</Link>
+											</li>
+										))}
 									</ul>
 								</div>
 							</div>
@@ -102,27 +97,11 @@ const Footer2 = () => {
 								</div>
 								<div className="widget-menu">
 									<ul>
-										<li>
-											<Link href="/services/1">Strategic planning</Link>
-										</li>
-										<li>
-											<Link href="/services/2">Market research</Link>
-										</li>
-										<li>
-											<Link href="/services/3">Business process</Link>
-										</li>
-										<li>
-											<Link href="/services/4">Financial management</Link>
-										</li>
-										<li>
-											<Link href="/services/5">Change management</Link>
-										</li>
-										<li>
-											<Link href="/services/6">IT consulting</Link>
-										</li>
-										<li>
-											<Link href="/services/1">Leadership </Link>
-										</li>
+										{services.map((s) => (
+											<li key={s.id}>
+												<Link href={`/services/${s.id}`}>{s.title}</Link>
+											</li>
+										))}
 									</ul>
 								</div>
 							</div>
@@ -139,21 +118,20 @@ const Footer2 = () => {
 								<div className="copyright-content-area">
 									<div className="copyright-text">
 										<p>
-											© 2025{" "}
+											© {copyrightYear ?? new Date().getFullYear()}{" "}
 											<Link href="/" target="_blank">
-												{" "}
-												Solvior{" "}
+												{brandName ?? "ONE Agency"}
 											</Link>{" "}
-											All right reserved.
+											{copyrightText ?? "All rights reserved."}
 										</p>
 									</div>
 									<div className="copyright-menu">
 										<ul>
 											<li>
-												<Link href="/contact">Policy & privacy</Link>
+												<Link href="/contact">Privacy Policy</Link>
 											</li>
 											<li>
-												<Link href="/contact">Terms & conditions</Link>
+												<Link href="/contact">Terms &amp; Conditions</Link>
 											</li>
 										</ul>
 									</div>

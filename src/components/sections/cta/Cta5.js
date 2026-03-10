@@ -15,15 +15,14 @@ const Cta5 = () => {
 						<div className="h6-cta-content">
 							<div className="sec-heading style-2">
 								<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-									// BUILD THE FUTURE
+									// ALL YOU NEED IS ONE
 								</span>
 								<h2 className="sec-title text-anim">
-									Hiring thinkers and doers for consulting
+									Join ONE Agency in radically transforming the future of intelligent marketing.
 								</h2>
 								<div className="desc wow fadeInUp" data-wow-delay="0.3s">
 									<p>
-										Our mission is to empowers businesses off all size to thrive
-										in an our businesses.
+										We focus on outcomes and work backwards from your objectives. Quick wins and longer-term tactics.
 									</p>
 								</div>
 								<div
@@ -31,7 +30,7 @@ const Cta5 = () => {
 									data-wow-delay="0.5s"
 								>
 									<ButtonPrimary
-										text={"Join with us"}
+										text={"Request Demo"}
 										url={"/contact"}
 										className={"white-btn"}
 									/>

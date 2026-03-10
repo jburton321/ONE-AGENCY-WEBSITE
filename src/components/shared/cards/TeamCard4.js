@@ -48,11 +48,11 @@ const TeamCard4 = ({ teamMember, idx, currentTabIdx }) => {
 				</div>
 				<div className="h6-tab-right">
 					<p className="mission">
-						Our mission is to empower businesses of all sizes to thrive in a
-						changing marketplace. We are committed to delivering exceptional
-						value through strategic insight and innovative approaches. Our
-						consulting empowers our clients. Our consultants specialize in
-						delivering rapid, actionable results.
+						ONE Agency hyperscales digital growth through customer acquisition
+						and performance creative. We are committed to delivering exceptional
+						value through strategic insight and innovative approaches. We
+						empower brands of all sizes. Our team specializes in rapid,
+						actionable results and real-time visibility in myONE Dash.
 					</p>
 					<div className="progress-style-2 style-6">
 						<div className="proggess-item">
@@ -60,7 +60,7 @@ const TeamCard4 = ({ teamMember, idx, currentTabIdx }) => {
 								<ProgressBar size={140} value={88} />
 							</div>
 							<div className="proggess-text">
-								<span className="sub-title">Business consultants</span>
+								<span className="sub-title">Performance marketing</span>
 							</div>
 						</div>
 						<div className="proggess-item">

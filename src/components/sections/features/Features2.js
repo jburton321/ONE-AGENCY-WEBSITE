@@ -5,6 +5,7 @@ import tjSvgAnimation from "@/libs/tjSvgAnimation";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import { useRef } from "react";
+import { featuresCopy } from "@/data/home-copy";
 
 const Features2 = () => {
 	const animContainerRef = useRef();
@@ -14,10 +15,11 @@ const Features2 = () => {
 		},
 		{ scope: animContainerRef }
 	);
+	const copy = featuresCopy[2];
 	const features = [
 		{
-			title: "Quick solutions",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[0].title,
+			desc: copy.cards[0].desc,
 			icon: (
 				<svg
 					width="81"
@@ -63,8 +65,8 @@ const Features2 = () => {
 			),
 		},
 		{
-			title: "Expert advice",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[1].title,
+			desc: copy.cards[1].desc,
 			icon: (
 				<svg
 					width="80"
@@ -124,8 +126,8 @@ const Features2 = () => {
 			),
 		},
 		{
-			title: "Strategic planning",
-			desc: "Our consultancy excels in providing quick solutions tailored to your business challenges",
+			title: copy.cards[2].title,
+			desc: copy.cards[2].desc,
 			icon: (
 				<svg
 					width="80"
@@ -169,9 +171,9 @@ const Features2 = () => {
 					<div className="col-12">
 						<div className="sec-heading style-2">
 							<span className="sub-title wow fadeInUp" data-wow-delay="0.1s">
-								Why chose us
+								Get big wins, faster
 							</span>
-							<h2 className="sec-title text-anim">Explore our core features</h2>
+							<h2 className="sec-title text-anim">Explore our core solutions</h2>
 						</div>
 					</div>
 				</div>

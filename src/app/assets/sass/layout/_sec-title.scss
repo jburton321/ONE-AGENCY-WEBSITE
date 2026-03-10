@@ -6,7 +6,7 @@
 	margin-bottom: 50px;
 	.sub-title {
 		display: inline-block;
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: var(--tj-fw-bold);
 		letter-spacing: 0.12em;
 		text-transform: uppercase;
@@ -35,7 +35,17 @@
 	}
 	.sec-title {
 		margin: 0;
+		font-size: 62px;
 		letter-spacing: -0.04em;
+		@media #{$md} {
+			font-size: 52px;
+		}
+		@media #{$sm} {
+			font-size: 46px;
+		}
+		@media #{$xs} {
+			font-size: 40px;
+		}
 		span {
 			color: var(--tj-color-theme-primary);
 		}

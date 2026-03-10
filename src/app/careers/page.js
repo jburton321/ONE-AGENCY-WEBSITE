@@ -5,6 +5,12 @@ import Cta1 from "@/components/sections/cta/Cta1";
 import HeroInner from "@/components/sections/heros/HeroInner";
 import TjMagicCursor from "@/components/shared/others/TjMagicCursor";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
+
+export const metadata = {
+	title: "Careers | ONE Agency – Join Our Team",
+	description: "Join ONE Agency. Explore roles in paid media, performance creative, MarTech and customer acquisition. Orlando, Scottsdale, Uxbridge, Cancún.",
+};
+
 export default function Careers() {
 	return (
 		<div>

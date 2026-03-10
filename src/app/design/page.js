@@ -44,8 +44,8 @@ const breakpoints = [
 ];
 
 export const metadata = {
-	title: "Design system — Solvior",
-	description: "Colors, typography, spacing and breakpoints for Solvior.",
+	title: "Design system — ONE Agency",
+	description: "Colors, typography, spacing and breakpoints for ONE Agency.",
 };
 
 export default function DesignPage() {
@@ -64,7 +64,7 @@ export default function DesignPage() {
 				}}
 			>
 				<h1 style={{ margin: 0, fontSize: "var(--tj-fs-h4)" }}>
-					Solvior design system
+					ONE Agency design system
 				</h1>
 				<Link
 					href="/"

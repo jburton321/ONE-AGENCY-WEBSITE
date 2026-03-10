@@ -4,7 +4,7 @@ import DesignPage from "../page";
 describe("Design page", () => {
 	it("renders design system title and main sections", () => {
 		render(<DesignPage />);
-		expect(screen.getByRole("heading", { name: /Solvior design system/i })).toBeInTheDocument();
+		expect(screen.getByRole("heading", { name: /ONE Agency design system/i })).toBeInTheDocument();
 		expect(screen.getByText(/Colors/i)).toBeInTheDocument();
 		expect(screen.getByText(/Typography/i)).toBeInTheDocument();
 		expect(screen.getByText(/Spacing/i)).toBeInTheDocument();

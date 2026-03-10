@@ -12,16 +12,7 @@ const Cta2 = () => {
                            <Link href="tel:+18884521505"><i className="tji-phone"></i>1-888-452-1505</Link>
                         </li>
                         <li>
-                           <Link href="mailto:support@solvior.com"><i className="tji-email"></i>support@solvior.com</Link>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div className="col-lg-6 col-md-5">
-                  <div className="tj-cta-wrapper-3 wow fadeInUp" data-wow-delay="0.3s">
-                     <ul className="tj-cta-list style-2">
-                        <li>
-                           <span><i className="tji-clock"></i>Mon - Friday from 9:00 - 18:00</span>
+                           <Link href="mailto:info@oneagency.com"><i className="tji-email"></i>info@oneagency.com</Link>
                         </li>
                      </ul>
                   </div>

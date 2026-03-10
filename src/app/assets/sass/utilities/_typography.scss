@@ -21,16 +21,16 @@ $font-scale: (
 	),
 );
 
-// Font Size
+// Font Size – base scale for titles (h1 = hero/page, h2 = section, h3 = subsection, etc.)
 $font-size: (
 	fs: (
 		body: 16px,
 		p: 16px,
-		h1: 72px,
-		h2: 48px,
-		h3: 32px,
-		h4: 24px,
-		h5: 20px,
-		h6: 18px,
+		h1: 80px,
+		h2: 56px,
+		h3: 38px,
+		h4: 28px,
+		h5: 22px,
+		h6: 20px,
 	),
 );

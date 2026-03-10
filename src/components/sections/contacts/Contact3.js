@@ -18,17 +18,17 @@ const Contact3 = () => {
 									Let’s discuss further to get better results
 								</h2>
 								<p className="desc wow fadeInUp" data-wow-delay="0.3s">
-									Our mission is to empowers businesses off our all size too
-									thrive in an businesses ever changing marketplaces. In today's
-									dynamicis business environment, the key to success lies.
+									ONE Agency hyperscales digital growth through customer acquisition
+									and performance creative. We deliver a symphony of digital
+									performance and actionable data analytics. Request Demo to get started.
 								</p>
 								<h6
 									className="contact-team-details__message wow fadeInUp"
 									data-wow-delay="0.5s"
 								>
-									<Link href="mailto:support@solvior.com">
+									<Link href="mailto:info@oneagency.com">
 										{" "}
-										<i className="tji-chat"></i>livechat@solvior.com
+										<i className="tji-chat"></i>info@oneagency.com
 									</Link>
 								</h6>
 							</div>
@@ -53,9 +53,9 @@ const Contact3 = () => {
 									<FormSelect
 										id={"contact"}
 										className="nice-select tj-nice-select tj-input"
-										defaultValue={"Chose a option"}
+										defaultValue={"Choose an option"}
 										items={[
-											{ value: "1", name: "Chose a option" },
+											{ value: "1", name: "Choose an option" },
 											{ value: "2", name: "Business Advertising" },
 											{ value: "3", name: "Social Media Marketing" },
 											{ value: "4", name: "Content Marketing" },
