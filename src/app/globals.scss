@@ -1,0 +1,147 @@
+@forward "./assets/sass/components/theme";
+@forward "./assets/sass/components/buttons";
+@forward "./assets/sass/components/mouse";
+@forward "./assets/sass/components/preloader";
+@forward "./assets/sass/components/header";
+@forward "./assets/sass/components/mega-menu";
+@forward "./assets/sass/components/search";
+@forward "./assets/sass/components/hamburger";
+@forward "./assets/sass/components/footer";
+@forward "./assets/sass/components/swiper";
+@forward "./assets/sass/components/backtotop";
+@forward "./assets/sass/components/socials";
+@forward "./assets/sass/components/progress-bar";
+@forward "./assets/sass/components/rangeSlider";
+@forward "./assets/sass/components/tj-modal";
+
+@forward "./assets/sass/layout/page-header";
+@forward "./assets/sass/layout/hero";
+@forward "./assets/sass/layout/feature";
+@forward "./assets/sass/layout/about";
+@forward "./assets/sass/layout/brand";
+@forward "./assets/sass/layout/blog";
+@forward "./assets/sass/layout/blog-details";
+@forward "./assets/sass/layout/project";
+@forward "./assets/sass/layout/counter";
+@forward "./assets/sass/layout/evolute";
+@forward "./assets/sass/layout/service";
+@forward "./assets/sass/layout/service-details";
+@forward "./assets/sass/layout/skill";
+@forward "./assets/sass/layout/pricing";
+@forward "./assets/sass/layout/testimonial";
+@forward "./assets/sass/layout/slider";
+@forward "./assets/sass/layout/team";
+@forward "./assets/sass/layout/team-details";
+@forward "./assets/sass/layout/faq";
+@forward "./assets/sass/layout/history";
+@forward "./assets/sass/layout/careers";
+@forward "./assets/sass/layout/contact";
+@forward "./assets/sass/layout/cta";
+@forward "./assets/sass/layout/progress";
+@forward "./assets/sass/layout/marquee";
+@forward "./assets/sass/layout/animate";
+@forward "./assets/sass/layout/sec-title";
+@forward "./assets/sass/layout/h4-hero";
+@forward "./assets/sass/layout/h4-about";
+@forward "./assets/sass/layout/h4-feature";
+@forward "./assets/sass/layout/h4-progress";
+@forward "./assets/sass/layout/h4-service";
+@forward "./assets/sass/layout/h4-cta";
+@forward "./assets/sass/layout/h4-case-study";
+@forward "./assets/sass/layout/h4-team";
+@forward "./assets/sass/layout/h4-blog";
+@forward "./assets/sass/layout/h5-hero";
+@forward "./assets/sass/layout/h5-feature";
+@forward "./assets/sass/layout/h5-process";
+@forward "./assets/sass/layout/h5-about";
+@forward "./assets/sass/layout/h5-price";
+@forward "./assets/sass/layout/h5-testimonial";
+@forward "./assets/sass/layout/h5-blog";
+@forward "./assets/sass/layout/h5-cta";
+@forward "./assets/sass/layout/h5-footer";
+@forward "./assets/sass/layout/h5-team";
+@forward "./assets/sass/layout/h5-case-study";
+@forward "./assets/sass/layout/h5-service";
+
+// home 6
+@forward "./assets/sass/layout/h6-blog";
+@forward "./assets/sass/layout/h6-cta";
+@forward "./assets/sass/layout/h6-testimonial";
+@forward "./assets/sass/layout/h6-team";
+@forward "./assets/sass/layout/h6-services";
+@forward "./assets/sass/layout/h6-insight";
+@forward "./assets/sass/layout/h6-footer";
+@forward "./assets/sass/layout/h6-marquee";
+@forward "./assets/sass/layout/h6-projects";
+@forward "./assets/sass/layout/h6-header";
+@forward "./assets/sass/layout/h6-hero";
+@forward "./assets/sass/layout/h6-about";
+
+// home 7
+@forward "./assets/sass/components/h7-header";
+@forward "./assets/sass/components/h7-footer";
+@forward "./assets/sass/layout/h7-hero";
+@forward "./assets/sass/layout/h7-feature";
+@forward "./assets/sass/layout/h7-about";
+@forward "./assets/sass/layout/h7-services";
+@forward "./assets/sass/layout/h7-brand";
+@forward "./assets/sass/layout/h7-projects";
+@forward "./assets/sass/layout/h7-process";
+@forward "./assets/sass/layout/h7-testimonial";
+@forward "./assets/sass/layout/h7-blog";
+@forward "./assets/sass/layout/h7-faq";
+
+// home 8
+@forward "./assets/sass/components/h8-header";
+@forward "./assets/sass/layout/h8-hero";
+@forward "./assets/sass/layout/h8-feature";
+@forward "./assets/sass/layout/h8-about";
+@forward "./assets/sass/components/h8-footer";
+@forward "./assets/sass/layout/h8-cta";
+@forward "./assets/sass/layout/h8-marquee";
+@forward "./assets/sass/layout/h8-growth";
+@forward "./assets/sass/layout/h8-team";
+@forward "./assets/sass/layout/h8-blog";
+@forward "./assets/sass/layout/h8-services";
+@forward "./assets/sass/layout/h8-price";
+@forward "./assets/sass/layout/h8-process";
+@forward "./assets/sass/layout/h8-case-study";
+@forward "./assets/sass/layout/h8-testimonial";
+
+// home 9
+@forward "./assets/sass/components/h9-header";
+@forward "./assets/sass/components/h9-footer";
+@forward "./assets/sass/layout/h9-hero";
+@forward "./assets/sass/layout/h9-marquee";
+@forward "./assets/sass/layout/h9-services";
+@forward "./assets/sass/layout/h9-process";
+@forward "./assets/sass/layout/h9-about";
+@forward "./assets/sass/layout/h9-counter";
+@forward "./assets/sass/layout/h9-blog";
+@forward "./assets/sass/layout/h9-contact";
+@forward "./assets/sass/layout/h9-team";
+@forward "./assets/sass/layout/h9-brands";
+@forward "./assets/sass/layout/h9-testimonial";
+@forward "./assets/sass/layout/h9-case-study";
+@forward "./assets/sass/layout/h9-cta";
+
+// home 10
+@forward "./assets/sass/components/h10-header";
+@forward "./assets/sass/components/h10-footer";
+@forward "./assets/sass/layout/h10-about";
+@forward "./assets/sass/layout/h10-counter";
+@forward "./assets/sass/layout/h10-services";
+@forward "./assets/sass/layout/h10-video";
+@forward "./assets/sass/layout/h10-hero";
+@forward "./assets/sass/layout/h10-feature";
+@forward "./assets/sass/layout/h10-testimonial";
+@forward "./assets/sass/layout/h10-projects";
+@forward "./assets/sass/layout/h10-blog";
+@forward "./assets/sass/layout/h10-brands";
+@forward "./assets/sass/layout/h10-team";
+
+// shop css
+@forward "./assets/sass/ecommerce/woo-default";
+@forward "./assets/sass/ecommerce/woo-product";
+@forward "./assets/sass/ecommerce/woo-details";
+@forward "./assets/sass/ecommerce/woo-wishlist";

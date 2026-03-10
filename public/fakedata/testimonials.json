@@ -1,0 +1,68 @@
+[
+	{
+		"id": 1,
+		"authorName": "David Padilla",
+		"authorDesig": "Sunset World Resorts",
+		"img": "/images/testimonial/h1-test-1.webp",
+		"img2": "/images/testimonial/h3-test-1.png",
+		"logoImg": "/img/testimonials/logo/1.png",
+		"logoImgLight": "/img/testimonials/logo/1-dark.png",
+		"thumbImg": "/img/testimonials/user/testmonial-7-thumb.jpg",
+		"desc": "We've had a good contact ratio, amount of leads, and most importantly these clients are more aware of this kind of promotions. Keep 'em coming!"
+	},
+	{
+		"id": 2,
+		"authorName": "Meagan Blanco",
+		"authorDesig": "Digital Marketing Manager, Jasper Contractors",
+		"img": "/images/testimonial/h1-test-2.webp",
+		"img2": "/images/testimonial/h1-test-2.webp",
+		"logoImg": "/img/testimonials/logo/2.png",
+		"logoImgLight": "/img/testimonials/logo/2-dark.png",
+		"thumbImg": "/img/testimonials/user/h10-test.png",
+		"desc": "They have provided us compelling content that has added value for our target market, driving new leads and importantly, conversions. Having access to large data makes social media marketing critical for us as a brand in order to increase sales."
+	},
+	{
+		"id": 3,
+		"authorName": "Michael Desouza",
+		"authorDesig": "Sr. Manager",
+		"img": "/images/testimonial/h6-test-1.webp",
+		"img2": "/images/testimonial/h3-test-3.png",
+		"logoImg": "/img/testimonials/logo/1.png",
+		"logoImgLight": "/img/testimonials/logo/1-dark.png",
+		"thumbImg": "/img/testimonials/user/testmonial-7-thumb.jpg",
+		"desc": "ONE Agency is overcoming the failures of other major advertisers through the orchestration of their proprietary tech stack, persuasive creative and actionable data analytics. We're seeing real results."
+	},
+	{
+		"id": 4,
+		"authorName": "Caroline Dueont",
+		"authorDesig": "Sr. Executiver",
+		"img": "/images/testimonial/h3-test-3.png",
+		"img2": "/images/testimonial/h6-test-1.webp",
+		"logoImg": "/img/testimonials/logo/2.png",
+		"logoImgLight": "/img/testimonials/logo/2-dark.png",
+		"thumbImg": "/img/testimonials/user/h10-test.png",
+		"desc": "Our experience with Solvior has been nothing short of exceptional. From day one, their team demonstrated a deep understanding of our industry and quickly identified key areas for improvement. Their recommendations were not only innovative but also practical, leading to a efficiency."
+	},
+	{
+		"id": 5,
+		"authorName": "Lauren Sanders",
+		"authorDesig": "Business owner",
+		"img": "/images/testimonial/h3-test-4.png",
+		"img2": "/images/testimonial/h3-test-1.png",
+		"logoImg": "/img/testimonials/logo/1.png",
+		"logoImgLight": "/img/testimonials/logo/1-dark.png",
+		"thumbImg": "/img/testimonials/user/testmonial-7-thumb.jpg",
+		"desc": "Our experience with Solvior has been nothing short of exceptional. From day one, their team demonstrated a deep understanding of our industry and quickly identified key areas for improvement. Their recommendations were not only innovative but also practical, leading to a efficiency."
+	},
+	{
+		"id": 6,
+		"authorName": "Brandon Cooper",
+		"authorDesig": "Sr. Manager",
+		"img": "/images/testimonial/h6-test-1.webp",
+		"img2": "/images/testimonial/h3-test-2.png",
+		"logoImg": "/img/testimonials/logo/2.png",
+		"logoImgLight": "/img/testimonials/logo/2-dark.png",
+		"thumbImg": "/img/testimonials/user/testmonial-7-thumb.jpg",
+		"desc": "Our experience with Solvior has been nothing short of exceptional. From day one, their team demonstrated a deep understanding of our industry and quickly identified key areas for improvement. Their recommendations were not only innovative but also practical, leading to a efficiency."
+	}
+]

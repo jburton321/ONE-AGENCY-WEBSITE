@@ -1,0 +1,101 @@
+[
+	{
+		"id": 1,
+		"name": "Savanah Nguyen",
+		"desig": "Manager",
+		"img": "/images/team/team-1.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 2,
+		"name": "Esther Howard",
+		"desig": "Co. Founder",
+		"img": "/images/team/team-2.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 3,
+		"name": "Kristin Watson",
+		"desig": "Sr. Manager",
+		"img": "/images/team/team-3.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 4,
+		"name": "Guy Hawkins",
+		"desig": "Sr. Marketer",
+		"img": "/images/team/team-4.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 5,
+		"name": "Darlene Robert",
+		"desig": "Sr. Dsigner",
+		"img": "/images/team/team-5.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 6,
+		"name": "Ronald Richards",
+		"desig": "Sr. Marketer",
+		"img": "/images/team/team-6.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 7,
+		"name": "Savannah Nguyen",
+		"desig": "Sr. Excutive",
+		"img": "/images/team/team-7.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 8,
+		"name": "Jerome Bell",
+		"desig": "Sr. Developer",
+		"img": "/images/team/team-8.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+
+	{
+		"id": 9,
+		"name": "Darlene Robert",
+		"desig": "Sr. Dsigner",
+		"img": "/images/team/team-5.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 10,
+		"name": "Ronald Richards",
+		"desig": "Sr. Marketer",
+		"img": "/images/team/team-6.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 11,
+		"name": "Savannah Nguyen",
+		"desig": "Sr. Excutive",
+		"img": "/images/team/team-7.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 12,
+		"name": "Jerome Bell",
+		"desig": "Sr. Developer",
+		"img": "/images/team/team-8.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 13,
+		"name": "Savanah Nguyen",
+		"desig": "Manager",
+		"img": "/images/team/team-1.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	},
+	{
+		"id": 14,
+		"name": "Esther Howard",
+		"desig": "Co. Founder",
+		"img": "/images/team/team-2.webp",
+		"imgLarge": "/images/team/team-single.webp"
+	}
+]

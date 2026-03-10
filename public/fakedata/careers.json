@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+		"title": "Business strategy consultant",
+		"iconName": "tji-strategy",
+		"price": "$400-$550",
+		"duration": "week",
+		"location": "London,UK",
+		"category": "Full time job/on site",
+		"need": "Urgent"
+	},
+	{
+		"id": 2,
+		"title": "Management consultant",
+		"iconName": "tji-manage",
+		"price": "$400-$550",
+		"duration": "week",
+		"location": "London,UK",
+		"category": "Full time job/on site",
+		"need": "Urgent"
+	},
+	{
+		"id": 3,
+		"title": "Business process consultant",
+		"iconName": "tji-process-1",
+		"price": "$400-$550",
+		"duration": "week",
+		"location": "London,UK",
+		"category": "Full time job/on site",
+		"need": "Urgent"
+	},
+	{
+		"id": 4,
+		"title": "Operations consultant",
+		"iconName": "tji-operations",
+		"price": "$400-$550",
+		"duration": "week",
+		"location": "London,UK",
+		"category": "Full time job/on site",
+		"need": "Urgent"
+	},
+	{
+		"id": 5,
+		"title": "Organizational development",
+		"iconName": "tji-organize",
+		"price": "$400-$550",
+		"duration": "week",
+		"location": "London,UK",
+		"category": "Full time job/on site",
+		"need": "Urgent"
+	},
+	{
+		"id": 6,
+		"title": "Performance optimization",
+		"iconName": "tji-performance",
+		"price": "$400-$550",
+		"duration": "week",
+		"location": "London,UK",
+		"category": "Full time job/on site",
+		"need": "Urgent"
+	},
+	{
+		"id": 7,
+		"title": "Management consultant",
+		"iconName": "tji-manage",
+		"price": "$400-$550",
+		"duration": "week",
+		"location": "London,UK",
+		"category": "Full time job/on site",
+		"need": "Urgent"
+	},
+	{
+		"id": 8,
+		"title": "Business process consultant",
+		"iconName": "tji-process-1",
+		"price": "$400-$550",
+		"duration": "week",
+		"location": "London,UK",
+		"category": "Full time job/on site",
+		"need": "Urgent"
+	}
+]
