@@ -1,3 +1,109 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	.section-px {
+		@apply px-5 sm:px-8 md:px-12 lg:px-20;
+	}
+}
+
+@media (max-width: 320px) {
+	.section-px {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+.liquid-header {
+	font-family: var(--tj-ff-heading), sans-serif;
+	font-size: 56px;
+	font-weight: var(--tj-fw-sbold);
+	line-height: 1.2;
+	letter-spacing: -0.025em;
+	margin: 0;
+	text-transform: uppercase;
+	color: var(--tj-color-common-white, white);
+}
+
+.liquid-header--dark {
+	color: var(--tj-color-heading-primary);
+}
+
+h1.liquid-header.liquid-header--dark.font-heading.mb-8.transition-all.duration-1000.opacity-100.translate-y-0 {
+	font-size: 94px;
+}
+
+.black-bar {
+	border-left: none;
+	border-right: none;
+	display: inline;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	letter-spacing: -0.05em;
+}
+
+.hero-alt-grid {
+	background-image:
+		linear-gradient(rgba(203, 213, 225, 0.25) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(203, 213, 225, 0.25) 1px, transparent 1px);
+	background-size: 60px 60px;
+}
+
+@keyframes floatHero {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+}
+
+.animate-float-hero {
+	animation: floatHero 5s ease-in-out infinite;
+}
+
+/* LiveStats */
+.live-stats__value {
+	font-family: var(--tj-ff-heading), sans-serif;
+	font-size: var(--tj-fs-h4);
+	font-weight: var(--tj-fw-bold);
+	color: var(--tj-color-heading-primary);
+}
+
+.live-stats__label {
+	font-family: var(--tj-ff-body), sans-serif;
+	font-size: var(--tj-fs-h6);
+	font-weight: var(--tj-fw-medium);
+	color: var(--tj-color-text-body);
+}
+
+.live-stats__subtitle {
+	font-family: var(--tj-ff-body), sans-serif;
+	font-size: var(--tj-fs-body);
+	font-weight: var(--tj-fw-semibold);
+	color: var(--tj-color-text-body-2);
+}
+
+.live-stats__divider {
+	background-color: var(--tj-color-border-2);
+}
+
+.live-stats__gradient {
+	background: radial-gradient(ellipse at 50% 0%, rgba(8, 145, 178, 0.04) 0%, transparent 60%);
+}
+
+.live-stats__gain-arrow {
+	transition-property: opacity, transform;
+	transition-duration: 0.6s, 0.35s;
+	transition-timing-function: ease, cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.live-stats__gain-icon {
+	transition: filter 0.35s ease;
+}
+
+span.inline-block.overflow-hidden {
+	margin-bottom: 5px;
+}

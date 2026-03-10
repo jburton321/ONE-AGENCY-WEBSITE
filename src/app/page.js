@@ -5,6 +5,7 @@ import Blogs1 from "@/components/sections/blogs/Blogs1";
 import Features from "@/components/sections/features/Features";
 import Funfact1 from "@/components/sections/funfacts/Funfact1";
 import Hero from "@/components/sections/heros/Hero";
+import LiveStats from "@/components/sections/live-stats/LiveStats";
 import Portfolios1 from "@/components/sections/portfolios/Portfolios1";
 import Services1 from "@/components/sections/services/Services1";
 import Skills1 from "@/components/sections/Skills/Skills1";
@@ -20,6 +21,7 @@ export default function Home() {
 			<Header isStickyHeader={true} />
 			<main>
 				<Hero />
+				<LiveStats />
 				<Features />
 				<About1 />
 				<Services1 />

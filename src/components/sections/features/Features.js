@@ -190,7 +190,7 @@ const Features = ({ type }) => {
 	return (
 		<section
 			ref={animContainerRef}
-			className={`tj-feature-section  ${type === 2 ? "" : "with-shape"}`}
+			className="tj-feature-section"
 			id="scroll-hero"
 		>
 			<div

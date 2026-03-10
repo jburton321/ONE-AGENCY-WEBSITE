@@ -4,27 +4,6 @@
 .tj-feature-section {
 	overflow: hidden;
 
-	&.with-shape {
-		position: relative;
-		z-index: 3;
-		padding-top: 40px;
-		margin-top: -40px;
-
-		&::before {
-			position: absolute;
-			content: "";
-			top: 1px;
-			inset-inline-start: 0;
-			width: 100%;
-			height: 40px;
-			mask-image: url(/images/shapes/h1-hero-shapes.svg);
-			background: var(--tj-color-common-white);
-			mask-repeat: no-repeat;
-			mask-position: center bottom;
-			mask-size: contain;
-			z-index: 2;
-		}
-	}
 	&-wrap {
 		background-color: var(--tj-color-common-white);
 	}
