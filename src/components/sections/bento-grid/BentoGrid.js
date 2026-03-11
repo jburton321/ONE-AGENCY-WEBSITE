@@ -105,6 +105,11 @@ const UPDATE_INTERVAL = 140;
 const BASE_VALUE = 55;
 const SMOOTHING = 0.35;
 
+// Deterministic initial curve so server and client match (avoids hydration mismatch)
+const INITIAL_CHART_POINTS = Array.from({ length: POINT_COUNT }, (_, i) =>
+	Math.max(15, Math.min(90, BASE_VALUE + 12 * Math.sin((i / (POINT_COUNT - 1)) * Math.PI * 1.5)))
+);
+
 function generatePoint(prev) {
 	const drift = (Math.random() - 0.5) * 6;
 	const mean = BASE_VALUE + Math.sin(Date.now() / 4000) * 6;
@@ -130,14 +135,10 @@ function buildPath(points, w, h, closed) {
 }
 
 function StreamingChart() {
-	const [points, setPoints] = useState(() => {
-		const arr = [BASE_VALUE];
-		for (let i = 1; i < POINT_COUNT; i++) arr.push(generatePoint(arr[i - 1]));
-		return arr;
-	});
+	const [points, setPoints] = useState(INITIAL_CHART_POINTS);
 	const rafId = useRef(0);
-	const lastTick = useRef(Date.now());
-	const lastValue = useRef(BASE_VALUE);
+	const lastTick = useRef(0);
+	const lastValue = useRef(INITIAL_CHART_POINTS[INITIAL_CHART_POINTS.length - 1]);
 
 	const tick = useCallback(() => {
 		const now = Date.now();
