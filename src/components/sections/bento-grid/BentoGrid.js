@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import useScrollReveal from "@/hooks/useScrollReveal";
 import {
 	Star,
 	TrendingUp,
@@ -26,32 +27,6 @@ import {
 	Gem,
 	Building2,
 } from "lucide-react";
-
-// ═══════════════════════════════════════════════════════════════
-// HOOKS
-// ═══════════════════════════════════════════════════════════════
-
-function useScrollReveal(delay = 0) {
-	const ref = useRef(null);
-	const [visible, setVisible] = useState(false);
-
-	useEffect(() => {
-		if (!ref.current) return;
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					setTimeout(() => setVisible(true), delay);
-					observer.disconnect();
-				}
-			},
-			{ threshold: 0.15 }
-		);
-		observer.observe(ref.current);
-		return () => observer.disconnect();
-	}, [delay]);
-
-	return { ref, visible };
-}
 
 function easeOutExpo(t) {
 	return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);

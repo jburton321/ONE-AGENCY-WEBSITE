@@ -35,17 +35,8 @@
 	}
 	.sec-title {
 		margin: 0;
-		font-size: 62px;
+		font-size: clamp(40px, 3vw + 20px, 62px);
 		letter-spacing: -0.04em;
-		@media #{$md} {
-			font-size: 52px;
-		}
-		@media #{$sm} {
-			font-size: 46px;
-		}
-		@media #{$xs} {
-			font-size: 40px;
-		}
 		span {
 			color: var(--tj-color-theme-primary);
 		}

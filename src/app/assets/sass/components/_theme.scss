@@ -136,27 +136,10 @@ h6 {
 	@include transition(all 0.3s ease-in-out 0s);
 }
 
-/* Heading sizes from _typography.scss $font-size map – output explicitly so they display */
 h1 {
-	font-size: 80px;
-	@media #{$xl} {
-		font-size: 72px;
-	}
-	@media #{$lg} {
-		font-size: 58px;
-	}
-	@media #{$md} {
-		font-size: 52px;
-	}
-	@media #{$sm} {
-		font-size: 46px;
-	}
-	@media #{$xs} {
-		font-size: 40px;
-	}
+	font-size: clamp(40px, 4vw + 16px, var(--tj-fs-h1));
 }
 
-/* Hero main title: 56px on all 10 homepage variants */
 .tj-hero-section h1.hero-title,
 .tj-hero-section-two h1.hero-title,
 .tj-hero-section-three h1.hero-title,
@@ -166,61 +149,31 @@ h1 {
 .h8-hero h1.h8-hero-title,
 .h9-hero h1.hero-title,
 .h10-hero h1.hero-title {
-	font-size: 56px !important;
+	font-size: clamp(34px, 2vw + 28px, var(--tj-fs-h2)) !important;
 }
 
 h2 {
-	font-size: 56px;
-	@media #{$md} {
-		font-size: 46px;
-	}
-	@media #{$sm} {
-		font-size: 40px;
-	}
-	@media #{$xs} {
-		font-size: 34px;
-	}
+	font-size: clamp(34px, 2vw + 28px, var(--tj-fs-h2));
 }
 
 h3 {
-	font-size: 38px;
-	@media #{$lg, $md} {
-		font-size: 32px;
-	}
-	@media #{$sm} {
-		font-size: 28px;
-	}
-	@media #{$xs} {
-		font-size: 26px;
-	}
+	font-size: clamp(26px, 1.5vw + 20px, var(--tj-fs-h3));
 }
 
 h4 {
-	font-size: 28px;
-	@media #{$lg} {
-		font-size: 26px;
-	}
-	@media #{$md, $sm, $xs} {
-		font-size: 24px;
-	}
+	font-size: clamp(22px, 0.8vw + 18px, var(--tj-fs-h4));
 }
 
 h4.text-anim {
-	font-size: 32px;
+	font-size: clamp(26px, 1vw + 22px, 32px);
 }
 
 h5 {
-	font-size: 22px;
-	@media #{$sm, $xs} {
-		font-size: 20px;
-	}
+	font-size: clamp(20px, 0.3vw + 18px, var(--tj-fs-h5));
 }
 
 h6 {
-	font-size: 20px;
-	@media #{$sm, $xs} {
-		font-size: 18px;
-	}
+	font-size: clamp(18px, 0.3vw + 16px, var(--tj-fs-h6));
 }
 
 h1 a,

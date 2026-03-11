@@ -1,83 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
-import { ArrowRight } from "lucide-react";
-
-// ─── useScrollReveal ────────────────────────────────────────────────────────
-
-function useScrollReveal(delay = 0) {
-	const ref = useRef(null);
-	const [visible, setVisible] = useState(false);
-
-	useEffect(() => {
-		if (!ref.current) return;
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					setTimeout(() => setVisible(true), delay);
-					observer.disconnect();
-				}
-			},
-			{ threshold: 0.15 }
-		);
-		observer.observe(ref.current);
-		return () => observer.disconnect();
-	}, [delay]);
-
-	return { ref, visible };
-}
-
-// ─── CTAButton ──────────────────────────────────────────────────────────────
-
-const SIZES = {
-	sm: "px-6 py-3.5 min-h-[48px] text-[10px]",
-	default: "px-8 sm:px-10 py-4 sm:py-5 min-h-[48px] text-[11px] sm:text-xs",
-	lg: "px-10 sm:px-14 py-5 sm:py-7 min-h-[48px] text-[11px] sm:text-xs",
-};
-
-const VARIANTS = {
-	dark: "bg-[#1F50DA] text-white hover:bg-black shadow-lg hover:shadow-[0_20px_60px_-12px_rgba(0,0,0,0.4)]",
-	light: "bg-white text-slate-900 hover:bg-slate-50 shadow-lg hover:shadow-xl",
-};
-
-function CTAButton({
-	variant = "dark",
-	size = "default",
-	onClick,
-	className = "",
-	fullWidth = false,
-}) {
-	return (
-		<button
-			onClick={onClick}
-			className={`group ${VARIANTS[variant]} ${SIZES[size]} ${fullWidth ? "w-full" : "w-full md:w-auto"} justify-center font-bold uppercase tracking-wide inline-flex items-center gap-3 transition-all duration-300 hover:-translate-y-0.5 ${className}`}
-		>
-			Request Your Strategy Session
-			<ArrowRight
-				size={size === "sm" ? 14 : 16}
-				className="transition-transform duration-300 group-hover:translate-x-1"
-			/>
-		</button>
-	);
-}
-
-// ─── InteractiveGradientBG ──────────────────────────────────────────────────
-
-function InteractiveGradientBG() {
-	return (
-		<div
-			className="absolute inset-0 w-full h-full"
-			style={{ zIndex: 0, background: "#F8FAFC" }}
-		/>
-	);
-}
-
-// ─── ContrastSection ────────────────────────────────────────────────────────
+import { useEffect, useRef, useCallback } from "react";
+import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
+import useScrollReveal from "@/hooks/useScrollReveal";
 
 export default function ContrastSection() {
-	const router = useRouter();
-	const onAction = () => router.push("/contact");
 	const { ref, visible } = useScrollReveal(0);
 	const cardRef = useRef(null);
 
@@ -110,7 +37,7 @@ export default function ContrastSection() {
 			ref={ref}
 			className="pb-0 pt-14 sm:pt-20 md:pt-28 lg:pt-32 overflow-visible relative z-0 section-px"
 		>
-			<InteractiveGradientBG />
+			<div className="absolute inset-0 w-full h-full" style={{ zIndex: 0, background: "#F8FAFC" }} />
 			<div className="relative z-10 max-w-5xl mx-auto text-center">
 				<div
 					className={`transition-all duration-1000 ${
@@ -154,7 +81,7 @@ export default function ContrastSection() {
 						</div>
 					</div>
 
-					<CTAButton onClick={onAction} />
+					<ButtonPrimary text="Request your strategy session" url="/contact" />
 				</div>
 			</div>
 

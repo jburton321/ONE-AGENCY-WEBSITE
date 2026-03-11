@@ -1,32 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef, useMemo } from "react";
-import { useRouter } from "next/navigation";
-import { GitBranch, Crosshair, Zap, Rocket, TrendingUp } from "lucide-react";
-
-// ─── useScrollReveal ────────────────────────────────────────────────────────
-
-function useScrollReveal(delay = 0) {
-	const ref = useRef(null);
-	const [visible, setVisible] = useState(false);
-
-	useEffect(() => {
-		if (!ref.current) return;
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					setTimeout(() => setVisible(true), delay);
-					observer.disconnect();
-				}
-			},
-			{ threshold: 0.15 }
-		);
-		observer.observe(ref.current);
-		return () => observer.disconnect();
-	}, [delay]);
-
-	return { ref, visible };
-}
+import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
+import useScrollReveal from "@/hooks/useScrollReveal";
+import { GitBranch, Crosshair, Zap, TrendingUp } from "lucide-react";
 
 // ─── FloatingOrbs ───────────────────────────────────────────────────────────
 
@@ -470,7 +447,6 @@ function cardBg(pos) {
 }
 
 export default function PlatformBento() {
-	const router = useRouter();
 	const { ref, visible } = useScrollReveal(0);
 
 	return (
@@ -589,18 +565,7 @@ export default function PlatformBento() {
 						className={`${C} lg:col-start-1 lg:row-start-4 p-5 sm:p-6 flex items-center justify-center min-h-[80px] lg:min-h-0`}
 						style={cardBg("213% -151%")}
 					>
-						<div className="w-full h-[64px] bg-slate-100 rounded-full overflow-hidden shadow-[inset_0px_1px_3px_rgba(0,0,0,0.06)] p-2 flex items-center">
-							<button
-								onClick={() => router.push("/contact")}
-								className="flex-1 h-full rounded-full border border-blue-500/20 flex items-center justify-center gap-2 text-white text-lg font-medium shadow-lg transition-all duration-300 hover:opacity-90"
-								style={{
-									background: "linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)",
-								}}
-							>
-								<Rocket size={20} />
-								Launch
-							</button>
-						</div>
+						<ButtonPrimary text="Get started" url="/contact" />
 					</div>
 
 					<div

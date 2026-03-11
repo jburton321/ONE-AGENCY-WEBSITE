@@ -7,24 +7,8 @@
 	background-color: var(--tj-color-theme-dark);
 	z-index: 1;
 	overflow: hidden;
-	/* Hero titles stay at h1 scale; section title sizes never apply here */
 	.sec-title {
-		font-size: var(--tj-fs-h1);
-		@media #{$xl} {
-			font-size: 72px;
-		}
-		@media #{$lg} {
-			font-size: 58px;
-		}
-		@media #{$md} {
-			font-size: 52px;
-		}
-		@media #{$sm} {
-			font-size: 46px;
-		}
-		@media #{$xs} {
-			font-size: 40px;
-		}
+		font-size: clamp(40px, 4vw + 16px, var(--tj-fs-h1));
 	}
 	&::before {
 		position: absolute;
