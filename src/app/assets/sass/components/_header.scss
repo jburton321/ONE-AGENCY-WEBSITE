@@ -16,8 +16,6 @@
 		z-index: 98;
 	}
 	&.header-duplicate {
-		background-color: var(--tj-color-theme-dark);
-		box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.06);
 		position: fixed;
 		z-index: 100;
 		transform: translateY(-100%);
@@ -29,9 +27,89 @@
 	}
 
 	&.header-1 {
+		background-color: transparent !important;
+
+		.mainmenu ul > li > a {
+			color: var(--tj-color-heading-primary) !important;
+		}
+		.mainmenu ul > li.current-menu-ancestor > a,
+		.mainmenu ul > li.current-menu-item > a,
+		.mainmenu ul > li:hover > a {
+			color: var(--tj-color-theme-primary) !important;
+		}
+
 		.menu_btn {
-			color: var(--tj-color-common-white);
+			color: var(--tj-color-heading-primary);
 			margin-inline-start: 10px;
+		}
+
+		&.header-absolute,
+		&.header-duplicate {
+			background: transparent !important;
+			background-color: transparent !important;
+			-webkit-backdrop-filter: none !important;
+			backdrop-filter: none !important;
+			border-bottom: none !important;
+			box-shadow: none !important;
+
+			.header-bottom {
+				position: relative;
+				z-index: 1;
+				background: transparent !important;
+				-webkit-backdrop-filter: none !important;
+				backdrop-filter: none !important;
+
+				&::before {
+					content: "" !important;
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: -1;
+					background: rgba(255, 255, 255, 0.45);
+					-webkit-backdrop-filter: blur(80px) saturate(1.8) brightness(1.05);
+					backdrop-filter: blur(80px) saturate(1.8) brightness(1.05);
+					box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+					-webkit-backface-visibility: hidden;
+					backface-visibility: hidden;
+					transition: bottom 0.35s ease;
+				}
+
+				&:has(.mainmenu ul > li:hover > .sub-menu)::before {
+					bottom: -520px;
+					border-radius: 0 0 12px 12px;
+				}
+			}
+
+			.header-wrapper {
+				background: transparent !important;
+				background-color: transparent !important;
+			}
+		}
+
+		.mainmenu ul > li > .sub-menu {
+			background: transparent !important;
+			-webkit-backdrop-filter: none !important;
+			backdrop-filter: none !important;
+			border: none !important;
+			box-shadow: none !important;
+
+			&::before {
+				display: none !important;
+			}
+
+			a,
+			li > a,
+			.mega-menu-list a,
+			.mega-menu-title {
+				color: var(--tj-color-heading-primary) !important;
+			}
+			li > a:hover,
+			.mega-menu-list a:hover,
+			.mega-menu-list a.active {
+				color: var(--tj-color-theme-primary) !important;
+			}
 		}
 	}
 

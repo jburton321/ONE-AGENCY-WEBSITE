@@ -653,13 +653,11 @@ export default function BentoGrid() {
 	return (
 		<section className="pt-10 pb-16 section-px" style={{ backgroundColor: "#F8FAFC" }}>
 			<div className="mx-auto">
-				<div className="mb-10 sm:mb-14">
-					<h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-slate-900 leading-[0.95]">
-						The Growth
-						<br />
-						Infrastructure.
+				<div className="sec-heading mb-10 sm:mb-14 text-center">
+					<h2 className="sec-title text-anim">
+						The Growth Infrastructure.
 					</h2>
-					<p className="mt-3 text-xs sm:text-sm font-medium text-slate-500 max-w-md leading-relaxed">
+					<p className="desc mx-auto">
 						Everything you need to dominate your market — speed, data, creative, and real-time intelligence working in concert.
 					</p>
 				</div>

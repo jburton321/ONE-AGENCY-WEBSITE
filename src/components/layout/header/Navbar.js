@@ -31,152 +31,50 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 					<Link href={homeNav?.path ? homeNav?.path : "#"}>
 						{homeNav?.name}
 					</Link>
-					<ul className="sub-menu header__mega-menu mega-menu  ">
+					<ul className="sub-menu header__mega-menu mega-menu mega-menu-pages">
 						<li>
 							<div className="mega-menu-wrapper">
-								<div className="container-fluid gap-60-25">
-									<div className="row">
-										{homeNav?.submenu?.length
-											? homeNav?.submenu?.map((item, idx) => (
-													<div key={idx} className="col-xl-3 col-lg-3 col-12">
-														<div className="tj-demo-thumb ">
-															<div className="image">
-																<Image
-																	src={
-																		item?.img
-																			? item?.img
-																			: "/images/header/demo/home-1.webp"
-																	}
-																	alt=""
-																	width={570}
-																	height={434}
-																/>
-																{item?.badge ? (
-																	<span className="tj-demo-badge">
-																		{item?.badge}
-																	</span>
-																) : (
-																	""
-																)}
-																<div className="tj-demo-button">
-																	<ButtonPrimary
-																		text={"View demo"}
-																		url={item?.path}
-																		className={"header_btn"}
-																	/>
-																</div>
-															</div>
-															<h6 className="tj-demo-title">
-																<Link href={item?.path ? item?.path : "#"}>
-																	{item?.name}
-																</Link>
-															</h6>
-														</div>
-													</div>
-											  ))
-											: ""}
+								{[0, 1, 2, 3, 4].map((col) => (
+									<div key={col} className="mega-menu-pages-single">
+										<div className="mega-menu-pages-single-inner">
+											<h6 className="mega-menu-title">
+												{["Starter", "Business", "Agency", "Enterprise", "Custom"][col]}
+											</h6>
+											<div className="mega-menu-list">
+												{homeNav?.submenu?.slice(col * 2, col * 2 + 2).map((item, idx) => (
+													<Link
+														key={idx}
+														href={item?.path ? item?.path : "/"}
+														className={item?.isActive ? "active" : ""}
+													>
+														<i className="tji-square-cube" style={{ fontSize: "14px", marginRight: "8px" }} />
+														{item?.name}
+														{item?.badge ? (
+															<span className="mega-menu-badge">
+																{item?.badge}
+															</span>
+														) : (
+															""
+														)}
+													</Link>
+												))}
+											</div>
+										</div>
 									</div>
-								</div>
+								))}
 							</div>
 						</li>
 					</ul>
 				</li>
-				<li
-					className={`has-dropdown ${
-						pagesNav?.isActive ? "current-menu-ancestor" : ""
-					}`}
-				>
-					<Link href="javascript:void(0)">{pagesNav?.name}</Link>
-					<ul className="sub-menu header__mega-menu mega-menu mega-menu-pages">
-						<li>
-							<div className="mega-menu-wrapper">
-								{pagesNav?.submenu?.length
-									? pagesNav?.submenu?.map((pageItem, idx) => (
-											<div key={idx} className="mega-menu-pages-single">
-												<div className="mega-menu-pages-single-inner">
-													<h6 className="mega-menu-title">{pageItem?.name}</h6>
-													<div className="mega-menu-list">
-														{pageItem?.items?.length
-															? pageItem?.items?.map((item, idx2) => (
-																	<Link
-																		key={100 + idx2}
-																		href={item?.path ? item?.path : "/"}
-																		className={item?.isActive ? "active" : ""}
-																	>
-																		{item?.name}
-																		{item?.badge ? (
-																			<span
-																				className={`mega-menu-badge ${
-																					item?.badge === "HOT"
-																						? "mega-menu-badge-hot"
-																						: ""
-																				}`}
-																			>
-																				{item?.badge}
-																			</span>
-																		) : (
-																			""
-																		)}
-																	</Link>
-															  ))
-															: ""}
-													</div>
-												</div>
-											</div>
-									  ))
-									: ""}
-
-								<div className="col-12 col-lg-3 mega-menu-pages-single">
-									<div className="mega-menu-pages-single-inner">
-										<div
-											className="tj-sidebar-cta"
-											style={{
-												backgroundImage: "url('/images/blog/widget-cta.webp')",
-											}}
-										>
-											<div className="content">
-												<div className="icon">
-													<Image
-														src="/images/shapes/widget-cta-icon.png"
-														alt="image"
-														width={55}
-														height={55}
-													/>
-												</div>
-												<h3>
-													Need help? <br /> Feel free contact us
-												</h3>
-												<p>
-													Delivering a Symphony of Digital Performance.
-												</p>
-											</div>
-											<div className="cta-btn">
-												<ButtonPrimary
-													text={"Get in touch"}
-													url={"/contact"}
-													className={"white-btn"}
-												/>
-												<Image
-													className="shapes move-anim-2"
-													src="/images/shapes/carrow.png"
-													alt="shape"
-													width={115}
-													height={117}
-												/>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
+				<li>
+					<Link href="/about">Company</Link>
 				</li>
 				<li
 					className={`has-dropdown ${
 						serviceNav?.isActive ? "current-menu-ancestor" : ""
 					}`}
 				>
-					<Link href="javascript:void(0)">{serviceNav?.name}</Link>
+					<Link href="#" onClick={(e) => e.preventDefault()}>{serviceNav?.name}</Link>
 					<ul className="sub-menu header__mega-menu mega-menu mega-menu-pages">
 						<li>
 							<div className="mega-menu-wrapper">
@@ -302,7 +200,7 @@ const Navbar = ({ headerType, isStickyHeader }) => {
 						solutionsNav?.isActive ? "current-menu-ancestor" : ""
 					}`}
 				>
-					<Link href="javascript:void(0)">{solutionsNav?.name}</Link>
+					<Link href="#" onClick={(e) => e.preventDefault()}>{solutionsNav?.name}</Link>
 					<ul className="sub-menu header__mega-menu mega-menu mega-menu-pages">
 						<li>
 							<div className="mega-menu-wrapper">

@@ -8,7 +8,7 @@
 				"id": 1,
 				"name": "Home - 01",
 				"img": "/images/header/demo/home-1.webp",
-				"path": "/"
+				"path": "/home-1"
 			},
 			{
 				"id": 2,

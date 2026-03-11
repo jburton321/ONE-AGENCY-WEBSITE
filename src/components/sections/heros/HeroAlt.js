@@ -473,7 +473,7 @@ export default function HeroAlt({ onAction }) {
 				style={{ background: "radial-gradient(ellipse at center, rgba(8,145,178,0.3) 0%, rgba(6,182,212,0.1) 50%, transparent 80%)" }}
 			/>
 
-			<div className="max-w-5xl mx-auto text-left relative z-10 section-px" style={{ marginTop: "5px" }}>
+			<div className="max-w-5xl mx-auto text-center xl:text-left relative z-10 section-px" style={{ marginTop: "5px" }}>
 				<div
 					className={`font-heading text-body inline-flex items-center gap-2 font-bold mb-6 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
 					style={{ color: "var(--tj-color-text-body)", transitionDelay: "100ms" }}
@@ -496,14 +496,14 @@ export default function HeroAlt({ onAction }) {
 				</h1>
 
 				<p
-					className={`font-body text-body max-w-2xl mb-10 leading-relaxed transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+					className={`font-body text-body max-w-2xl mx-auto xl:mx-0 mb-10 leading-relaxed transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
 					style={{ color: "var(--tj-color-text-body)", transitionDelay: "400ms" }}
 				>
 					More customers, lower costs, zero disruption. Our AI-powered MarTech, conversion-obsessed creative, and proprietary data intelligence work as one coordinated&nbsp;engine.
 				</p>
 
 				<div
-					className={`flex flex-col sm:flex-row justify-start gap-4 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+					className={`flex flex-col sm:flex-row justify-center xl:justify-start gap-4 transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
 					style={{ transitionDelay: "600ms" }}
 				>
 					<CTAButton onClick={onAction} />
@@ -514,14 +514,10 @@ export default function HeroAlt({ onAction }) {
 				className={`xl:hidden relative z-10 mt-16 section-px transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
 				style={{ transitionDelay: "800ms" }}
 			>
-				<div className="grid grid-cols-2 gap-3 max-w-lg mx-auto sm:max-w-xl">
-					<div className="flex justify-center">
-						<IncreaseCard />
-					</div>
-					<div className="flex justify-center">
-						<MetricPill />
-					</div>
-					<div className="col-span-2 flex justify-center">
+				<div className="flex flex-col sm:grid sm:grid-cols-2 gap-3 max-w-lg mx-auto sm:max-w-xl">
+					<IncreaseCard />
+					<MetricPill />
+					<div className="sm:col-span-2">
 						<GrowthLineChart />
 					</div>
 				</div>

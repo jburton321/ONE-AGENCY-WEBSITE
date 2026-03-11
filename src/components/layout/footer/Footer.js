@@ -4,11 +4,16 @@ import Link from "next/link";
 import getFooterData from "@/libs/getFooterData";
 import getSolutions from "@/libs/getSolutions";
 import getALlServices from "@/libs/getALlServices";
+import getNavItems from "@/libs/getNavItems";
+import FooterPagesDropdown from "./FooterPagesDropdown";
 
 const Footer = ({ footerType }) => {
 	const footerData = getFooterData() ?? {};
 	const solutions = getSolutions() ?? [];
 	const services = getALlServices() ?? [];
+	const navItems = getNavItems() ?? [];
+	const pagesNav = navItems[1];
+	const pageGroups = pagesNav?.submenu || [];
 	const {
 		ctaHeading,
 		ctaSubheading,
@@ -139,6 +144,11 @@ const Footer = ({ footerType }) => {
 									</ul>
 								</div>
 							</div>
+						</div>
+
+						{/* Pages */}
+						<div className="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+							<FooterPagesDropdown groups={pageGroups} />
 						</div>
 
 						{/* Contact */}

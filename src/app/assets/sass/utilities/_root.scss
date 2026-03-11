@@ -2,6 +2,8 @@
 @use "typography" as *;
 
 :root {
+	--tj-ff-body: var(--tj-ff-heading);
+
 	/**
     @Font-Family Declaration
   */
