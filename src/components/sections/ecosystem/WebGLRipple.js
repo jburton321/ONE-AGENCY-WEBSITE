@@ -25,8 +25,8 @@ const FRAGMENT_SHADER = `
     float freq = 65.0;
     float wave = sin(d * freq - speed);
     
-    // --- SMOOTH BEVEL (softer edges) ---
-    float height = pow(wave * 0.5 + 0.5, 0.85);
+    // --- SMOOTH BEVEL (softer edges, reduced depth) ---
+    float height = pow(wave * 0.5 + 0.5, 0.92);
     
     // --- RIPPLE STARTS AT HUB CENTER (SVG logo center) ---
     // innerRadius = 0: ripple emanates from exact hub center
@@ -46,8 +46,8 @@ const FRAGMENT_SHADER = `
     // p = fragment position relative to hub center, normalized by min dimension
     vec2 p = (gl_FragCoord.xy - u_hubCenter) / min(u_resolution.y, u_resolution.x);
 
-    // --- SMOOTH 3D SLOPE CALCULATION (gentler bevel) ---
-    float e = 0.012;
+    // --- SMOOTH 3D SLOPE CALCULATION (reduced bevel) ---
+    float e = 0.028;
     float h = getZ(p);
     float hx = getZ(p + vec2(e, 0.0)) - h;
     float hy = getZ(p + vec2(0.0, e)) - h;
@@ -65,7 +65,7 @@ const FRAGMENT_SHADER = `
     vec3 baseColor = vec3(0.95, 0.96, 0.98);
     vec3 shadeColor = vec3(0.86, 0.89, 0.93);
     
-    vec3 color = mix(shadeColor, baseColor, diff) + (spec * 0.12);
+    vec3 color = mix(shadeColor, baseColor, diff) + (spec * 0.05);
 
     gl_FragColor = vec4(color, 1.0);
   }

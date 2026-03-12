@@ -1,10 +1,21 @@
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
-import Image from "next/image";
+import InfinityMesh from "@/components/shared/InfinityMesh";
 
 const Cta1 = () => {
 	return (
-		<section className="tj-cta-section">
-			<div className="container">
+		<section className="tj-cta-section relative overflow-hidden">
+			<div
+				className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 overflow-hidden pointer-events-none"
+				style={{ width: 1920, minWidth: 1920 }}
+			>
+				<InfinityMesh
+					className="absolute inset-0 pointer-events-none"
+					style={{ width: 1920, minWidth: 1920, height: "100%" }}
+					cameraZ={45}
+					meshScale={4}
+				/>
+			</div>
+			<div className="container relative z-10">
 				<div className="row">
 					<div className="col-12">
 						<div className="cta-wrapper">
@@ -22,23 +33,6 @@ const Cta1 = () => {
 					</div>
 				</div>
 			</div>
-
-			<Image
-				className="cta-shape-1"
-				src="/images/shapes/cta-shapes-1.png"
-				alt="Shapes"
-				width={207}
-				height={110}
-				style={{ height: "auto" }}
-			/>
-			<Image
-				className="cta-shape-2"
-				src="/images/shapes/cta-shapes-2.png"
-				alt="Shapes"
-				width={207}
-				height={110}
-				style={{ height: "auto" }}
-			/>
 		</section>
 	);
 };

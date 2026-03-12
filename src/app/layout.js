@@ -22,6 +22,7 @@ import "./tailwind.css";
 export const metadata = {
 	title: "ONE Agency – Digital Growth & Performance Marketing | Orlando",
 	description: "Hyperscale digital growth through customer acquisition, UX/CX & MarTech. Proprietary tech stack, persuasive creative and actionable data.",
+	themeColor: "#2D3548",
 };
 
 const libreFranklin = Libre_Franklin({

@@ -79,6 +79,11 @@ const Team1 = ({ type }) => {
 						<ButtonPrimary text={"View all leadership"} url={"/team"} />
 					</div>
 				)}
+				{type !== 2 && (
+					<div className="flex justify-center mt-10 sm:mt-12">
+						<ButtonPrimary text="Meet Our Team" url="/team" />
+					</div>
+				)}
 				{type === 2 && totalItemsToShow < totalItems ? (
 					<Paginations
 						paginationDetails={{
