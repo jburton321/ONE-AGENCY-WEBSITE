@@ -21,25 +21,6 @@ import QuoteButton from "@/components/shared/buttons/QuoteButton";
 import useScrollReveal from "@/hooks/useScrollReveal";
 import WebGLRipple from "./WebGLRipple";
 
-// ─── Dashboard accent colors (for lightbox) ─────────────────────────────────
-
-const DASHBOARD_ACCENTS = {
-	"PAID SEARCH": "#0ea5e9",
-	"PAID SOCIAL": "#0ea5e9",
-	"PROGRAMMATIC": "#10b981",
-	"MARKETING AUTOMATION": "#f59e0b",
-	"REMARKETING & RETARGETING": "#ef4444",
-	"ONLINE REPUTATION": "#10b981",
-	"BRANDING & PRODUCT DEV": "#0ea5e9",
-	"SOCIAL COMMUNITY": "#8b5cf6",
-	"CRO": "#f59e0b",
-	"SOFTWARE DEV & API": "#0ea5e9",
-};
-
-function getAccent(title) {
-	return DASHBOARD_ACCENTS[title] || "#0ea5e9";
-}
-
 // ─── Service Node Data ───────────────────────────────────────────────────────
 
 const LEFT_NODES = [
@@ -666,89 +647,49 @@ function MobileEcosystem({ visible, onClick }) {
 
 // ─── Main Export ─────────────────────────────────────────────────────────────
 
-function EcoBgCharts({ visible }) {
-	/*
-	 * Depth model — XY plane perspective.
-	 * depth(x,y) = y×0.7 + centerProximity(x)×0.3
-	 * depth ∈ [0,1], 0 = furthest, 1 = nearest.
-	 */
-	const computeDepth = (x, y) => {
-		const centerProximity = 1 - Math.abs(x - 0.5) * 2;
-		return Math.min(1, Math.max(0, y * 0.7 + centerProximity * 0.3));
-	};
-
-	const RINGS = [
-		{ x: 0.30, y: 0.12, size: 120, delay: 0 },
-		{ x: 0.32, y: 0.55, size: 90, delay: 1.2 },
-		{ x: 0.36, y: 0.80, size: 100, delay: 2.4 },
-		{ x: 0.70, y: 0.10, size: 110, delay: 0.6 },
-		{ x: 0.66, y: 0.52, size: 80, delay: 1.8 },
-		{ x: 0.68, y: 0.84, size: 95, delay: 3.0 },
-		{ x: 0.40, y: 0.35, size: 70, delay: 2.0 },
-		{ x: 0.62, y: 0.28, size: 75, delay: 0.8 },
-	];
-
-	return (
-		<div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
-			{/* Pulsing rings — depth-sorted */}
-			{RINGS
-				.map((r) => ({ ...r, depth: computeDepth(r.x, r.y) }))
-				.sort((a, b) => a.depth - b.depth)
-				.map((ring, i) => {
-					const ringScale = 0.55 + ring.depth * 0.55;
-					const ringOpacity = 0.12 + ring.depth * 0.28;
-					const dotSize = 3 + ring.depth * 4;
-					return (
-						<div
-							key={`pulse-${i}`}
-							className="absolute"
-							style={{
-								top: `${ring.y * 100}%`,
-								left: `${ring.x * 100}%`,
-								width: ring.size * ringScale,
-								height: ring.size * ringScale,
-								transform: "translate(-50%, -50%)",
-								opacity: visible ? ringOpacity : 0,
-								transition: `opacity 1s ease ${ring.delay + 0.5}s`,
-								zIndex: Math.round(ring.depth * 10),
-								filter: `brightness(${(0.7 + ring.depth * 0.35).toFixed(2)})`,
-							}}
-						>
-							{[0, 1, 2].map((r) => (
-								<div
-									key={r}
-									className="absolute inset-0 rounded-full border border-blue-400/20"
-									style={{
-										animation: visible ? `ecoPulseRing 3s ease-out ${ring.delay + r * 0.8}s infinite` : "none",
-										borderWidth: ring.depth > 0.5 ? 1.5 : 1,
-									}}
-								/>
-							))}
-							<div
-								className="absolute rounded-full"
-								style={{
-									width: dotSize,
-									height: dotSize,
-									top: "50%",
-									left: "50%",
-									transform: "translate(-50%, -50%)",
-									backgroundColor: "#0475FF",
-									opacity: 0.25 + ring.depth * 0.25,
-								}}
-							/>
-						</div>
-					);
-				})}
-		</div>
-	);
-}
-
 export default function Ecosystem() {
 	const { ref, visible } = useScrollReveal(0);
 	const [activeIdx, setActiveIdx] = useState(null);
 	const [lightboxIdx, setLightboxIdx] = useState(null);
 	const autoStep = useRef(0);
 	const pauseUntil = useRef(0);
+	const rippleContainerRef = useRef(null);
+	const hubDesktopRef = useRef(null);
+	const hubMobileRef = useRef(null);
+	const hubCenterRef = useRef({ x: 0, y: 0 });
+
+	useEffect(() => {
+		const container = rippleContainerRef.current;
+		const hubDesktop = hubDesktopRef.current;
+		const hubMobile = hubMobileRef.current;
+		if (!container) return;
+
+		const measure = () => {
+			const cr = container.getBoundingClientRect();
+			const hub = hubDesktop?.getBoundingClientRect().width > 0 ? hubDesktop : hubMobile;
+			if (!hub || cr.width === 0 || cr.height === 0) return;
+
+			const hr = hub.getBoundingClientRect();
+			hubCenterRef.current = {
+				x: hr.left - cr.left + hr.width / 2,
+				y: hr.top - cr.top + hr.height / 2,
+			};
+		};
+
+		measure();
+		const ro = new ResizeObserver(measure);
+		ro.observe(container);
+		const raf = () => {
+			measure();
+			rafId = requestAnimationFrame(raf);
+		};
+		let rafId = requestAnimationFrame(raf);
+
+		return () => {
+			ro.disconnect();
+			cancelAnimationFrame(rafId);
+		};
+	}, [visible]);
 
 	useEffect(() => {
 		if (!visible) return;
@@ -776,8 +717,8 @@ export default function Ecosystem() {
 	return (
 		<section id="ecosystem" ref={ref} className="relative py-12 sm:py-16 overflow-hidden section-px" style={{ backgroundColor: "#F8FAFC" }}>
 			{/* Ripple: full section background */}
-			<div className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-1000 ${visible ? "opacity-100" : "opacity-0"}`} style={{ zIndex: 0 }}>
-				<WebGLRipple visible={visible} />
+			<div ref={rippleContainerRef} className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-1000 ${visible ? "opacity-100" : "opacity-0"}`} style={{ zIndex: 0 }}>
+				<WebGLRipple visible={visible} hubCenterRef={hubCenterRef} />
 			</div>
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-blue-500/[0.02] rounded-full blur-[140px]" />
@@ -802,13 +743,15 @@ export default function Ecosystem() {
 				<div className="min-h-[520px] flex items-center justify-center" aria-hidden="true" />
 				<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full min-h-[480px] section-px">
 					<div className="relative w-full h-full min-h-[480px]">
-						<EcoBgCharts visible={visible} />
 						<DesktopEcosystem visible={visible} hovered={activeIdx} onEnter={handleEnter} onLeave={handleLeave} onClick={handleClick} />
+						{/* Hub + radial animation share same center */}
 						<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center pointer-events-none">
-							<div className="flex flex-col items-center justify-center text-center w-[220px] h-[220px] xl:w-[260px] xl:h-[260px] rounded-full border border-white/30 backdrop-blur-md shadow-sm" style={{ background: "rgba(255,255,255,0.35)" }}>
-								<EcosystemBot hovered={activeIdx} className="w-[90px] xl:w-[110px] mb-2" />
-								<span className="text-[8px] font-black uppercase text-blue-600">Fully Managed</span>
-								<h4 className="text-lg xl:text-xl font-bold uppercase tracking-tight text-slate-900 mt-1.5 leading-tight">CHANNELS</h4>
+							<div ref={hubDesktopRef} className="relative flex flex-col items-center justify-center text-center w-[220px] h-[220px] xl:w-[260px] xl:h-[260px] rounded-full border border-white/30 backdrop-blur-md shadow-sm overflow-visible" style={{ background: "rgba(255,255,255,0.35)" }}>
+								<div className="relative z-10 flex flex-col items-center justify-center">
+									<EcosystemBot hovered={activeIdx} className="w-[90px] xl:w-[110px] mb-2" />
+									<span className="text-[8px] font-black uppercase text-blue-600">Fully Managed</span>
+									<h4 className="text-lg xl:text-xl font-bold uppercase tracking-tight text-slate-900 mt-1.5 leading-tight">CHANNELS</h4>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -817,15 +760,14 @@ export default function Ecosystem() {
 
 			{/* Mobile: flow-based layout — hub then cards, section grows with content */}
 			<div className="lg:hidden relative z-10 pt-6 sm:pt-8 pb-4">
-				<div className="hidden sm:block">
-					<EcoBgCharts visible={visible} />
-				</div>
-				{/* Hub */}
+				{/* Hub + radial animation share same center */}
 				<div className="flex justify-center mb-6 sm:mb-8">
-					<div className="flex flex-col items-center justify-center text-center w-[120px] h-[120px] sm:w-[170px] sm:h-[170px] rounded-full border border-white/30 backdrop-blur-md shadow-sm" style={{ background: "rgba(255,255,255,0.35)" }}>
-						<EcosystemBot hovered={null} className="w-[50px] sm:w-[75px] mb-1.5" />
-						<span className="text-[7px] font-black uppercase text-blue-600">Fully Managed</span>
-						<h4 className="text-sm sm:text-base font-bold uppercase tracking-tight text-slate-900 mt-1 leading-tight">CHANNELS</h4>
+					<div ref={hubMobileRef} className="relative flex flex-col items-center justify-center text-center w-[120px] h-[120px] sm:w-[170px] sm:h-[170px] rounded-full border border-white/30 backdrop-blur-md shadow-sm overflow-visible" style={{ background: "rgba(255,255,255,0.35)" }}>
+						<div className="relative z-10 flex flex-col items-center justify-center">
+							<EcosystemBot hovered={null} className="w-[50px] sm:w-[75px] mb-1.5" />
+							<span className="text-[7px] font-black uppercase text-blue-600">Fully Managed</span>
+							<h4 className="text-sm sm:text-base font-bold uppercase tracking-tight text-slate-900 mt-1 leading-tight">CHANNELS</h4>
+						</div>
 					</div>
 				</div>
 				<MobileEcosystem visible={visible} onClick={handleClick} />
@@ -852,10 +794,6 @@ export default function Ecosystem() {
 				}
 				.eco-modal-exit {
 					animation: ecoModalOut 0.2s ease-in forwards;
-				}
-				@keyframes ecoPulseRing {
-					0% { transform: scale(0.3); opacity: 0.6; }
-					100% { transform: scale(1); opacity: 0; }
 				}
 			`}</style>
 		</section>

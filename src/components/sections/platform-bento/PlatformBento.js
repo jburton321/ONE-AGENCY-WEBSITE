@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo } from "react";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import WebGLReveal from "@/components/shared/WebGLReveal";
 import { GitBranch, Crosshair, Zap, TrendingUp, Heart, MessageCircle, Send, Bookmark } from "lucide-react";
 
 // ─── FloatingOrbs ───────────────────────────────────────────────────────────
@@ -538,10 +539,13 @@ export default function PlatformBento() {
 			ref={ref}
 			className="py-10 sm:py-16 lg:py-20 bg-white relative overflow-hidden section-px"
 		>
+			<div className="absolute inset-0 overflow-hidden pointer-events-none">
+				<WebGLReveal visible={visible} delay={0} />
+			</div>
 			<FloatingOrbs count={7} minSize={100} maxSize={280} />
 
 			<div
-				className={`transition-all duration-1000 ${
+				className={`relative z-10 transition-all duration-1000 ${
 					visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
 				}`}
 			>

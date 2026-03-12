@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import WebGLReveal from "@/components/shared/WebGLReveal";
 
 export default function CIQHero() {
 	const ref = useRef(null);
@@ -25,6 +26,9 @@ export default function CIQHero() {
 		<section id="technology" ref={ref} className="relative overflow-hidden">
 			{/* Background */}
 			<div className="absolute inset-0 w-full h-full" style={{ zIndex: 0, background: "#F8FAFC" }} />
+			<div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 1 }}>
+				<WebGLReveal visible={visible} delay={0} />
+			</div>
 
 			<div className="relative z-10">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">

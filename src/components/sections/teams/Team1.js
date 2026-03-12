@@ -33,7 +33,7 @@ const Team1 = ({ type }) => {
 	const totalItems = items?.length;
 	const totalItemsToShow = currentItems?.length;
 	return (
-		<section ref={animContainerRef} className="tj-team-section section-space">
+		<section ref={animContainerRef} className="tj-team-section section-space" style={{ backgroundColor: "#051129" }}>
 			<div className="container">
 				{type === 2 ? (
 					""

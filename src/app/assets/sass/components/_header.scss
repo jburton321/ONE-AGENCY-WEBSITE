@@ -41,6 +41,32 @@
 		.menu_btn {
 			color: var(--tj-color-heading-primary);
 			margin-inline-start: 10px;
+
+			.line {
+				width: 50px;
+				height: auto;
+				display: inline-flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-end;
+				gap: 8px;
+				border-radius: var(--tj-br-md);
+
+				span {
+					width: 100%;
+					height: 1px;
+					background-color: #0074FD;
+					flex-shrink: 0;
+
+					&:nth-child(2) {
+						width: 50%;
+					}
+				}
+
+				&:hover span:nth-child(2) {
+					width: 100%;
+				}
+			}
 		}
 
 		&.header-absolute,
@@ -52,12 +78,48 @@
 			border-bottom: none !important;
 			box-shadow: none !important;
 
+			.mainmenu ul > li > a {
+				color: var(--tj-color-common-white) !important;
+			}
+			.mainmenu ul > li:hover > a {
+				color: #a8d4ff !important;
+			}
+			.mainmenu ul > li.current-menu-ancestor > a,
+			.mainmenu ul > li.current-menu-item > a {
+				color: var(--tj-color-common-white) !important;
+				position: relative;
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 8px;
+					height: 2px;
+					background: var(--tj-color-theme-primary);
+					border-radius: 1px;
+				}
+			}
+			.menu_btn {
+				color: var(--tj-color-common-white);
+			}
+			.menu_btn .line span {
+				background-color: var(--tj-color-common-white) !important;
+			}
+			.menu_btn .cubes span {
+				border-color: var(--tj-color-common-white) !important;
+				&:nth-child(2) {
+					box-shadow: inset 0 0 0 2px var(--tj-color-common-white) !important;
+				}
+			}
+
 			.header-bottom {
 				position: relative;
 				z-index: 1;
 				background: transparent !important;
 				-webkit-backdrop-filter: none !important;
 				backdrop-filter: none !important;
+				padding-top: 24px;
+				padding-bottom: 24px;
 
 				&::before {
 					content: "" !important;
@@ -67,10 +129,10 @@
 					right: 0;
 					bottom: 0;
 					z-index: -1;
-					background: rgba(255, 255, 255, 0.45);
-					-webkit-backdrop-filter: blur(80px) saturate(1.8) brightness(1.05);
-					backdrop-filter: blur(80px) saturate(1.8) brightness(1.05);
-					box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+					background: rgba(5, 18, 41, 0.88);
+					-webkit-backdrop-filter: blur(24px) saturate(1.4);
+					backdrop-filter: blur(24px) saturate(1.4);
+					box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 					-webkit-backface-visibility: hidden;
 					backface-visibility: hidden;
 					transition: bottom 0.35s ease;
@@ -85,6 +147,37 @@
 			.header-wrapper {
 				background: transparent !important;
 				background-color: transparent !important;
+			}
+
+			.mainmenu ul > li > .sub-menu a,
+			.mainmenu ul > li > .sub-menu li > a,
+			.mainmenu ul > li > .sub-menu .mega-menu-list a,
+			.mainmenu ul > li > .sub-menu .mega-menu-title {
+				color: var(--tj-color-common-white) !important;
+			}
+			.mainmenu ul > li > .sub-menu li > a:hover,
+			.mainmenu ul > li > .sub-menu .mega-menu-list a:hover,
+			.mainmenu ul > li > .sub-menu .mega-menu-list a.active {
+				color: var(--tj-color-theme-primary) !important;
+			}
+
+			.header_search--explore {
+				color: var(--tj-color-common-white) !important;
+				.header_search__icon {
+					background: rgba(255, 255, 255, 0.15) !important;
+					i {
+						color: var(--tj-color-common-white) !important;
+					}
+				}
+				&:hover {
+					color: #a8d4ff !important;
+					.header_search__icon {
+						background: rgba(168, 212, 255, 0.25) !important;
+						i {
+							color: #a8d4ff !important;
+						}
+					}
+				}
 			}
 		}
 
@@ -509,6 +602,9 @@
 		max-width: 150px;
 		width: 100%;
 	}
+	&.site-logo--header1 .logo {
+		max-width: 220px;
+	}
 }
 .header-bottom {
 	padding: 0px 45px;
@@ -560,6 +656,20 @@
 						font-family: "solvior-icons";
 						transition: transform 0.4s;
 					}
+				}
+			}
+			&.current-menu-ancestor > a,
+			&.current-menu-item > a {
+				position: relative;
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 8px;
+					height: 2px;
+					background: var(--tj-color-theme-primary);
+					border-radius: 1px;
 				}
 			}
 			&.current-menu-ancestor,
@@ -933,9 +1043,20 @@
 	}
 }
 .tj-header-area {
-	&.header-1,
+	&.header-1 {
+		.menu_btn {
+			.cubes {
+				span {
+					border-color: #0074FD;
+					&:nth-child(2) {
+						box-shadow: inset 0 0 0 2px #0074FD;
+					}
+				}
+			}
+		}
+	}
 	&.header-2,
-	&.header-duplicate {
+	&.header-duplicate:not(.header-1) {
 		.menu_btn {
 			.cubes {
 				span {

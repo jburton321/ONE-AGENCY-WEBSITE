@@ -35,6 +35,8 @@
 		"sweetalert2": "^11.22.5",
 		"swiper": "^11.2.10",
 		"three": "^0.183.2",
+		"three-globe": "^2.45.0",
+		"three-glow-mesh": "^0.1.2",
 		"venobox": "^2.1.8",
 		"wow.js": "^1.2.2"
 	},

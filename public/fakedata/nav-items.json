@@ -2,13 +2,14 @@
 	{
 		"id": 1,
 		"name": "Home",
-		"path": "/",
+		"path": "/home-1",
 		"submenu": [
 			{
 				"id": 1,
 				"name": "Home - 01",
 				"img": "/images/header/demo/home-1.webp",
-				"path": "/home-1"
+				"path": "/home-1",
+				"badge": "HOT"
 			},
 			{
 				"id": 2,

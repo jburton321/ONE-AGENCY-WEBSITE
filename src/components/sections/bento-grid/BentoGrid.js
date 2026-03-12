@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import WebGLReveal from "@/components/shared/WebGLReveal";
 import {
 	Star,
 	TrendingUp,
@@ -282,8 +283,11 @@ function BentoScrollingSite({ visible }) {
 function RevealCard({ children, delay = 0, className = "" }) {
 	const { ref, visible } = useScrollReveal(delay);
 	return (
-		<div ref={ref} className={`${className} transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-[0.97]"}`}>
+		<div ref={ref} className={`${className} relative overflow-hidden transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-8 scale-[0.97]"}`}>
 			{children}
+			<div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 10 }}>
+				<WebGLReveal visible={visible} delay={delay} />
+			</div>
 		</div>
 	);
 }
@@ -626,7 +630,7 @@ function DashFeedCard() {
 
 export default function BentoGrid() {
 	return (
-		<section className="pt-10 pb-16 section-px" style={{ backgroundColor: "#ffffff" }}>
+		<section className="pt-10 pb-16 section-px backdrop-blur-sm" style={{ backgroundColor: "#ffffff" }}>
 			<div className="mx-auto">
 				<div className="sec-heading mb-10 sm:mb-14 text-center">
 					<h2 className="sec-title text-anim">

@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { TrendingUp, Zap, BarChart3, Activity, Target } from "lucide-react";
+import { TrendingUp, BarChart3, Activity, Target } from "lucide-react";
+import WebGLReveal from "@/components/shared/WebGLReveal";
+import GlobeCanvas from "@/components/shared/GlobeCanvas";
 import ButtonPrimary from "@/components/shared/buttons/ButtonPrimary";
 import QuoteButton from "@/components/shared/buttons/QuoteButton";
 import FlipWords from "./FlipWords";
@@ -17,6 +19,10 @@ export default function HeroAlt() {
 
 	return (
 		<section className="relative min-h-[85vh] sm:min-h-screen flex flex-col justify-center pt-24 sm:pt-36 md:pt-40 lg:pt-48 pb-16 sm:pb-20 md:pb-24 overflow-hidden font-body" style={{ backgroundColor: "#F8FAFC" }}>
+			<div className="absolute inset-0 overflow-hidden pointer-events-none">
+				<GlobeCanvas className="fixed inset-0" />
+				<WebGLReveal visible={mounted} delay={0} />
+			</div>
 			<div className="absolute inset-0 hero-alt-grid z-0 pointer-events-none" />
 
 			<div
@@ -108,30 +114,10 @@ export default function HeroAlt() {
 			{/* Desktop decorative depth cards (static, blurred for parallax feel) */}
 			<div className="hidden xl:block pointer-events-none" aria-hidden="true">
 				<div
-					className="absolute -left-6 top-[14%] w-52 animate-float-hero"
-					style={{ filter: "blur(0.5px) saturate(1.1) contrast(1.05)", opacity: 0.62, transform: "scale(0.95)", animationDelay: "3.2s" }}
-				>
-					<div className="rounded-2xl border border-white/50 p-4 backdrop-blur-xl" style={{ background: "rgba(255,255,255,0.6)", boxShadow: "0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)" }}>
-						<div className="flex items-center gap-1.5 mb-2">
-							<div className="w-5 h-5 rounded-md bg-blue-500/15 border border-blue-400/30 flex items-center justify-center">
-								<Activity size={10} className="text-blue-600" />
-							</div>
-							<span className="text-[9px] font-black uppercase text-slate-700 tracking-wide">Impressions</span>
-						</div>
-						<span className="text-xl font-extrabold tracking-tighter text-slate-900 tabular-nums">2.4M</span>
-						<div className="mt-2 flex items-end gap-1 h-10">
-							{[40, 55, 35, 70, 60, 80, 65].map((h, i) => (
-								<div key={i} className="flex-1 rounded-sm" style={{ height: `${h}%`, background: i === 5 ? "#0475FF" : "#cbd5e1" }} />
-							))}
-						</div>
-					</div>
-				</div>
-
-				<div
 					className="absolute -right-5 bottom-[8%] w-56 animate-float-hero"
 					style={{ filter: "blur(0.5px) saturate(1.1) contrast(1.05)", opacity: 0.62, transform: "scale(0.95)", animationDelay: "2.6s" }}
 				>
-					<div className="rounded-2xl border border-white/50 p-4 backdrop-blur-xl" style={{ background: "rgba(255,255,255,0.6)", boxShadow: "0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)" }}>
+					<div className="rounded-2xl border border-white/50 p-4 backdrop-blur-md" style={{ background: "rgba(255,255,255,0.22)", boxShadow: "0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)" }}>
 						<div className="flex items-center gap-1.5 mb-2">
 							<div className="w-5 h-5 rounded-md bg-blue-500/15 border border-blue-400/30 flex items-center justify-center">
 								<BarChart3 size={10} className="text-blue-600" />
@@ -156,7 +142,7 @@ export default function HeroAlt() {
 					className="absolute -right-14 top-[8%] w-48 animate-float-hero"
 					style={{ filter: "blur(2.5px) saturate(0.6) contrast(0.85) brightness(1.08)", opacity: 0.36, transform: "scale(0.78)", animationDelay: "0.8s" }}
 				>
-					<div className="rounded-2xl border border-white/25 p-4" style={{ background: "rgba(255,255,255,0.4)", boxShadow: "0 4px 16px rgba(0,0,0,0.03)" }}>
+					<div className="rounded-2xl border border-white/25 p-4 backdrop-blur-md" style={{ background: "rgba(255,255,255,0.18)", boxShadow: "0 4px 16px rgba(0,0,0,0.03)" }}>
 						<div className="flex items-center gap-1.5 mb-2">
 							<div className="w-5 h-5 rounded-md bg-blue-500/8 flex items-center justify-center">
 								<Target size={10} className="text-blue-500" />
@@ -171,33 +157,10 @@ export default function HeroAlt() {
 				</div>
 
 				<div
-					className="absolute -left-16 bottom-[5%] w-48 animate-float-hero"
-					style={{ filter: "blur(2.5px) saturate(0.6) contrast(0.85) brightness(1.08)", opacity: 0.36, transform: "scale(0.78)", animationDelay: "1.5s" }}
-				>
-					<div className="rounded-2xl border border-white/25 p-4" style={{ background: "rgba(255,255,255,0.4)", boxShadow: "0 4px 16px rgba(0,0,0,0.03)" }}>
-						<div className="flex items-center gap-1.5 mb-2">
-							<div className="w-5 h-5 rounded-md bg-blue-500/8 flex items-center justify-center">
-								<Zap size={10} className="text-blue-500" />
-							</div>
-							<span className="text-[9px] font-black uppercase text-slate-500 tracking-wide">ROAS</span>
-						</div>
-						<div className="flex items-baseline gap-1">
-							<span className="text-xl font-extrabold tracking-tighter text-slate-700 tabular-nums">6.2</span>
-							<span className="text-[9px] font-bold text-emerald-500">x</span>
-						</div>
-						<div className="mt-2 grid grid-cols-4 gap-1">
-							{[65, 80, 55, 90].map((h, i) => (
-								<div key={i} className="rounded-sm" style={{ height: `${h * 0.3}px`, background: i === 3 ? "#60a5fa" : "#e2e8f0" }} />
-							))}
-						</div>
-					</div>
-				</div>
-
-				<div
 					className="absolute left-[2%] top-[72%] w-44 animate-float-hero"
 					style={{ filter: "blur(5px) saturate(0.3) contrast(0.7) brightness(1.18)", opacity: 0.2, transform: "scale(0.6)", animationDelay: "4s" }}
 				>
-					<div className="rounded-2xl border border-white/15 p-3.5" style={{ background: "rgba(255,255,255,0.3)", boxShadow: "none" }}>
+					<div className="rounded-2xl border border-white/15 p-3.5 backdrop-blur-md" style={{ background: "rgba(255,255,255,0.14)", boxShadow: "none" }}>
 						<div className="flex items-center gap-1.5 mb-2">
 							<div className="w-5 h-5 rounded-md bg-blue-500/5 flex items-center justify-center">
 								<TrendingUp size={10} className="text-blue-400" />
@@ -215,7 +178,7 @@ export default function HeroAlt() {
 					className="absolute right-[1%] top-[55%] w-44 animate-float-hero"
 					style={{ filter: "blur(5px) saturate(0.3) contrast(0.7) brightness(1.18)", opacity: 0.2, transform: "scale(0.6)", animationDelay: "3.8s" }}
 				>
-					<div className="rounded-2xl border border-white/15 p-3.5" style={{ background: "rgba(255,255,255,0.3)", boxShadow: "none" }}>
+					<div className="rounded-2xl border border-white/15 p-3.5 backdrop-blur-md" style={{ background: "rgba(255,255,255,0.14)", boxShadow: "none" }}>
 						<div className="flex items-center gap-1.5 mb-2">
 							<div className="w-5 h-5 rounded-md bg-blue-500/5 flex items-center justify-center">
 								<Activity size={10} className="text-blue-400" />

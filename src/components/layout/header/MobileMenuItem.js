@@ -5,7 +5,8 @@ import { useState } from "react";
 
 const MobileMenuItem = ({ children, text, url, submenuClass }) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const handleClick = () => {
+	const handleClick = (e) => {
+		e?.preventDefault?.();
 		setIsOpen(prevIsOpen => !prevIsOpen);
 	};
 	return (
@@ -13,7 +14,7 @@ const MobileMenuItem = ({ children, text, url, submenuClass }) => {
 			<Link href={url ? url : "#"}>{text}</Link>
 			<ul
 				className={`sub-menu ${submenuClass ? submenuClass : ""}`}
-				style={{ display: !isOpen ? "none" : "" }}
+				style={{ display: isOpen ? "block" : "none" }}
 			>
 				{children}
 			</ul>
@@ -21,7 +22,7 @@ const MobileMenuItem = ({ children, text, url, submenuClass }) => {
 				className={`mean-expand ${isOpen ? "mean-clicked" : ""}`}
 				href="#"
 				style={{ fontSize: "18px" }}
-				onClick={() => handleClick()}
+				onClick={handleClick}
 			>
 				<i className="tji-angle-down"></i>
 			</Link>

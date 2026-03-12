@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useCallback } from "react";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import WebGLReveal from "@/components/shared/WebGLReveal";
 
 export default function ContrastSection() {
 	const { ref, visible } = useScrollReveal(0);
@@ -37,6 +38,9 @@ export default function ContrastSection() {
 			className="pb-0 pt-14 sm:pt-20 md:pt-28 lg:pt-32 overflow-visible relative z-0 section-px"
 		>
 			<div className="absolute inset-0 w-full h-full" style={{ zIndex: 0, background: "#F8FAFC" }} />
+			<div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 1 }}>
+				<WebGLReveal visible={visible} delay={0} />
+			</div>
 			<div className="relative z-10 max-w-5xl mx-auto text-center">
 				<div
 					className={`transition-all duration-1000 ${

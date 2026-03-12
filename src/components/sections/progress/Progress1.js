@@ -4,12 +4,6 @@ import Image from "next/image";
 const Progress1 = () => {
 	return (
 		<section className="tj-progress-section section-space">
-			<div
-				className="progress-bg-images d-none d-lg-block"
-				style={{
-					backgroundImage: "url('/images/progress/h2-progress-2.webp')",
-				}}
-			></div>
 			<div className="container">
 				<div className="row align-items-center">
 					<div className="col-lg-6 order-2 order-lg-1">

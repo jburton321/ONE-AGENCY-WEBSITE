@@ -112,7 +112,7 @@ export default function LiveStats() {
 			<div className="live-stats__gradient absolute inset-0 pointer-events-none" />
 
 			<div
-				className={`w-full section-px py-8 sm:py-10 transition-all duration-1000 ${
+				className={`w-full section-px py-8 sm:py-10 transition-all duration-1000 backdrop-blur-sm ${
 					visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
 				}`}
 			>

@@ -12,6 +12,7 @@ const VERTEX_SHADER = `
 const FRAGMENT_SHADER = `
   precision highp float;
   uniform vec2 u_resolution;
+  uniform vec2 u_hubCenter;
   uniform float u_time;
 
   float getZ(vec2 p) {
@@ -24,13 +25,13 @@ const FRAGMENT_SHADER = `
     float freq = 65.0;
     float wave = sin(d * freq - speed);
     
-    // --- SMOOTH BEVEL ---
-    float height = pow(wave * 0.5 + 0.5, 1.5);
+    // --- SMOOTH BEVEL (softer edges) ---
+    float height = pow(wave * 0.5 + 0.5, 0.85);
     
-    // --- RIPPLE STARTS FROM OUTSIDE HUB (circle logo) ---
-    // Inner radius closer to hub; ripple emanates from just outside the circle
-    float innerRadius = 0.12;
-    float birth = smoothstep(innerRadius, innerRadius + 0.2, d);
+    // --- RIPPLE STARTS AT HUB CENTER (SVG logo center) ---
+    // innerRadius = 0: ripple emanates from exact hub center
+    float innerRadius = 0.0;
+    float birth = smoothstep(innerRadius, innerRadius + 0.15, d);
     
     // --- CONTINUOUS ENVELOPE ---
     float intensityPulse = sin(u_time * 0.5) * 0.15 + 0.85;
@@ -42,10 +43,11 @@ const FRAGMENT_SHADER = `
   }
 
   void main() {
-    vec2 p = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.y, u_resolution.x);
+    // p = fragment position relative to hub center, normalized by min dimension
+    vec2 p = (gl_FragCoord.xy - u_hubCenter) / min(u_resolution.y, u_resolution.x);
 
-    // --- SMOOTH 3D SLOPE CALCULATION ---
-    float e = 0.008;
+    // --- SMOOTH 3D SLOPE CALCULATION (gentler bevel) ---
+    float e = 0.012;
     float h = getZ(p);
     float hx = getZ(p + vec2(e, 0.0)) - h;
     float hy = getZ(p + vec2(0.0, e)) - h;
@@ -56,14 +58,14 @@ const FRAGMENT_SHADER = `
     vec3 lightDir = normalize(vec3(0.4, 0.6, 1.0));
     float diff = max(dot(normal, lightDir), 0.0);
     
-    // Specular (Lower power for matte/plastic feel)
+    // Specular (reduced for softer bevel)
     float spec = pow(max(dot(reflect(-lightDir, normal), vec3(0,0,1)), 0.0), 20.0);
 
     // --- COLORS ---
     vec3 baseColor = vec3(0.95, 0.96, 0.98);
     vec3 shadeColor = vec3(0.86, 0.89, 0.93);
     
-    vec3 color = mix(shadeColor, baseColor, diff) + (spec * 0.35);
+    vec3 color = mix(shadeColor, baseColor, diff) + (spec * 0.12);
 
     gl_FragColor = vec4(color, 1.0);
   }
@@ -87,7 +89,7 @@ function getDPR() {
 	return Math.min(base, isMobile ? 1.5 : 2);
 }
 
-export default function WebGLRipple({ visible = true }) {
+export default function WebGLRipple({ visible = true, hubCenterRef }) {
 	const canvasRef = useRef(null);
 	const rafRef = useRef(null);
 	const startTimeRef = useRef(null);
@@ -120,6 +122,7 @@ export default function WebGLRipple({ visible = true }) {
 		const posLoc = gl.getAttribLocation(program, "position");
 		const utimeLoc = gl.getUniformLocation(program, "u_time");
 		const uresLoc = gl.getUniformLocation(program, "u_resolution");
+		const uhubLoc = gl.getUniformLocation(program, "u_hubCenter");
 
 		const resize = () => {
 			const rect = canvas.getBoundingClientRect();
@@ -141,6 +144,14 @@ export default function WebGLRipple({ visible = true }) {
 
 			resize();
 
+			const rect = canvas.getBoundingClientRect();
+			const dpr = getDPR();
+			const hc = hubCenterRef?.current;
+			const cx = hc && (hc.x !== 0 || hc.y !== 0) ? hc.x : rect.width / 2;
+			const cy = hc && (hc.x !== 0 || hc.y !== 0) ? hc.y : rect.height / 2;
+			// WebGL gl_FragCoord has origin at bottom-left; CSS is top-left — flip Y
+			const hubCenterPx = [cx * dpr, canvas.height - cy * dpr];
+
 			gl.clearColor(0.93, 0.94, 0.96, 1);
 			gl.clear(gl.COLOR_BUFFER_BIT);
 
@@ -150,6 +161,7 @@ export default function WebGLRipple({ visible = true }) {
 
 			gl.uniform1f(utimeLoc, time);
 			gl.uniform2f(uresLoc, canvas.width, canvas.height);
+			gl.uniform2f(uhubLoc, hubCenterPx[0], hubCenterPx[1]);
 			gl.drawArrays(gl.TRIANGLES, 0, 6);
 
 			rafRef.current = requestAnimationFrame(render);
@@ -167,7 +179,7 @@ export default function WebGLRipple({ visible = true }) {
 			ro.disconnect();
 			cancelAnimationFrame(rafRef.current);
 		};
-	}, [visible, reduceMotion]);
+	}, [visible, reduceMotion, hubCenterRef]);
 
 	return (
 		<canvas

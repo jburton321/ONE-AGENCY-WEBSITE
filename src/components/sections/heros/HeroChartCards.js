@@ -85,9 +85,9 @@ export function IncreaseCard() {
 	const polyline = sparkPoints.map((y, i) => `${i * 14},${y}`).join(" ");
 
 	return (
-		<div className="rounded-2xl border border-white/40 shadow-lg shadow-black/5 p-4 w-full xl:w-44 backdrop-blur-xl" style={{ background: "rgba(255,255,255,0.55)" }}>
+		<div className="rounded-2xl border border-white/40 shadow-lg shadow-black/5 p-4 w-full xl:w-44 backdrop-blur-md" style={{ background: "rgba(255,255,255,0.22)" }}>
 			<div className="flex items-center gap-1.5 mb-3">
-				<div className="w-5 h-5 rounded-md bg-blue-500/10 border border-blue-300/40 flex items-center justify-center backdrop-blur-sm">
+				<div className="w-5 h-5 rounded-md bg-blue-500/10 border border-blue-300/40 flex items-center justify-center backdrop-blur-md">
 					<TrendingUp size={10} className="text-blue-600" />
 				</div>
 				<span className="text-[9px] font-black uppercase text-slate-600 tracking-wide">Conv. Rate</span>
@@ -193,7 +193,7 @@ export function GrowthLineChart() {
 	}, [showing, fading, measured]);
 
 	return (
-		<div className="rounded-2xl border border-white/40 shadow-lg shadow-black/5 p-5 w-full xl:w-64 backdrop-blur-xl" style={{ background: "rgba(255,255,255,0.55)" }}>
+		<div className="rounded-2xl border border-white/40 shadow-lg shadow-black/5 p-5 w-full xl:w-64 backdrop-blur-md" style={{ background: "rgba(255,255,255,0.22)" }}>
 			<div className="flex justify-between items-center mb-1">
 				<span className="text-[10px] font-black uppercase text-slate-600 tracking-wide">Campaign Performance</span>
 				<span
@@ -297,7 +297,7 @@ export function BusinessBarChart() {
 	const maxH = 88;
 
 	return (
-		<div className="rounded-2xl border border-white/40 shadow-lg shadow-black/5 p-5 w-full xl:w-72 backdrop-blur-xl" style={{ background: "rgba(255,255,255,0.55)" }}>
+		<div className="rounded-2xl border border-white/40 shadow-lg shadow-black/5 p-5 w-full xl:w-72 backdrop-blur-md" style={{ background: "rgba(255,255,255,0.22)" }}>
 			<div className="flex justify-between items-center mb-1">
 				<span className="text-[10px] font-black uppercase text-slate-600 tracking-wide">Weekly Pipeline</span>
 				<div
@@ -358,8 +358,8 @@ export function MetricPill() {
 	const fill = showing && !fading;
 
 	return (
-		<div className="rounded-2xl border border-white/40 shadow-lg shadow-black/5 flex items-center gap-3.5 p-3 pr-5 backdrop-blur-xl" style={{ background: "rgba(255,255,255,0.55)" }}>
-			<div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-300/40 flex items-center justify-center backdrop-blur-sm">
+		<div className="rounded-2xl border border-white/40 shadow-lg shadow-black/5 flex items-center gap-3.5 p-3 pr-5 backdrop-blur-md" style={{ background: "rgba(255,255,255,0.22)" }}>
+			<div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-300/40 flex items-center justify-center backdrop-blur-md">
 				<Zap size={16} className="text-blue-600" />
 			</div>
 			<div className="flex-1 min-w-0">

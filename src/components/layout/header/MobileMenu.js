@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Fragment } from "react";
+import AnimatedOneLogo from "@/components/shared/AnimatedOneLogo";
 import MobileNavbar from "./MobileNavbar";
 
 const MobileMenu = ({ isMobileMenuOpen, handleMobileToggler }) => {
@@ -32,6 +33,11 @@ const MobileMenu = ({ isMobileMenuOpen, handleMobileToggler }) => {
 							</button>
 						</div>
 					</div>
+					<div className="hamburger_one_logo mb-6 w-full flex justify-center items-center" style={{ color: "var(--tj-color-common-white)" }}>
+						<Link href="/" className="block w-full max-w-full" onClick={() => handleMobileToggler(false)}>
+							<AnimatedOneLogo active={isMobileMenuOpen} className="w-full h-auto block mx-auto" />
+						</Link>
+					</div>
 					<div className="hamburger_search">
 						<form method="get" action="#0">
 							<button type="submit">
@@ -46,31 +52,6 @@ const MobileMenu = ({ isMobileMenuOpen, handleMobileToggler }) => {
 						</form>
 					</div>
 					<MobileNavbar />
-					<div className="hamburger-infos">
-						<h4 className="hamburger-title">Contact info</h4>
-						<div className="contact-info">
-							<div className="contact_item">
-								<span className="subtitle">Email</span>
-								<div className="text">
-<Link className="link" href="mailto:info@oneagency.com">
-									info@oneagency.com
-									</Link>
-								</div>
-							</div>
-							<div className="contact_item">
-								<span className="subtitle">Phone</span>
-								<div className="text">
-									<Link className="link" href="tel:000123456789">
-										(000) 123 456 789
-									</Link>
-								</div>
-							</div>
-							<div className="contact_item">
-								<span className="subtitle">Location</span>
-								<div className="text">Santa, United State</div>
-							</div>
-						</div>
-					</div>
 					<div className="hamburger-socials">
 						<h4 className="hamburger-title">Follow us</h4>
 						<ul>

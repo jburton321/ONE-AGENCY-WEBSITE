@@ -1,6 +1,24 @@
-import { Fragment } from "react";
+"use client";
+
+import { Fragment, useCallback, useRef } from "react";
+import { useRouter } from "next/navigation";
 
 const HeaderSearchForm = ({ isSearchOpen, handleSearchToggler }) => {
+	const router = useRouter();
+	const inputRef = useRef(null);
+
+	const handleSubmit = useCallback(
+		(e) => {
+			e.preventDefault();
+			const q = inputRef.current?.value?.trim() || "";
+			handleSearchToggler(false);
+			if (q) {
+				router.push(`/search?q=${encodeURIComponent(q)}`);
+			}
+		},
+		[router, handleSearchToggler]
+	);
+
 	return (
 		<Fragment>
 			<div className={`search_popup ${isSearchOpen ? "search-opened" : ""}`}>
@@ -39,17 +57,19 @@ const HeaderSearchForm = ({ isSearchOpen, handleSearchToggler }) => {
 						<div className="col-xxl-12">
 							<div className="tj_search_wrapper">
 								<div className="search_form">
-									<form action="#">
+									<form onSubmit={handleSubmit} action="/search">
 										<div className="search_input">
 											<h4 className="title">
 												Search Blog, projects, Service or people.
 											</h4>
 											<div className="search-box">
 												<input
+													ref={inputRef}
 													className="search-input-field"
 													type="search"
+													name="q"
 													placeholder="Search here..."
-													required=""
+													required
 												/>
 												<button type="submit">
 													<i className="tji-search"></i>

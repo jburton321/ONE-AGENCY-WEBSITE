@@ -11,7 +11,7 @@ const Services1 = () => {
 	const allServices = getALlServices();
 	const services = useMemo(() => (allServices?.length ? allServices.slice(0, 3) : []), [allServices]);
 	useGSAP(
-		context => {
+		() => {
 			tjStackAnimation(".service-stack");
 		},
 		{ scope: animContainerRef }

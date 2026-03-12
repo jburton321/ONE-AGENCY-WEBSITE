@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
 import QuoteButton from "@/components/shared/buttons/QuoteButton";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import WebGLReveal from "@/components/shared/WebGLReveal";
 import {
 	ArrowRight,
 	Target,
@@ -446,6 +447,7 @@ export default function GrowthStack() {
 			style={{ backgroundColor: "#ffffff" }}
 		>
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
+				<WebGLReveal visible={visible} delay={0} />
 				<div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-500/[0.03] rounded-full blur-[120px]" />
 				<div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-500/[0.03] rounded-full blur-[120px]" />
 			</div>

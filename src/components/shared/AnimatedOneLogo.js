@@ -147,7 +147,7 @@ export default function AnimatedOneLogo({ active, className = "", style, subtitl
 	const label = subtitle ? `ONE ${subtitle} logo` : "ONE Agency logo";
 
 	return (
-		<svg viewBox="-300 350 1400 400" className={className} style={style} aria-label={label}>
+		<svg viewBox="-136 350 1108 400" preserveAspectRatio="xMidYMid meet" className={className} style={style} aria-label={label}>
 			{ONE_PATHS.map((d, i) => (
 				<path
 					key={`one-${i}`}
