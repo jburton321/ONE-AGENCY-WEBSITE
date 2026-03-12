@@ -13,6 +13,7 @@ import FoundersReveal from "@/components/sections/founders/FoundersReveal";
 import Services1 from "@/components/sections/services/Services1";
 import Skills1 from "@/components/sections/Skills/Skills1";
 import Ecosystem from "@/components/sections/ecosystem/Ecosystem";
+import CIQHero from "@/components/sections/ciq-hero/CIQHero";
 import GrowthStack from "@/components/sections/growth-stack/GrowthStack";
 import Testimonials1 from "@/components/sections/testimonials/Testimonials1";
 import TjMagicCursor from "@/components/shared/others/TjMagicCursor";
@@ -36,6 +37,7 @@ export default function HomeContent() {
 				<FoundersReveal />
 				<Skills1 />
 				<Ecosystem />
+				<CIQHero />
 				<GrowthStack />
 				<Testimonials1 />
 				<Portfolios1 />

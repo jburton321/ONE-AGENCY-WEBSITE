@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import QuoteButton from "@/components/shared/buttons/QuoteButton";
 import useScrollReveal from "@/hooks/useScrollReveal";
+import WebGLRipple from "./WebGLRipple";
 
 // ─── Dashboard accent colors (for lightbox) ─────────────────────────────────
 
@@ -143,54 +144,6 @@ const AUTO_ORDER = [0, 5, 1, 6, 2, 7, 3, 8, 4, 9];
 const AUTO_DELAY = 1800;
 const PAUSE_AFTER_MANUAL = 3000;
 
-// ─── Ecosystem Ripple ────────────────────────────────────────────────────────
-
-function EcosystemRipple({
-	mainCircleSize = 240,
-	mainCircleOpacity = 0.18,
-	numCircles = 6,
-	color = "rgba(2, 51, 197, 0.35)",
-	gap = 52,
-}) {
-	const maxSize = mainCircleSize + (numCircles - 1) * gap;
-
-	return (
-		<div
-			className="absolute pointer-events-none select-none"
-			style={{
-				width: maxSize,
-				height: maxSize,
-				top: "50%",
-				left: "50%",
-				transform: "translate(-50%, -50%)",
-			}}
-		>
-			{Array.from({ length: numCircles }, (_, i) => {
-				const size = mainCircleSize + i * gap;
-				const opacity = mainCircleOpacity - i * 0.01;
-
-				return (
-					<div
-						key={i}
-						className="absolute rounded-full eco-ripple-ring"
-						style={{
-							width: size,
-							height: size,
-							opacity: Math.max(opacity, 0.02),
-							top: "50%",
-							left: "50%",
-							transform: "translate(-50%, -50%) scale(1)",
-							border: `1px solid ${color}`,
-							backgroundColor: color.replace(/[\d.]+\)$/, "0.02)"),
-							animationDelay: `${i * 0.08}s`,
-						}}
-					/>
-				);
-			})}
-		</div>
-	);
-}
-
 // ─── Ecosystem Bot (animated mascot) ─────────────────────────────────────────
 
 const LEFT_EYE = { cx: 312.661, cy: 267.993 };
@@ -250,7 +203,7 @@ function EcosystemBot({ hovered, className }) {
 
 	return (
 		<div ref={containerRef} className={className}>
-			<svg viewBox="0 0 894 715" className="w-full h-full" style={{ filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.12))" }}>
+			<svg viewBox="0 0 894 715" className="w-full h-full">
 				<path d="M285.241 536C191.039 536 178.667 430.431 178.667 357.334V178.667C105.57 178.667 0 191.017 0 285.242V357.334C0 456.002 79.998 536 178.667 536H285.241Z" fill="#15C1FF" />
 				<path d="M0 285.241C0 191.039 105.57 178.667 178.667 178.667H714.667C714.667 105.57 702.294 0 608.092 0H178.667C79.998 0 0 79.998 0 178.667V285.241Z" fill="#373299" />
 				<path d="M608.1 0C702.302 0 714.674 105.57 714.674 178.667V357.333C787.771 357.333 893.341 322.627 893.341 228.425V178.667C893.341 79.998 813.343 0 714.674 0H608.1Z" fill="#F0264F" />
@@ -492,7 +445,7 @@ function NodeColumn({ nodes, side, visible, hovered, onEnter, onLeave, onClick, 
 				return (
 					<div
 						key={n.title}
-						className={`relative rounded-xl overflow-hidden transition-all duration-500 cursor-pointer flex-1 group border backdrop-blur-xl ${
+						className={`relative rounded-xl overflow-hidden transition-all duration-500 cursor-pointer flex-1 group border backdrop-blur-md ${
 							active
 								? `shadow-lg shadow-blue-500/10 scale-[1.03] border-white/40 ${isLeft ? "-translate-x-2" : "translate-x-2"}`
 								: "border-white/30 shadow-sm hover:shadow-md hover:border-white/50 hover:scale-[1.02]"
@@ -514,7 +467,7 @@ function NodeColumn({ nodes, side, visible, hovered, onEnter, onLeave, onClick, 
 							className={`absolute ${isLeft ? "left-0" : "right-0"} top-0 bottom-0 w-[3px] transition-all duration-500 ${active ? "opacity-100" : "opacity-0 group-hover:opacity-40"}`}
 							style={{ background: "linear-gradient(180deg, #0233C5 0%, #3b82f6 100%)" }}
 						/>
-						<div className="relative px-4 py-3 xl:px-5 xl:py-4 flex flex-col justify-center h-full transition-colors duration-300" style={{ background: "rgba(255,255,255,0.55)" }}>
+						<div className="relative px-4 py-3 xl:px-5 xl:py-4 flex flex-col justify-center h-full transition-colors duration-300" style={{ background: "rgba(255,255,255,0.35)" }}>
 							<div className="flex items-center gap-2.5 mb-1">
 								<div className={`flex items-center justify-center w-7 h-7 rounded-lg transition-all duration-500 ${
 									active
@@ -566,18 +519,6 @@ function DesktopEcosystem({ visible, hovered, onEnter, onLeave, onClick }) {
 	return (
 		<div className="hidden lg:block">
 			<div className="relative" ref={containerRef}>
-				<div className={`absolute inset-0 flex items-center justify-center pointer-events-none z-0 transition-all duration-1000 ${visible ? "opacity-100 scale-100" : "opacity-0 scale-75"}`} style={{ transitionDelay: visible ? "400ms" : "0ms" }}>
-					<div className="relative" style={{ width: 1, height: 1 }}>
-						<EcosystemRipple
-							mainCircleSize={240}
-							numCircles={18}
-							mainCircleOpacity={0.22}
-							color="rgba(2, 51, 197, 0.35)"
-							gap={70}
-						/>
-					</div>
-				</div>
-
 				<svg
 					className="absolute inset-0 w-full h-full pointer-events-none z-[1]"
 					viewBox="0 0 1000 480"
@@ -616,17 +557,8 @@ function DesktopEcosystem({ visible, hovered, onEnter, onLeave, onClick }) {
 						indexOffset={0}
 					/>
 
-					<div className="w-[240px] xl:w-[280px] flex-shrink-0 flex items-center justify-center relative min-h-[440px]">
-						<div className="relative z-10 w-[220px] h-[220px] xl:w-[260px] xl:h-[260px] rounded-full flex flex-col items-center justify-center text-center border-2 border-slate-200/60 bg-white shadow-lg">
-							<EcosystemBot hovered={hovered} className="w-[90px] xl:w-[110px] mb-2" />
-							<span className="text-[8px] font-black uppercase text-blue-600">
-								Fully Managed
-							</span>
-							<h4 className="text-lg xl:text-xl font-bold uppercase tracking-tight text-slate-900 mt-1.5 leading-tight">
-								CHANNELS
-							</h4>
-						</div>
-					</div>
+					{/* Spacer: hub is positioned at section center via absolute */}
+					<div className="w-[240px] xl:w-[280px] flex-shrink-0 min-h-[440px]" aria-hidden="true" />
 
 					<NodeColumn
 						nodes={RIGHT_NODES}
@@ -655,29 +587,8 @@ function MobileEcosystem({ visible, onClick }) {
 
 	return (
 		<div className="lg:hidden relative">
-			<div className={`absolute left-1/2 top-[40px] sm:top-[60px] -translate-x-1/2 pointer-events-none z-0 transition-all duration-1000 scale-50 sm:scale-75 lg:scale-100 origin-center ${visible ? "opacity-60 sm:opacity-100" : "opacity-0"}`}>
-				<div className="relative" style={{ width: 1, height: 1 }}>
-					<EcosystemRipple
-						mainCircleSize={160}
-						numCircles={16}
-						mainCircleOpacity={0.2}
-						color="rgba(2, 51, 197, 0.3)"
-						gap={50}
-					/>
-				</div>
-			</div>
-
-			<div className="flex justify-center mb-6 sm:mb-10 relative z-[2]">
-				<div className="relative w-[120px] h-[120px] sm:w-[170px] sm:h-[170px] rounded-full flex flex-col items-center justify-center text-center border-2 border-slate-200/60 bg-white shadow-lg">
-					<EcosystemBot hovered={null} className="w-[50px] sm:w-[75px] mb-1.5" />
-					<span className="text-[7px] font-black uppercase text-blue-600">
-						Fully Managed
-					</span>
-					<h4 className="text-sm sm:text-base font-bold uppercase tracking-tight text-slate-900 mt-1 leading-tight">
-						CHANNELS
-					</h4>
-				</div>
-			</div>
+			{/* Spacer: hub is positioned at section center via absolute */}
+			<div className="h-[120px] sm:h-[170px] mb-6 sm:mb-10" aria-hidden="true" />
 
 			<div className="flex flex-col gap-1 sm:grid sm:grid-cols-2 sm:gap-2 relative z-[2]">
 				{ALL_NODES.map((n, i) => {
@@ -695,7 +606,7 @@ function MobileEcosystem({ visible, onClick }) {
 								className={`absolute left-0 top-0 bottom-0 w-[3px] transition-opacity duration-300 ${isExpanded ? "opacity-100" : "opacity-0"}`}
 								style={{ background: "linear-gradient(180deg, #0233C5 0%, #3b82f688 100%)" }}
 							/>
-							<div className="p-2.5 sm:p-4" style={{ background: "rgba(255,255,255,0.55)" }} onClick={() => handleTap(i)}>
+							<div className="p-2.5 sm:p-4" style={{ background: "rgba(255,255,255,0.35)" }} onClick={() => handleTap(i)}>
 								<div className="flex items-center gap-2 sm:gap-2.5">
 									<div className={`flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-lg transition-all duration-300 flex-shrink-0 ${
 										isExpanded ? "bg-blue-600 text-white shadow-md shadow-blue-500/20" : "bg-blue-50 text-blue-600"
@@ -744,61 +655,6 @@ function MobileEcosystem({ visible, onClick }) {
 
 // ─── Main Export ─────────────────────────────────────────────────────────────
 
-// ─── Background Animated Icons ──────────────────────────────────────────────
-
-const ICON_DEFS = [
-	{
-		id: "shopping", label: "Shopping", x: 0.26, y: 0.14, delay: 0.4, size: 56,
-		color: "#0475FF", bg: "rgba(4,117,255,0.08)",
-		path: "M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0",
-	},
-	{
-		id: "social", label: "Social", x: 0.68, y: 0.10, delay: 0.7, size: 52,
-		color: "#3b82f6", bg: "rgba(59,130,246,0.08)",
-		path: "M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0",
-		path2: "M4 4l16 16",
-	},
-	{
-		id: "marketing", label: "Marketing", x: 0.32, y: 0.48, delay: 1.0, size: 50,
-		color: "#0475FF", bg: "rgba(4,117,255,0.08)",
-		path: "M22 12h-4l-3 9L9 3l-3 9H2",
-	},
-	{
-		id: "email", label: "Email", x: 0.66, y: 0.46, delay: 1.3, size: 48,
-		color: "#3b82f6", bg: "rgba(59,130,246,0.08)",
-		path: "M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z",
-		path2: "M22 6l-10 7L2 6",
-	},
-	{
-		id: "globe", label: "Internet", x: 0.30, y: 0.74, delay: 0.9, size: 54,
-		color: "#0475FF", bg: "rgba(4,117,255,0.08)",
-		path: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z",
-		path2: "M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z",
-	},
-	{
-		id: "business", label: "Business", x: 0.64, y: 0.76, delay: 1.5, size: 50,
-		color: "#3b82f6", bg: "rgba(59,130,246,0.08)",
-		path: "M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z",
-		path2: "M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16",
-	},
-	{
-		id: "target", label: "Targeting", x: 0.48, y: 0.90, delay: 1.7, size: 52,
-		color: "#0475FF", bg: "rgba(4,117,255,0.08)",
-		path: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z",
-		path2: "M12 18a6 6 0 100-12 6 6 0 000 12zM12 14a2 2 0 100-4 2 2 0 000 4z",
-	},
-	{
-		id: "megaphone", label: "Ads", x: 0.40, y: 0.32, delay: 0.6, size: 46,
-		color: "#3b82f6", bg: "rgba(59,130,246,0.08)",
-		path: "M3 11l18-5v12L3 13v-2zM11.6 16.8a.5.5 0 01.4.2l2 3a.5.5 0 01-.4.8H9.4a.5.5 0 01-.4-.8l2-3a.5.5 0 01.6-.2z",
-	},
-	{
-		id: "cursor", label: "Clicks", x: 0.60, y: 0.30, delay: 1.1, size: 44,
-		color: "#0475FF", bg: "rgba(4,117,255,0.08)",
-		path: "M4 4l7.07 17 2.51-7.39L21 11.07z",
-	},
-];
-
 function EcoBgCharts({ visible }) {
 	/*
 	 * Depth model — XY plane perspective.
@@ -808,21 +664,6 @@ function EcoBgCharts({ visible }) {
 	const computeDepth = (x, y) => {
 		const centerProximity = 1 - Math.abs(x - 0.5) * 2;
 		return Math.min(1, Math.max(0, y * 0.7 + centerProximity * 0.3));
-	};
-
-	const depthVisuals = (depth, delay) => {
-		const scale = 0.65 + depth * 0.43;
-		const opacity = 0.22 + depth * 0.40;
-		const brightness = (0.70 + depth * 0.40).toFixed(2);
-		return {
-			position: "absolute",
-			opacity: visible ? opacity : 0,
-			transform: `translate(-50%, -50%) scale(${scale.toFixed(3)})`,
-			transformOrigin: "center center",
-			filter: `brightness(${brightness})`,
-			transition: `opacity 1.2s ease ${delay}s, transform 0.8s ease ${delay}s`,
-			zIndex: Math.round(depth * 10),
-		};
 	};
 
 	const RINGS = [
@@ -836,12 +677,8 @@ function EcoBgCharts({ visible }) {
 		{ x: 0.62, y: 0.28, size: 75, delay: 0.8 },
 	];
 
-	const enriched = ICON_DEFS
-		.map((c) => ({ ...c, depth: computeDepth(c.x, c.y) }))
-		.sort((a, b) => a.depth - b.depth);
-
 	return (
-		<div className="absolute inset-0 overflow-hidden pointer-events-none z-[0]">
+		<div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
 			{/* Pulsing rings — depth-sorted */}
 			{RINGS
 				.map((r) => ({ ...r, depth: computeDepth(r.x, r.y) }))
@@ -891,80 +728,6 @@ function EcoBgCharts({ visible }) {
 						</div>
 					);
 				})}
-
-			{/* Animated icon elements — depth-sorted */}
-			{enriched.map((icon) => {
-				const dv = depthVisuals(icon.depth, icon.delay);
-				const iconPx = icon.size * (0.4 + icon.depth * 0.15);
-				const strokeLen = 200;
-				return (
-					<div
-						key={icon.id}
-						style={{
-							...dv,
-							top: `${icon.y * 100}%`,
-							left: `${icon.x * 100}%`,
-						}}
-						className="flex flex-col items-center gap-1.5"
-					>
-						<div
-							className="rounded-2xl flex items-center justify-center"
-							style={{
-								width: icon.size,
-								height: icon.size,
-								backgroundColor: icon.bg,
-								border: `1px solid ${icon.color}15`,
-								animation: visible
-									? `ecoIconFloat ${3 + icon.depth * 2}s ease-in-out ${icon.delay}s infinite`
-									: "none",
-							}}
-						>
-							<svg
-								width={iconPx}
-								height={iconPx}
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke={icon.color}
-								strokeWidth="1.5"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							>
-								<path
-									d={icon.path}
-									strokeDasharray={strokeLen}
-									strokeDashoffset={visible ? "0" : String(strokeLen)}
-									style={{ transition: `stroke-dashoffset 1.6s ease-out ${icon.delay + 0.3}s` }}
-								/>
-								{icon.path2 && (
-									<path
-										d={icon.path2}
-										strokeDasharray={strokeLen}
-										strokeDashoffset={visible ? "0" : String(strokeLen)}
-										style={{ transition: `stroke-dashoffset 1.6s ease-out ${icon.delay + 0.6}s` }}
-									/>
-								)}
-							</svg>
-						</div>
-						<span
-							className="text-[8px] font-bold uppercase tracking-wider"
-							style={{
-								color: icon.color,
-								opacity: visible ? 0.6 : 0,
-								transition: `opacity 0.8s ease ${icon.delay + 1}s`,
-							}}
-						>
-							{icon.label}
-						</span>
-					</div>
-				);
-			})}
-
-			<style>{`
-				@keyframes ecoIconFloat {
-					0%, 100% { transform: translateY(0); }
-					50% { transform: translateY(-6px); }
-				}
-			`}</style>
 		</div>
 	);
 }
@@ -1000,15 +763,19 @@ export default function Ecosystem() {
 	}, []);
 
 	return (
-		<section id="ecosystem" ref={ref} className="relative py-14 sm:py-20 lg:py-32 overflow-hidden section-px" style={{ backgroundColor: "#F8FAFC" }}>
+		<section id="ecosystem" ref={ref} className="relative py-16 overflow-hidden section-px" style={{ backgroundColor: "#F8FAFC" }}>
+			{/* Ripple: full section background, center at (50%, 50%) */}
+			<div className={`absolute inset-0 overflow-hidden pointer-events-none transition-opacity duration-1000 ${visible ? "opacity-100" : "opacity-0"}`} style={{ zIndex: 0 }}>
+				<WebGLRipple visible={visible} />
+			</div>
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<div className="absolute top-1/4 left-1/3 w-[600px] h-[600px] bg-blue-500/[0.02] rounded-full blur-[140px]" />
 				<div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-sky-500/[0.015] rounded-full blur-[120px]" />
 				<div className="absolute top-0 right-0 w-[300px] h-[300px] bg-blue-500/[0.015] rounded-full blur-[100px]" />
 			</div>
 
-			<div className={`relative z-10 mb-10 sm:mb-16 lg:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 sm:gap-10 transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-				<div className="sec-heading" style={{ marginBottom: 0 }}>
+			<div className={`relative z-20 flex flex-col items-center justify-center text-center transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+				<div className="sec-heading mb-0">
 					<span className="sub-title">Your Channels, Fully Managed</span>
 					<h2 className="sec-title text-anim">
 						Everywhere Your Customers{" "}
@@ -1016,15 +783,29 @@ export default function Ecosystem() {
 						<span>Make Decisions, We&apos;re There.</span>
 					</h2>
 				</div>
-				<p className="desc max-w-sm" style={{ color: "var(--tj-color-text-body)", marginTop: 0 }}>
-					Paid Search, Paid Social, Programmatic, email, SMS, retargeting. Orchestrated from a single strategy, measured on a single dashboard, optimized against one shared&nbsp;goal.
-				</p>
+				<div className="min-h-[480px] lg:min-h-[520px]" aria-hidden="true" />
 			</div>
 
-			<div className="relative z-10">
-				<EcoBgCharts visible={visible} />
-				<DesktopEcosystem visible={visible} hovered={activeIdx} onEnter={handleEnter} onLeave={handleLeave} onClick={handleClick} />
-				<MobileEcosystem visible={visible} onClick={handleClick} />
+			{/* Ecosystem: centered at section center (50%, 50%) = ripple center */}
+			<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full min-h-[480px] z-10 section-px">
+				<div className="relative w-full h-full min-h-[480px]">
+					<EcoBgCharts visible={visible} />
+					<DesktopEcosystem visible={visible} hovered={activeIdx} onEnter={handleEnter} onLeave={handleLeave} onClick={handleClick} />
+					<MobileEcosystem visible={visible} onClick={handleClick} />
+					{/* Hub: center of wrapper = section center = ripple center */}
+					<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center pointer-events-none">
+						<div className="hidden lg:flex flex-col items-center justify-center text-center w-[220px] h-[220px] xl:w-[260px] xl:h-[260px] rounded-full border border-white/30 backdrop-blur-md shadow-sm" style={{ background: "rgba(255,255,255,0.35)" }}>
+							<EcosystemBot hovered={activeIdx} className="w-[90px] xl:w-[110px] mb-2" />
+							<span className="text-[8px] font-black uppercase text-blue-600">Fully Managed</span>
+							<h4 className="text-lg xl:text-xl font-bold uppercase tracking-tight text-slate-900 mt-1.5 leading-tight">CHANNELS</h4>
+						</div>
+						<div className="lg:hidden flex flex-col items-center justify-center text-center w-[120px] h-[120px] sm:w-[170px] sm:h-[170px] rounded-full border border-white/30 backdrop-blur-md shadow-sm" style={{ background: "rgba(255,255,255,0.35)" }}>
+							<EcosystemBot hovered={null} className="w-[50px] sm:w-[75px] mb-1.5" />
+							<span className="text-[7px] font-black uppercase text-blue-600">Fully Managed</span>
+							<h4 className="text-sm sm:text-base font-bold uppercase tracking-tight text-slate-900 mt-1 leading-tight">CHANNELS</h4>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			{lightboxIdx !== null && (
@@ -1048,13 +829,6 @@ export default function Ecosystem() {
 				}
 				.eco-modal-exit {
 					animation: ecoModalOut 0.2s ease-in forwards;
-				}
-				.eco-ripple-ring {
-					animation: ecoRipplePulse 4s ease-in-out infinite alternate;
-				}
-				@keyframes ecoRipplePulse {
-					0% { transform: translate(-50%, -50%) scale(1); }
-					100% { transform: translate(-50%, -50%) scale(1.03); }
 				}
 				@keyframes ecoPulseRing {
 					0% { transform: scale(0.3); opacity: 0.6; }
