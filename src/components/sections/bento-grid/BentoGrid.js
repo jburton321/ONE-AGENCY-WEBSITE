@@ -225,7 +225,7 @@ function BentoScrollingSite({ visible }) {
 	}, [visible]);
 
 	return (
-		<div className={`relative h-[100px] sm:h-full rounded-xl overflow-hidden border border-slate-200/80 bg-slate-50 shadow-sm transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+		<div className={`relative h-[100px] sm:h-full rounded-2xl overflow-hidden border border-slate-200/80 bg-slate-50 shadow-sm transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
 			<div className="flex items-center justify-between px-2.5 py-1.5 bg-white border-b border-slate-200/60">
 				<div className="flex items-center gap-1.5">
 					<div className="w-3.5 h-3.5 rounded-md bg-gradient-to-br from-cyan-500 to-blue-600" />
@@ -595,7 +595,7 @@ function DashFeedCard() {
 	return (
 		<RevealCard delay={250} className="rounded-2xl bg-white border border-slate-200/80 shadow-sm p-5 sm:p-6 md:p-8 flex flex-col justify-end min-h-[160px] sm:min-h-[200px] md:min-h-0 group relative overflow-hidden">
 			<div className="absolute top-0 left-0 w-32 h-32 bg-cyan-500/[0.04] rounded-full blur-3xl transition-all duration-700 group-hover:bg-cyan-500/[0.06]" />
-			<div className="bg-slate-50 rounded-xl p-5 border border-slate-200 relative overflow-hidden transition-all duration-500 group-hover:border-cyan-200">
+			<div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 relative overflow-hidden transition-all duration-500 group-hover:border-cyan-200">
 				<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/[0.03] to-cyan-500/0 transition-all duration-700 group-hover:via-cyan-500/[0.06]" />
 				<div className="relative z-10">
 					<div className="flex items-center justify-between mb-3">

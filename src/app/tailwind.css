@@ -16,6 +16,18 @@
 	direction: ltr;
 }
 
+/* Home - 1: consistent card border-radius (16px) and border */
+.home-1-global .service-item,
+.home-1-global .team-item,
+.home-1-global .project-item,
+.home-1-global .project-style-2,
+.home-1-global .feature-item {
+	border-radius: 16px !important;
+}
+.home-1-global .feature-item {
+	border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
 /* Mobile menu icon color */
 .hamburger_menu .mean-container a.meanmenu-reveal span {
 	background: #1874FD !important;

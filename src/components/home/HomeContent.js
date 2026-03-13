@@ -12,6 +12,7 @@ import FoundersReveal from "@/components/sections/founders/FoundersReveal";
 import Funfact2 from "@/components/sections/funfacts/Funfact2";
 import GrowthStack from "@/components/sections/growth-stack/GrowthStack";
 import CIQHero from "@/components/sections/ciq-hero/CIQHero";
+import CIQAgents from "@/components/sections/ciq-agents/CIQAgents";
 import LiveStats from "@/components/sections/live-stats/LiveStats";
 import Portfolios1 from "@/components/sections/portfolios/Portfolios1";
 import Services1 from "@/components/sections/services/Services1";
@@ -42,6 +43,7 @@ export default function HomeContent() {
 				<Skills1 />
 				<Ecosystem />
 				<CIQHero />
+				<CIQAgents />
 				<GrowthStack />
 				<Team1 />
 				<Funfact2 />

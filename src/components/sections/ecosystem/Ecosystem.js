@@ -426,7 +426,7 @@ function NodeColumn({ nodes, side, visible, hovered, onEnter, onLeave, onClick, 
 				return (
 					<div
 						key={n.title}
-						className={`relative rounded-xl overflow-hidden transition-all duration-500 cursor-pointer flex-1 group border backdrop-blur-md ${
+						className={`relative rounded-2xl overflow-hidden transition-all duration-500 cursor-pointer flex-1 group border backdrop-blur-md ${
 							active
 								? `shadow-lg shadow-blue-500/10 scale-[1.03] border-white/40 ${isLeft ? "-translate-x-2" : "translate-x-2"}`
 								: "border-white/30 shadow-sm hover:shadow-md hover:border-white/50 hover:scale-[1.02]"
@@ -575,7 +575,7 @@ function MobileEcosystem({ visible, onClick }) {
 					return (
 						<div
 							key={n.title}
-							className={`relative rounded-xl overflow-hidden border backdrop-blur-md shadow-sm transition-all duration-300 ${
+							className={`relative rounded-2xl overflow-hidden border backdrop-blur-md shadow-sm transition-all duration-300 ${
 								isExpanded ? "border-white/40 shadow-md" : "border-white/30"
 							} ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
 							style={{ transitionDelay: visible ? `${i * 50}ms` : "0ms" }}

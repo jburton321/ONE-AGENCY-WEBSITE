@@ -59,7 +59,7 @@ export default function ContrastSection() {
 					</div>
 
 					<div className="grid sm:grid-cols-2 gap-6 text-left">
-						<div className="px-6 py-5 rounded-xl border border-slate-200/80 bg-slate-50/50">
+						<div className="px-6 py-5 rounded-2xl border border-slate-200/80 bg-slate-50/50">
 							<div className="flex items-center gap-3 mb-3">
 								<div className="h-px w-6 bg-gradient-to-r from-slate-400 to-slate-300" />
 								<span className="text-[8px] font-black uppercase text-slate-500">The Pattern</span>
@@ -71,7 +71,7 @@ export default function ContrastSection() {
 							</p>
 						</div>
 
-						<div className="px-6 py-5 rounded-xl border border-blue-200/60 bg-blue-50/40">
+						<div className="px-6 py-5 rounded-2xl border border-blue-200/60 bg-blue-50/40">
 							<div className="flex items-center gap-3 mb-3">
 								<div className="h-px w-6 bg-gradient-to-r from-blue-600 to-cyan-500" />
 								<span className="text-[8px] font-black uppercase text-blue-600">A Different Premise</span>

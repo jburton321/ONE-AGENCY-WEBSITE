@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { Fragment } from "react";
-import AnimatedOneLogo from "@/components/shared/AnimatedOneLogo";
 import MobileNavbar from "./MobileNavbar";
 
 const MobileMenu = ({ isMobileMenuOpen, handleMobileToggler }) => {
@@ -21,7 +20,7 @@ const MobileMenu = ({ isMobileMenuOpen, handleMobileToggler }) => {
 					<div className="hamburger_top d-flex align-items-center justify-content-between">
 						<div className="hamburger_logo">
 							<Link href="/" className="mobile_logo">
-								<img src="/logo/main.svg" alt="ONE Agency" />
+								<img src="/logo/NAV-ONE-LOGO.png" alt="ONE Agency" />
 							</Link>
 						</div>
 						<div className="hamburger_close">
@@ -35,7 +34,7 @@ const MobileMenu = ({ isMobileMenuOpen, handleMobileToggler }) => {
 					</div>
 					<div className="hamburger_one_logo mb-6 w-full flex justify-center items-center" style={{ color: "var(--tj-color-common-white)" }}>
 						<Link href="/" className="block w-full max-w-full" onClick={() => handleMobileToggler(false)}>
-							<AnimatedOneLogo active={isMobileMenuOpen} className="w-full h-auto block mx-auto" />
+							<img src="/logo/NAV-ONE-LOGO.png" alt="ONE Agency" className="w-full h-auto block mx-auto max-w-[280px]" />
 						</Link>
 					</div>
 					<div className="hamburger_search">

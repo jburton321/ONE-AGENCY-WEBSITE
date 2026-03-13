@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import AnimatedOneLogo from "@/components/shared/AnimatedOneLogo";
-
 const Logo = ({ headerType, isStickyHeader }) => {
 	const isHeader1 = !headerType || headerType === 1;
 
@@ -11,19 +9,12 @@ const Logo = ({ headerType, isStickyHeader }) => {
 		<div className={`site-logo${isHeader1 ? " site-logo--header1" : ""}`}>
 			<Link className="logo" href="/">
 				{isHeader1 ? (
-					<span
-						className="inline-block"
-						style={{
-							color: "var(--tj-color-common-white)",
-							height: 72,
-							width: "auto",
-						}}
-					>
-						<AnimatedOneLogo
-							active
-							style={{ height: 72, width: "auto", display: "block" }}
-						/>
-					</span>
+					<Image
+						src="/logo/NAV-ONE-LOGO.png"
+						alt="ONE Agency"
+						height={72}
+						width={236}
+					/>
 				) : (
 					<Image
 						src={
