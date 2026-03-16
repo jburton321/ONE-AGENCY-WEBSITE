@@ -106,7 +106,6 @@ export default function InfinityMesh({ className, style, cameraZ = 120, meshScal
 				}
 			}
 
-			const isMobile = container.clientWidth < 768;
 			const scene = new Scene();
 			const camera = new PerspectiveCamera(
 				35,
@@ -116,22 +115,14 @@ export default function InfinityMesh({ className, style, cameraZ = 120, meshScal
 			);
 			const renderer = new WebGLRenderer({ antialias: true, alpha: true });
 			renderer.setSize(container.clientWidth, container.clientHeight);
-			renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
+			renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 			container.appendChild(renderer.domElement);
 
-			const numSamples = isMobile ? 1000 : 5000;
+			const numSamples = 5000;
 			const pathPoints = sampleSvgPath(numSamples);
 			const path = new SVGFigure8Curve(pathPoints);
 
-			const tubularSegments = isMobile ? 400 : 5000;
-			const radialSegments = isMobile ? 8 : 10;
-			const geometry = new TubeGeometry(
-				path,
-				tubularSegments,
-				8,
-				radialSegments,
-				true
-			);
+			const geometry = new TubeGeometry(path, 5000, 8, 10, true);
 
 			const material = new ShaderMaterial({
 				uniforms: {
