@@ -269,6 +269,7 @@
 }
 
 .hamburger_logo {
+	display: none !important; /* Hidden: duplicate logo in mobile menu */
 	.mobile_logo {
 		display: inline-block;
 		max-width: 120px;
