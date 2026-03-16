@@ -38,8 +38,9 @@ export default function RootLayout({ children }) {
 			lang="en"
 			data-scroll-behavior="smooth"
 			className={`${libreFranklin.variable}`}
+			suppressHydrationWarning
 		>
-			<body>
+			<body suppressHydrationWarning>
 				<ClientProviders>
 					{children}
 				</ClientProviders>
