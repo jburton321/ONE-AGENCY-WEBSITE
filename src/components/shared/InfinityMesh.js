@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const SVG_D =
 	"M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z";
 
 const vertexShader = `
+  precision mediump float;
   varying vec2 vUv;
   varying vec3 vNormal;
   varying vec3 vViewDir;
@@ -19,6 +20,7 @@ const vertexShader = `
 `;
 
 const fragmentShader = `
+  precision mediump float;
   uniform float uTime;
   uniform vec3 colorDeep;
   uniform vec3 colorBright;
@@ -48,14 +50,24 @@ const fragmentShader = `
 export default function InfinityMesh({ className, style, cameraZ = 120, meshScale = 1 }) {
 	const containerRef = useRef(null);
 	const cleanupRef = useRef(() => {});
+	const [useFallback, setUseFallback] = useState(false);
 
 	useEffect(() => {
 		const container = containerRef.current;
 		if (!container) return;
 
+		// Use static fallback on mobile (WebGL unstable) or when user prefers reduced motion
+		const prefersReducedMotion = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+		if (prefersReducedMotion || isMobile) {
+			setUseFallback(true);
+			return;
+		}
+
 		let cancelled = false;
 
 		(async () => {
+			try {
 			const THREE = await import("three");
 			if (cancelled) return;
 
@@ -114,17 +126,22 @@ export default function InfinityMesh({ className, style, cameraZ = 120, meshScal
 				2,
 				1000
 			);
-			const renderer = new WebGLRenderer({ antialias: true, alpha: true });
+			const renderer = new WebGLRenderer({
+				antialias: !isMobile,
+				alpha: true,
+				powerPreference: isMobile ? "low-power" : "default",
+				failIfMajorPerformanceCaveat: false,
+			});
 			renderer.setSize(container.clientWidth, container.clientHeight);
-			renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
+			renderer.setPixelRatio(isMobile ? 1 : Math.min(window.devicePixelRatio, 2));
 			container.appendChild(renderer.domElement);
 
-			const numSamples = isMobile ? 1000 : 5000;
+			const numSamples = isMobile ? 400 : 5000;
 			const pathPoints = sampleSvgPath(numSamples);
 			const path = new SVGFigure8Curve(pathPoints);
 
-			const tubularSegments = isMobile ? 400 : 5000;
-			const radialSegments = isMobile ? 8 : 10;
+			const tubularSegments = isMobile ? 150 : 5000;
+			const radialSegments = isMobile ? 6 : 10;
 			const geometry = new TubeGeometry(
 				path,
 				tubularSegments,
@@ -166,6 +183,13 @@ export default function InfinityMesh({ className, style, cameraZ = 120, meshScal
 			}
 			window.addEventListener("resize", handleResize);
 
+			// Handle WebGL context loss (common on mobile)
+			renderer.domElement.addEventListener("webglcontextlost", (e) => {
+				e.preventDefault();
+				cancelAnimationFrame(animationId);
+				setUseFallback(true);
+			});
+
 			cleanupRef.current = () => {
 				cancelAnimationFrame(animationId);
 				window.removeEventListener("resize", handleResize);
@@ -176,6 +200,10 @@ export default function InfinityMesh({ className, style, cameraZ = 120, meshScal
 					container.removeChild(renderer.domElement);
 				}
 			};
+			} catch (err) {
+				console.warn("InfinityMesh WebGL init failed, using fallback:", err);
+				setUseFallback(true);
+			}
 		})();
 
 		return () => {
@@ -183,6 +211,43 @@ export default function InfinityMesh({ className, style, cameraZ = 120, meshScal
 			cleanupRef.current();
 		};
 	}, [cameraZ, meshScale]);
+
+	// Static SVG fallback for mobile / reduced motion / WebGL failure
+	if (useFallback) {
+		return (
+			<div
+				className={className ?? "absolute top-1/2 left-1/2 pointer-events-none"}
+				style={
+					style ?? {
+						width: "2800px",
+						height: "1500px",
+						transform: "translate(calc(-50% + 200px), -50%)",
+					}
+				}
+				aria-hidden="true"
+			>
+				<svg
+					viewBox="0 0 200 100"
+					className="w-full h-full opacity-40"
+					preserveAspectRatio="xMidYMid meet"
+				>
+					<defs>
+						<linearGradient id="infinity-fallback" x1="0%" y1="0%" x2="100%" y2="100%">
+							<stop offset="0%" stopColor="#0668e1" />
+							<stop offset="100%" stopColor="#00f2ff" />
+						</linearGradient>
+					</defs>
+					<path
+						d={SVG_D}
+						fill="none"
+						stroke="url(#infinity-fallback)"
+						strokeWidth="4"
+						strokeLinecap="round"
+					/>
+				</svg>
+			</div>
+		);
+	}
 
 	return (
 		<div
