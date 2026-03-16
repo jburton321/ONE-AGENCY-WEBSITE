@@ -606,6 +606,11 @@
 		max-width: 220px;
 	}
 }
+
+/* Hide main nav logo when mobile menu is open */
+.tj-header-area.mobile-menu-open .site-logo {
+	display: none !important;
+}
 .header-bottom {
 	padding: 0px 45px;
 	@media #{$lg} {

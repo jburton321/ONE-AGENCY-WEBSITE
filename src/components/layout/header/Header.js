@@ -24,7 +24,7 @@ const Header = ({ headerType, isHeaderTop, topbarType, isStickyHeader }) => {
 	return (
 		<Fragment>
 			<header
-				className={`tj-header-area ${
+				className={`tj-header-area ${isMobileMenuOpen ? "mobile-menu-open" : ""} ${
 					headerType === 10
 						? "header-2 header-7 header-10"
 						: headerType === 9
