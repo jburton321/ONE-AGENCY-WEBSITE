@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-const Logo = ({ headerType, isStickyHeader }) => {
+const Logo = ({ headerType, isStickyHeader, isMobileMenuOpen }) => {
 	const isHeader1 = !headerType || headerType === 1;
+	const hidden = isMobileMenuOpen ? " d-none" : "";
 
 	return (
-		<div className={`site-logo${isHeader1 ? " site-logo--header1" : ""}`}>
+		<div className={`site-logo${isHeader1 ? " site-logo--header1" : ""}${hidden}`}>
 			<Link className="logo" href="/">
 				{isHeader1 ? (
 					<Image

@@ -60,6 +60,7 @@ const Header = ({ headerType, isHeaderTop, topbarType, isStickyHeader }) => {
 									<Logo
 										isStickyHeader={isStickyHeader}
 										headerType={headerType}
+										isMobileMenuOpen={isMobileMenuOpen}
 									/>
 
 									{/* <!-- main navigation --> */}

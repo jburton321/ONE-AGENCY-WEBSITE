@@ -17,12 +17,7 @@ const MobileMenu = ({ isMobileMenuOpen, handleMobileToggler }) => {
 			>
 				<div className="hamburger_bg"></div>
 				<div className="hamburger_wrapper">
-					<div className="hamburger_top d-flex align-items-center justify-content-between">
-						<div className="hamburger_logo">
-							<Link href="/" className="mobile_logo">
-								<img src="/logo/NAV-ONE-LOGO.png" alt="ONE Agency" />
-							</Link>
-						</div>
+					<div className="hamburger_top d-flex align-items-center justify-content-end">
 						<div className="hamburger_close">
 							<button
 								className="hamburger_close_btn hamburgerCloseBtn"
